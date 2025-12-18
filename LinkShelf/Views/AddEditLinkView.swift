@@ -27,7 +27,7 @@ struct AddEditLinkView: View {
     }
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 0) {
             // Header
             HStack {
                 Text(link == nil ? "Add Link" : "Edit Link")
@@ -38,11 +38,13 @@ struct AddEditLinkView: View {
                 }) {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.secondary)
+                        .font(.system(size: 18))
                 }
                 .buttonStyle(.plain)
             }
             .padding(.horizontal, 20)
             .padding(.top, 20)
+            .padding(.bottom, 12)
             
             Divider()
             
@@ -67,12 +69,15 @@ struct AddEditLinkView: View {
                         Text(errorMessage)
                             .font(.caption)
                             .foregroundColor(.red)
+                            .padding(.top, 2)
                     }
                 }
             }
             .padding(.horizontal, 20)
+            .padding(.top, 20)
+            .padding(.bottom, 20)
             
-            Spacer()
+            Divider()
             
             // Buttons
             HStack(spacing: 12) {
@@ -91,9 +96,10 @@ struct AddEditLinkView: View {
                 .disabled(title.isEmpty || url.isEmpty)
             }
             .padding(.horizontal, 20)
+            .padding(.top, 16)
             .padding(.bottom, 20)
         }
-        .frame(width: 400, height: 220)
+        .frame(width: 400, height: 280)
         .onAppear {
             // Focus on title field
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
