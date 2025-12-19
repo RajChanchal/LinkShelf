@@ -12,12 +12,14 @@ struct Link: Identifiable, Codable, Equatable {
     var title: String
     var url: String
     var order: Int
+    var faviconData: Data?
     
-    init(id: UUID = UUID(), title: String, url: String, order: Int = 0) {
+    init(id: UUID = UUID(), title: String, url: String, order: Int = 0, faviconData: Data? = nil) {
         self.id = id
         self.title = title
         self.url = url
         self.order = order
+        self.faviconData = faviconData
     }
     
     var isValidURL: Bool {

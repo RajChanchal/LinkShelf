@@ -127,13 +127,28 @@ struct LinkRowView: View {
     let onEdit: () -> Void
     let onDelete: () -> Void
     
+    private var faviconImage: NSImage? {
+        guard let faviconData = link.faviconData else { return nil }
+        return FaviconManager.shared.image(from: faviconData)
+    }
+    
     var body: some View {
         HStack(spacing: 12) {
-            // Link icon
-            Image(systemName: "link")
-                .font(.system(size: 14))
-                .foregroundColor(.secondary)
-                .frame(width: 20)
+            // Favicon or default link icon
+            Group {
+                if let favicon = faviconImage {
+                    Image(nsImage: favicon)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 16, height: 16)
+                        .clipShape(RoundedRectangle(cornerRadius: 2))
+                } else {
+                    Image(systemName: "link")
+                        .font(.system(size: 14))
+                        .foregroundColor(.secondary)
+                }
+            }
+            .frame(width: 20, height: 20)
             
             // Link info
             VStack(alignment: .leading, spacing: 2) {

@@ -24,6 +24,9 @@ class LinkManager: ObservableObject {
         if !hasLaunchedBefore() {
             setDefaultLinks()
             markAsLaunched()
+        } else {
+            // Fetch favicons for existing links that don't have them
+            fetchMissingFavicons()
         }
     }
     
@@ -63,13 +66,39 @@ class LinkManager: ObservableObject {
         let newLink = Link(title: title, url: url, order: newOrder)
         links.append(newLink)
         saveLinks()
+        
+        // Fetch favicon asynchronously
+        Task {
+            if let faviconData = await FaviconManager.shared.fetchFavicon(for: url) {
+                await MainActor.run {
+                    if let index = links.firstIndex(where: { $0.id == newLink.id }) {
+                        links[index].faviconData = faviconData
+                        saveLinks()
+                    }
+                }
+            }
+        }
     }
     
     func updateLink(_ link: Link, title: String, url: String) {
         if let index = links.firstIndex(where: { $0.id == link.id }) {
             links[index].title = title
             links[index].url = url
+            // Clear old favicon - will fetch new one
+            links[index].faviconData = nil
             saveLinks()
+            
+            // Fetch favicon asynchronously
+            Task {
+                if let faviconData = await FaviconManager.shared.fetchFavicon(for: url) {
+                    await MainActor.run {
+                        if let currentIndex = links.firstIndex(where: { $0.id == link.id }) {
+                            links[currentIndex].faviconData = faviconData
+                            saveLinks()
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -100,6 +129,30 @@ class LinkManager: ObservableObject {
     func openInBrowser(_ link: Link) {
         guard let url = URL(string: link.url) else { return }
         NSWorkspace.shared.open(url)
+    }
+    
+    /// Fetches favicons for all links that don't have one yet
+    func fetchMissingFavicons() {
+        let linksWithoutFavicons = links.filter { $0.faviconData == nil }
+        
+        // Fetch favicons with a small delay between requests to avoid overwhelming servers
+        for (index, link) in linksWithoutFavicons.enumerated() {
+            Task {
+                // Add small delay to stagger requests
+                if index > 0 {
+                    try? await Task.sleep(nanoseconds: 200_000_000) // 0.2 seconds
+                }
+                
+                if let faviconData = await FaviconManager.shared.fetchFavicon(for: link.url) {
+                    await MainActor.run {
+                        if let linkIndex = links.firstIndex(where: { $0.id == link.id }) {
+                            links[linkIndex].faviconData = faviconData
+                            saveLinks()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
