@@ -13,6 +13,19 @@ struct LinkListView: View {
     @State private var showingAddLink = false
     @State private var editingLink: Link?
     @State private var copiedLinkId: UUID?
+    @State private var searchText: String = ""
+    @FocusState private var isSearchFocused: Bool
+    
+    // Filtered links based on search text
+    private var filteredLinks: [Link] {
+        if searchText.isEmpty {
+            return linkManager.links
+        }
+        return linkManager.links.filter { link in
+            link.title.localizedCaseInsensitiveContains(searchText) ||
+            link.url.localizedCaseInsensitiveContains(searchText)
+        }
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -23,6 +36,7 @@ struct LinkListView: View {
                     .foregroundColor(.primary)
                 Spacer()
                 Button(action: {
+                    isSearchFocused = false
                     showingAddLink = true
                 }) {
                     Image(systemName: "plus")
@@ -37,7 +51,47 @@ struct LinkListView: View {
             
             Divider()
             
-            // Links list
+            // Search bar
+            HStack(spacing: 8) {
+                Image(systemName: "magnifyingglass")
+                    .foregroundColor(.secondary)
+                    .font(.system(size: 12))
+                
+                TextField("Search links...", text: $searchText)
+                    .textFieldStyle(.plain)
+                    .focused($isSearchFocused)
+                    .onSubmit {
+                        // Unfocus when pressing Enter/Return
+                        isSearchFocused = false
+                    }
+                
+                if !searchText.isEmpty {
+                    Button(action: {
+                        searchText = ""
+                        isSearchFocused = false
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.secondary)
+                            .font(.system(size: 12))
+                    }
+                    .buttonStyle(.plain)
+                    .help("Clear search")
+                }
+            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background(Color(NSColor.controlBackgroundColor).opacity(0.5))
+            .cornerRadius(6)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .onTapGesture {
+                // Keep focus when clicking on search bar itself
+                isSearchFocused = true
+            }
+            
+            Divider()
+            
+            // Links list (with tap gesture to unfocus search)
             if linkManager.links.isEmpty {
                 VStack(spacing: 8) {
                     Image(systemName: "link")
@@ -52,13 +106,29 @@ struct LinkListView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding(40)
+            } else if filteredLinks.isEmpty && !searchText.isEmpty {
+                // No search results
+                VStack(spacing: 8) {
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 32))
+                        .foregroundColor(.secondary)
+                    Text("No results found")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    Text("Try a different search term")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(40)
             } else {
                 List {
-                    ForEach(linkManager.links) { link in
+                    ForEach(filteredLinks) { link in
                         LinkRowView(
                             link: link,
                             isCopied: copiedLinkId == link.id,
                             onCopy: {
+                                isSearchFocused = false
                                 linkManager.copyToClipboard(link)
                                 withAnimation {
                                     copiedLinkId = link.id
@@ -71,12 +141,15 @@ struct LinkListView: View {
                                 }
                             },
                             onOpen: {
+                                isSearchFocused = false
                                 linkManager.openInBrowser(link)
                             },
                             onEdit: {
+                                isSearchFocused = false
                                 editingLink = link
                             },
                             onDelete: {
+                                isSearchFocused = false
                                 linkManager.deleteLink(link)
                             }
                         )
@@ -105,6 +178,36 @@ struct LinkListView: View {
             .background(Color(NSColor.controlBackgroundColor))
         }
         .frame(width: 300, height: 400)
+        .background(
+            // Background tap to unfocus search
+            Color.clear
+                .contentShape(Rectangle())
+                .gesture(
+                    TapGesture()
+                        .onEnded { _ in
+                            // Unfocus search when tapping background
+                            isSearchFocused = false
+                        }
+                )
+        )
+        .onAppear {
+            // Auto-focus search when popover opens
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                isSearchFocused = true
+            }
+        }
+        .onChange(of: showingAddLink) { oldValue, newValue in
+            // Clear search when adding new link
+            if newValue {
+                searchText = ""
+            }
+        }
+        .onChange(of: editingLink) { oldValue, newValue in
+            // Clear search when editing link
+            if newValue != nil {
+                searchText = ""
+            }
+        }
         .sheet(isPresented: $showingAddLink) {
             AddEditLinkView(isPresented: $showingAddLink)
                 .environmentObject(linkManager)
