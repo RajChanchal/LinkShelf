@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings (Chinese Simplified)
+  LinkShelf
+*/
+
+"app.name" = "LinkShelf";
+"empty.state.title" = "您的链接架是空的";
+"empty.state.message" = "开始构建您常用链接的收藏";
+"empty.state.add.first.link" = "添加您的第一个链接";
+"empty.state.quick.tips" = "快速提示：";
+"empty.state.tip.copy.links" = "一键将链接复制到剪贴板";
+"empty.state.tip.open.links" = "直接在浏览器中打开链接";
+"empty.state.tip.search.links" = "即时搜索和筛选您的链接";
+"search.placeholder" = "搜索链接...";
+"search.no.results" = "未找到结果";
+"search.no.results.message" = "没有链接匹配 \"%@\"";
+"search.clear" = "清除搜索";
+"search.try.label" = "尝试：";
+"search.try.check.spelling" = "检查拼写";
+"search.try.search.by.title" = "按标题或URL搜索";
+"link.add" = "添加链接";
+"link.edit" = "编辑链接";
+"link.title" = "标题";
+"link.url" = "URL";
+"link.title.placeholder" = "例如：LinkedIn个人资料";
+"link.url.placeholder" = "https://example.com";
+"button.cancel" = "取消";
+"button.add" = "添加";
+"button.save" = "保存";
+"button.delete" = "删除";
+"button.edit" = "编辑";
+"error.title.required" = "标题和URL是必需的";
+"error.url.required" = "标题和URL是必需的";
+"error.invalid.url" = "请输入有效的URL";
+"action.copy.to.clipboard" = "复制到剪贴板";
+"action.copied" = "已复制！";
+"action.open.in.browser" = "在浏览器中打开";
+"action.quit.app" = "退出LinkShelf";
+"menu.quit.linkshelf" = "退出LinkShelf";
+

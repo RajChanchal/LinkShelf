@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings (Japanese)
+  LinkShelf
+*/
+
+"app.name" = "LinkShelf";
+"empty.state.title" = "リンク棚が空です";
+"empty.state.message" = "よく使うリンクのコレクションを作り始めましょう";
+"empty.state.add.first.link" = "最初のリンクを追加";
+"empty.state.quick.tips" = "クイックヒント：";
+"empty.state.tip.copy.links" = "ワンクリックでリンクをクリップボードにコピー";
+"empty.state.tip.open.links" = "リンクをブラウザで直接開く";
+"empty.state.tip.search.links" = "リンクを瞬時に検索・フィルタ";
+"search.placeholder" = "リンクを検索...";
+"search.no.results" = "結果が見つかりません";
+"search.no.results.message" = "\"%@\" に一致するリンクがありません";
+"search.clear" = "検索をクリア";
+"search.try.label" = "試してください：";
+"search.try.check.spelling" = "スペルを確認";
+"search.try.search.by.title" = "タイトルまたはURLで検索";
+"link.add" = "リンクを追加";
+"link.edit" = "リンクを編集";
+"link.title" = "タイトル";
+"link.url" = "URL";
+"link.title.placeholder" = "例：LinkedInプロフィール";
+"link.url.placeholder" = "https://example.com";
+"button.cancel" = "キャンセル";
+"button.add" = "追加";
+"button.save" = "保存";
+"button.delete" = "削除";
+"button.edit" = "編集";
+"error.title.required" = "タイトルとURLが必要です";
+"error.url.required" = "タイトルとURLが必要です";
+"error.invalid.url" = "有効なURLを入力してください";
+"action.copy.to.clipboard" = "クリップボードにコピー";
+"action.copied" = "コピーしました！";
+"action.open.in.browser" = "ブラウザで開く";
+"action.quit.app" = "LinkShelfを終了";
+"menu.quit.linkshelf" = "LinkShelfを終了";
+

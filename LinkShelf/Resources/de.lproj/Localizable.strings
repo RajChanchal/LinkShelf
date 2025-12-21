@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings (German)
+  LinkShelf
+*/
+
+"app.name" = "LinkShelf";
+"empty.state.title" = "Ihr Link-Regal ist Leer";
+"empty.state.message" = "Beginnen Sie, Ihre Sammlung häufig verwendeter Links zu erstellen";
+"empty.state.add.first.link" = "Ihren Ersten Link Hinzufügen";
+"empty.state.quick.tips" = "Schnelle Tipps:";
+"empty.state.tip.copy.links" = "Links mit einem Klick in die Zwischenablage kopieren";
+"empty.state.tip.open.links" = "Links direkt in Ihrem Browser öffnen";
+"empty.state.tip.search.links" = "Ihre Links sofort durchsuchen und filtern";
+"search.placeholder" = "Links suchen...";
+"search.no.results" = "Keine Ergebnisse Gefunden";
+"search.no.results.message" = "Keine Links entsprechen \"%@\"";
+"search.clear" = "Suche Löschen";
+"search.try.label" = "Versuchen Sie:";
+"search.try.check.spelling" = "Rechtschreibung überprüfen";
+"search.try.search.by.title" = "Nach Titel oder URL suchen";
+"link.add" = "Link Hinzufügen";
+"link.edit" = "Link Bearbeiten";
+"link.title" = "Titel";
+"link.url" = "URL";
+"link.title.placeholder" = "z.B. LinkedIn-Profil";
+"link.url.placeholder" = "https://beispiel.com";
+"button.cancel" = "Abbrechen";
+"button.add" = "Hinzufügen";
+"button.save" = "Speichern";
+"button.delete" = "Löschen";
+"button.edit" = "Bearbeiten";
+"error.title.required" = "Titel und URL sind erforderlich";
+"error.url.required" = "Titel und URL sind erforderlich";
+"error.invalid.url" = "Bitte geben Sie eine gültige URL ein";
+"action.copy.to.clipboard" = "In Zwischenablage kopieren";
+"action.copied" = "Kopiert!";
+"action.open.in.browser" = "Im Browser öffnen";
+"action.quit.app" = "LinkShelf Beenden";
+"menu.quit.linkshelf" = "LinkShelf Beenden";
+

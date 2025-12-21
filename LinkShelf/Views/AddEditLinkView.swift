@@ -30,7 +30,7 @@ struct AddEditLinkView: View {
         VStack(spacing: 0) {
             // Header
             HStack {
-                Text(link == nil ? "Add Link" : "Edit Link")
+                Text(link == nil ? L.addLink.localized : L.editLink.localized)
                     .font(.headline)
                 Spacer()
                 Button(action: {
@@ -51,18 +51,18 @@ struct AddEditLinkView: View {
             // Form
             VStack(alignment: .leading, spacing: 16) {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("Title")
+                    Text(L.linkTitle.localized)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                    TextField("e.g., LinkedIn Profile", text: $title)
+                    TextField(L.linkTitlePlaceholder.localized, text: $title)
                         .textFieldStyle(.roundedBorder)
                 }
                 
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("URL")
+                    Text(L.linkURL.localized)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                    TextField("https://example.com", text: $url)
+                    TextField(L.linkURLPlaceholder.localized, text: $url)
                         .textFieldStyle(.roundedBorder)
                     
                     if let errorMessage = errorMessage {
@@ -81,14 +81,14 @@ struct AddEditLinkView: View {
             
             // Buttons
             HStack(spacing: 12) {
-                Button("Cancel") {
+                Button(L.cancel.localized) {
                     isPresented = false
                 }
                 .keyboardShortcut(.cancelAction)
                 
                 Spacer()
                 
-                Button(link == nil ? "Add" : "Save") {
+                Button(link == nil ? L.add.localized : L.save.localized) {
                     saveLink()
                 }
                 .keyboardShortcut(.defaultAction)
@@ -111,7 +111,7 @@ struct AddEditLinkView: View {
     private func saveLink() {
         // Validate URL
         guard !title.isEmpty, !url.isEmpty else {
-            errorMessage = "Title and URL are required"
+            errorMessage = L.errorTitleRequired.localized
             return
         }
         
@@ -123,7 +123,7 @@ struct AddEditLinkView: View {
         
         // Basic URL validation
         guard URL(string: finalURL) != nil else {
-            errorMessage = "Please enter a valid URL"
+            errorMessage = L.errorInvalidURL.localized
             return
         }
         

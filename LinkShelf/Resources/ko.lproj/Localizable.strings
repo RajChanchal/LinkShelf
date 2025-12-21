@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings (Korean)
+  LinkShelf
+*/
+
+"app.name" = "LinkShelf";
+"empty.state.title" = "링크 선반이 비어 있습니다";
+"empty.state.message" = "자주 사용하는 링크 컬렉션을 만들기 시작하세요";
+"empty.state.add.first.link" = "첫 번째 링크 추가";
+"empty.state.quick.tips" = "빠른 팁:";
+"empty.state.tip.copy.links" = "원클릭으로 링크를 클립보드에 복사";
+"empty.state.tip.open.links" = "링크를 브라우저에서 직접 열기";
+"empty.state.tip.search.links" = "링크를 즉시 검색 및 필터링";
+"search.placeholder" = "링크 검색...";
+"search.no.results" = "결과를 찾을 수 없음";
+"search.no.results.message" = "\"%@\"와 일치하는 링크가 없습니다";
+"search.clear" = "검색 지우기";
+"search.try.label" = "시도:";
+"search.try.check.spelling" = "철자 확인";
+"search.try.search.by.title" = "제목 또는 URL로 검색";
+"link.add" = "링크 추가";
+"link.edit" = "링크 편집";
+"link.title" = "제목";
+"link.url" = "URL";
+"link.title.placeholder" = "예: LinkedIn 프로필";
+"link.url.placeholder" = "https://example.com";
+"button.cancel" = "취소";
+"button.add" = "추가";
+"button.save" = "저장";
+"button.delete" = "삭제";
+"button.edit" = "편집";
+"error.title.required" = "제목과 URL이 필요합니다";
+"error.url.required" = "제목과 URL이 필요합니다";
+"error.invalid.url" = "유효한 URL을 입력하세요";
+"action.copy.to.clipboard" = "클립보드에 복사";
+"action.copied" = "복사됨!";
+"action.open.in.browser" = "브라우저에서 열기";
+"action.quit.app" = "LinkShelf 종료";
+"menu.quit.linkshelf" = "LinkShelf 종료";
+

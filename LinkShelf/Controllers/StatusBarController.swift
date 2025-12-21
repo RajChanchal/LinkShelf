@@ -64,7 +64,7 @@ class StatusBarController: ObservableObject {
         let menu = NSMenu()
         
         // Quit menu item
-        let quitItem = NSMenuItem(title: "Quit LinkShelf", action: #selector(quitApp), keyEquivalent: "q")
+        let quitItem = NSMenuItem(title: L.quitLinkShelf.localized, action: #selector(quitApp), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
         

@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings (Russian)
+  LinkShelf
+*/
+
+"app.name" = "LinkShelf";
+"empty.state.title" = "Ваша Полка Ссылок Пуста";
+"empty.state.message" = "Начните создавать коллекцию часто используемых ссылок";
+"empty.state.add.first.link" = "Добавить Первую Ссылку";
+"empty.state.quick.tips" = "Быстрые Советы:";
+"empty.state.tip.copy.links" = "Копируйте ссылки в буфер обмена одним кликом";
+"empty.state.tip.open.links" = "Открывайте ссылки прямо в браузере";
+"empty.state.tip.search.links" = "Мгновенно ищите и фильтруйте ссылки";
+"search.placeholder" = "Поиск ссылок...";
+"search.no.results" = "Результаты Не Найдены";
+"search.no.results.message" = "Нет ссылок, соответствующих \"%@\"";
+"search.clear" = "Очистить Поиск";
+"search.try.label" = "Попробуйте:";
+"search.try.check.spelling" = "Проверьте правописание";
+"search.try.search.by.title" = "Искать по названию или URL";
+"link.add" = "Добавить Ссылку";
+"link.edit" = "Редактировать Ссылку";
+"link.title" = "Название";
+"link.url" = "URL";
+"link.title.placeholder" = "напр. Профиль LinkedIn";
+"link.url.placeholder" = "https://example.com";
+"button.cancel" = "Отмена";
+"button.add" = "Добавить";
+"button.save" = "Сохранить";
+"button.delete" = "Удалить";
+"button.edit" = "Редактировать";
+"error.title.required" = "Название и URL обязательны";
+"error.url.required" = "Название и URL обязательны";
+"error.invalid.url" = "Пожалуйста, введите действительный URL";
+"action.copy.to.clipboard" = "Копировать в буфер обмена";
+"action.copied" = "Скопировано!";
+"action.open.in.browser" = "Открыть в браузере";
+"action.quit.app" = "Выйти из LinkShelf";
+"menu.quit.linkshelf" = "Выйти из LinkShelf";
+

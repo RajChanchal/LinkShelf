@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings (Italian)
+  LinkShelf
+*/
+
+"app.name" = "LinkShelf";
+"empty.state.title" = "La Tua Mensola dei Link è Vuota";
+"empty.state.message" = "Inizia a creare la tua collezione di link usati frequentemente";
+"empty.state.add.first.link" = "Aggiungi il Tuo Primo Link";
+"empty.state.quick.tips" = "Suggerimenti Rapidi:";
+"empty.state.tip.copy.links" = "Copia i link negli appunti con un clic";
+"empty.state.tip.open.links" = "Apri i link direttamente nel tuo browser";
+"empty.state.tip.search.links" = "Cerca e filtra i tuoi link istantaneamente";
+"search.placeholder" = "Cerca link...";
+"search.no.results" = "Nessun Risultato Trovato";
+"search.no.results.message" = "Nessun link corrisponde a \"%@\"";
+"search.clear" = "Cancella Ricerca";
+"search.try.label" = "Prova:";
+"search.try.check.spelling" = "Controlla l'ortografia";
+"search.try.search.by.title" = "Cerca per titolo o URL";
+"link.add" = "Aggiungi Link";
+"link.edit" = "Modifica Link";
+"link.title" = "Titolo";
+"link.url" = "URL";
+"link.title.placeholder" = "es. Profilo LinkedIn";
+"link.url.placeholder" = "https://esempio.com";
+"button.cancel" = "Annulla";
+"button.add" = "Aggiungi";
+"button.save" = "Salva";
+"button.delete" = "Elimina";
+"button.edit" = "Modifica";
+"error.title.required" = "Titolo e URL sono obbligatori";
+"error.url.required" = "Titolo e URL sono obbligatori";
+"error.invalid.url" = "Inserisci un URL valido";
+"action.copy.to.clipboard" = "Copia negli appunti";
+"action.copied" = "Copiato!";
+"action.open.in.browser" = "Apri nel browser";
+"action.quit.app" = "Esci da LinkShelf";
+"menu.quit.linkshelf" = "Esci da LinkShelf";
+
