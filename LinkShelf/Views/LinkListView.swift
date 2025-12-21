@@ -93,34 +93,153 @@ struct LinkListView: View {
             
             // Links list (with tap gesture to unfocus search)
             if linkManager.links.isEmpty {
-                VStack(spacing: 8) {
-                    Image(systemName: "link")
-                        .font(.system(size: 32))
+                VStack(spacing: 16) {
+                    // Icon
+                    Image(systemName: "link.badge.plus")
+                        .font(.system(size: 48, weight: .light))
                         .foregroundColor(.secondary)
-                    Text("No links yet")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                    Text("Click + to add your first link")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                    
+                    // Title
+                    VStack(spacing: 6) {
+                        Text("Your Link Shelf is Empty")
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(.primary)
+                        
+                        Text("Start building your collection of frequently used links")
+                            .font(.system(size: 12))
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.horizontal, 16)
+                    }
+                    
+                    // Quick action button
+                    Button(action: {
+                        isSearchFocused = false
+                        showingAddLink = true
+                    }) {
+                        HStack(spacing: 6) {
+                            Image(systemName: "plus.circle.fill")
+                                .font(.system(size: 14))
+                            Text("Add Your First Link")
+                                .font(.system(size: 13, weight: .medium))
+                        }
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 10)
+                        .background(Color.accentColor)
+                        .cornerRadius(8)
+                    }
+                    .buttonStyle(.plain)
+                    .help("Add your first link")
+                    
+                    // Tips
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Quick Tips:")
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundColor(.secondary)
+                        
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 10))
+                                .foregroundColor(.green)
+                            Text("Copy links to clipboard with one click")
+                                .font(.system(size: 10))
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 10))
+                                .foregroundColor(.green)
+                            Text("Open links directly in your browser")
+                                .font(.system(size: 10))
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 10))
+                                .foregroundColor(.green)
+                            Text("Search and filter your links instantly")
+                                .font(.system(size: 10))
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .padding(.top, 8)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(40)
+                .padding(30)
             } else if filteredLinks.isEmpty && !searchText.isEmpty {
                 // No search results
-                VStack(spacing: 8) {
+                VStack(spacing: 16) {
+                    // Icon
                     Image(systemName: "magnifyingglass")
-                        .font(.system(size: 32))
+                        .font(.system(size: 48, weight: .light))
                         .foregroundColor(.secondary)
-                    Text("No results found")
-                        .font(.subheadline)
+                    
+                    // Title and message
+                    VStack(spacing: 6) {
+                        Text("No Results Found")
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(.primary)
+                        
+                        Text("No links match \"\(searchText)\"")
+                            .font(.system(size: 12))
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20)
+                    }
+                    
+                    // Clear search button
+                    Button(action: {
+                        searchText = ""
+                        isSearchFocused = false
+                    }) {
+                        HStack(spacing: 6) {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.system(size: 12))
+                            Text("Clear Search")
+                                .font(.system(size: 12, weight: .medium))
+                        }
                         .foregroundColor(.secondary)
-                    Text("Try a different search term")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .background(Color(NSColor.controlBackgroundColor))
+                        .cornerRadius(6)
+                    }
+                    .buttonStyle(.plain)
+                    .help("Clear search")
+                    
+                    // Alternative actions
+                    VStack(spacing: 8) {
+                        Text("Try:")
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundColor(.secondary)
+                        
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: "lightbulb.fill")
+                                .font(.system(size: 10))
+                                .foregroundColor(.yellow)
+                            Text("Check your spelling")
+                                .font(.system(size: 10))
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: "lightbulb.fill")
+                                .font(.system(size: 10))
+                                .foregroundColor(.yellow)
+                            Text("Search by title or URL")
+                                .font(.system(size: 10))
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                    .padding(.top, 8)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(40)
+                .padding(30)
             } else {
                 List {
                     ForEach(filteredLinks) { link in
@@ -177,7 +296,7 @@ struct LinkListView: View {
             }
             .background(Color(NSColor.controlBackgroundColor))
         }
-        .frame(width: 300, height: 400)
+        .frame(width: 360, height: 400)
         .background(
             // Background tap to unfocus search
             Color.clear
