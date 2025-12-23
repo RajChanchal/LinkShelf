@@ -62,6 +62,13 @@ enum L10n: String {
     // Menu
     case quitLinkShelf = "menu.quit.linkshelf"
     
+    // Share Extension
+    case shareExtensionTitle = "share.extension.title"
+    case shareExtensionAddButton = "share.extension.add.button"
+    case shareExtensionUrlLabel = "share.extension.url.label"
+    case shareExtensionTitleLabel = "share.extension.title.label"
+    case shareExtensionUrlExists = "share.extension.url.exists"
+    
     var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }
