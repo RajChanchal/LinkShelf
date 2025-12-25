@@ -37,4 +37,9 @@
 "action.open.in.browser" = "Abrir en navegador";
 "action.quit.app" = "Salir de LinkShelf";
 "menu.quit.linkshelf" = "Salir de LinkShelf";
+"share.extension.title" = "Agregar a LinkShelf";
+"share.extension.add.button" = "Agregar a LinkShelf";
+"share.extension.url.label" = "URL";
+"share.extension.title.label" = "Título";
+"share.extension.url.exists" = "⚠️ Esta URL ya existe en LinkShelf";
 

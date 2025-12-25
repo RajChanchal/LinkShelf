@@ -37,4 +37,9 @@
 "action.open.in.browser" = "브라우저에서 열기";
 "action.quit.app" = "LinkShelf 종료";
 "menu.quit.linkshelf" = "LinkShelf 종료";
+"share.extension.title" = "LinkShelf에 추가";
+"share.extension.add.button" = "LinkShelf에 추가";
+"share.extension.url.label" = "URL";
+"share.extension.title.label" = "제목";
+"share.extension.url.exists" = "⚠️ 이 URL이 이미 LinkShelf에 존재합니다";
 

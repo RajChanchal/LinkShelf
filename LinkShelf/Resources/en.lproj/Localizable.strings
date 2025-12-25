@@ -53,3 +53,10 @@
 // Menu
 "menu.quit.linkshelf" = "Quit LinkShelf";
 
+// Share Extension
+"share.extension.title" = "Add to LinkShelf";
+"share.extension.add.button" = "Add to LinkShelf";
+"share.extension.url.label" = "URL";
+"share.extension.title.label" = "Title";
+"share.extension.url.exists" = "⚠️ This URL already exists in LinkShelf";
+

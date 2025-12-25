@@ -6,19 +6,85 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		279539952EFB28E7009840EC /* LinkShelfShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 279539892EFB28E7009840EC /* LinkShelfShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		279539932EFB28E7009840EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27B287242EF4812800AE50B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 279539882EFB28E7009840EC;
+			remoteInfo = LinkShelfShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		279539962EFB28E7009840EC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				279539952EFB28E7009840EC /* LinkShelfShare.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		279539892EFB28E7009840EC /* LinkShelfShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LinkShelfShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B2872C2EF4812800AE50B8 /* LinkShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		279539992EFB28E7009840EC /* Exceptions for "LinkShelfShare" folder in "LinkShelfShare" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 279539882EFB28E7009840EC /* LinkShelfShare */;
+		};
+		2795399D2EFB29DD009840EC /* Exceptions for "LinkShelf" folder in "LinkShelfShare" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Resources/Localizable.strings",
+				Managers/SharedLinkStorage.swift,
+				Models/Link.swift,
+			);
+			target = 279539882EFB28E7009840EC /* LinkShelfShare */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		2795398A2EFB28E7009840EC /* LinkShelfShare */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				279539992EFB28E7009840EC /* Exceptions for "LinkShelfShare" folder in "LinkShelfShare" target */,
+			);
+			path = LinkShelfShare;
+			sourceTree = "<group>";
+		};
 		27B2872E2EF4812800AE50B8 /* LinkShelf */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2795399D2EFB29DD009840EC /* Exceptions for "LinkShelf" folder in "LinkShelfShare" target */,
+			);
 			path = LinkShelf;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		279539862EFB28E7009840EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B287292EF4812800AE50B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				27B2872E2EF4812800AE50B8 /* LinkShelf */,
+				2795398A2EFB28E7009840EC /* LinkShelfShare */,
 				27B2872D2EF4812800AE50B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				27B2872C2EF4812800AE50B8 /* LinkShelf.app */,
+				279539892EFB28E7009840EC /* LinkShelfShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +116,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		279539882EFB28E7009840EC /* LinkShelfShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2795399A2EFB28E7009840EC /* Build configuration list for PBXNativeTarget "LinkShelfShare" */;
+			buildPhases = (
+				279539852EFB28E7009840EC /* Sources */,
+				279539862EFB28E7009840EC /* Frameworks */,
+				279539872EFB28E7009840EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2795398A2EFB28E7009840EC /* LinkShelfShare */,
+			);
+			name = LinkShelfShare;
+			packageProductDependencies = (
+			);
+			productName = LinkShelfShare;
+			productReference = 279539892EFB28E7009840EC /* LinkShelfShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		27B2872B2EF4812800AE50B8 /* LinkShelf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B287372EF4812900AE50B8 /* Build configuration list for PBXNativeTarget "LinkShelf" */;
@@ -55,10 +145,12 @@
 				27B287282EF4812800AE50B8 /* Sources */,
 				27B287292EF4812800AE50B8 /* Frameworks */,
 				27B2872A2EF4812800AE50B8 /* Resources */,
+				279539962EFB28E7009840EC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				279539942EFB28E7009840EC /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				27B2872E2EF4812800AE50B8 /* LinkShelf */,
@@ -80,6 +172,9 @@
 				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
+					279539882EFB28E7009840EC = {
+						CreatedOnToolsVersion = 26.1;
+					};
 					27B2872B2EF4812800AE50B8 = {
 						CreatedOnToolsVersion = 26.1;
 					};
@@ -109,11 +204,19 @@
 			projectRoot = "";
 			targets = (
 				27B2872B2EF4812800AE50B8 /* LinkShelf */,
+				279539882EFB28E7009840EC /* LinkShelfShare */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		279539872EFB28E7009840EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B2872A2EF4812800AE50B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +227,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		279539852EFB28E7009840EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B287282EF4812800AE50B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,7 +243,83 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		279539942EFB28E7009840EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 279539882EFB28E7009840EC /* LinkShelfShare */;
+			targetProxy = 279539932EFB28E7009840EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		279539972EFB28E7009840EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LinkShelfShare/LinkShelfShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 3U7U6K4WE2;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LinkShelfShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LinkShelfShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chanchalgeek.LinkShelf.LinkShelfShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		279539982EFB28E7009840EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LinkShelfShare/LinkShelfShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 3U7U6K4WE2;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LinkShelfShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LinkShelfShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chanchalgeek.LinkShelf.LinkShelfShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		27B287352EF4812900AE50B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -262,7 +448,7 @@
 				CODE_SIGN_ENTITLEMENTS = LinkShelf/LinkShelf.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 3U7U6K4WE2;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -296,7 +482,7 @@
 				CODE_SIGN_ENTITLEMENTS = LinkShelf/LinkShelf.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 3U7U6K4WE2;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -325,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2795399A2EFB28E7009840EC /* Build configuration list for PBXNativeTarget "LinkShelfShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279539972EFB28E7009840EC /* Debug */,
+				279539982EFB28E7009840EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27B287272EF4812800AE50B8 /* Build configuration list for PBXProject "LinkShelf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

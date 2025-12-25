@@ -13,12 +13,25 @@ import SwiftUI
 class LinkManager: ObservableObject {
     @Published var links: [Link] = []
     
-    private let userDefaults = UserDefaults.standard
+    private let appGroupID = "group.com.chanchalgeek.LinkShelf"
+    private let userDefaults: UserDefaults
     private let linksKey = "LinkShelf_Links"
     private let hasLaunchedKey = "LinkShelf_HasLaunched"
     
     init() {
+        // Use App Group UserDefaults for sharing with Share Extension
+        // Fallback to standard UserDefaults if App Group is not available
+        if let appGroupDefaults = UserDefaults(suiteName: appGroupID) {
+            self.userDefaults = appGroupDefaults
+        } else {
+            self.userDefaults = UserDefaults.standard
+        }
+        
+        
         loadLinks()
+        
+        // Setup observer for external changes (Share Extension)
+        setupNotificationObserver()
         
         // Set default links on first launch
         if !hasLaunchedBefore() {
@@ -28,6 +41,36 @@ class LinkManager: ObservableObject {
             // Fetch favicons for existing links that don't have them
             fetchMissingFavicons()
         }
+    }
+    
+    deinit {
+        CFNotificationCenterRemoveObserver(CFNotificationCenterGetDarwinNotifyCenter(), 
+                                         Unmanaged.passUnretained(self).toOpaque(), 
+                                         CFNotificationName(SharedLinkStorage.linksChangedNotification as CFString), 
+                                         nil)
+    }
+    
+    private func setupNotificationObserver() {
+        let center = CFNotificationCenterGetDarwinNotifyCenter()
+        let observer = Unmanaged.passUnretained(self).toOpaque()
+        let name = SharedLinkStorage.linksChangedNotification as CFString
+        
+        CFNotificationCenterAddObserver(center,
+                                        observer,
+                                        { (_, observer, _, _, _) in
+                                            // Handle notification
+                                            if let observer = observer {
+                                                let manager = Unmanaged<LinkManager>.fromOpaque(observer).takeUnretainedValue()
+                                                DispatchQueue.main.async {
+                                                    manager.loadLinks()
+                                                    // Also fetch favicons for new links
+                                                    manager.fetchMissingFavicons()
+                                                }
+                                            }
+                                        },
+                                        name,
+                                        nil,
+                                        .deliverImmediately)
     }
     
     private func hasLaunchedBefore() -> Bool {
@@ -58,6 +101,7 @@ class LinkManager: ObservableObject {
     func saveLinks() {
         if let encoded = try? JSONEncoder().encode(links) {
             userDefaults.set(encoded, forKey: linksKey)
+            userDefaults.synchronize() // Ensure data is written immediately for Share Extension
         }
     }
     
@@ -129,6 +173,23 @@ class LinkManager: ObservableObject {
     func openInBrowser(_ link: Link) {
         guard let url = URL(string: link.url) else { return }
         NSWorkspace.shared.open(url)
+    }
+    
+    /// Check if a URL already exists in the links
+    func linkExists(url: String) -> Bool {
+        let normalizedURL = normalizeURL(url)
+        return links.contains { link in
+            normalizeURL(link.url) == normalizedURL
+        }
+    }
+    
+    /// Normalize URL for comparison (lowercase, add https:// if missing)
+    private func normalizeURL(_ urlString: String) -> String {
+        var url = urlString.trimmingCharacters(in: .whitespaces)
+        if !url.hasPrefix("http://") && !url.hasPrefix("https://") {
+            url = "https://" + url
+        }
+        return url.lowercased()
     }
     
     /// Fetches favicons for all links that don't have one yet

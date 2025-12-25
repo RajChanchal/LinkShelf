@@ -37,4 +37,9 @@
 "action.open.in.browser" = "在浏览器中打开";
 "action.quit.app" = "退出LinkShelf";
 "menu.quit.linkshelf" = "退出LinkShelf";
+"share.extension.title" = "添加到LinkShelf";
+"share.extension.add.button" = "添加到LinkShelf";
+"share.extension.url.label" = "URL";
+"share.extension.title.label" = "标题";
+"share.extension.url.exists" = "⚠️ 此URL已存在于LinkShelf中";
 

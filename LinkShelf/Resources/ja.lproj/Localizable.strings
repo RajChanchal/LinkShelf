@@ -37,4 +37,9 @@
 "action.open.in.browser" = "ブラウザで開く";
 "action.quit.app" = "LinkShelfを終了";
 "menu.quit.linkshelf" = "LinkShelfを終了";
+"share.extension.title" = "LinkShelfに追加";
+"share.extension.add.button" = "LinkShelfに追加";
+"share.extension.url.label" = "URL";
+"share.extension.title.label" = "タイトル";
+"share.extension.url.exists" = "⚠️ このURLは既にLinkShelfに存在します";
 

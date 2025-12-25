@@ -37,4 +37,9 @@
 "action.open.in.browser" = "Открыть в браузере";
 "action.quit.app" = "Выйти из LinkShelf";
 "menu.quit.linkshelf" = "Выйти из LinkShelf";
+"share.extension.title" = "Добавить в LinkShelf";
+"share.extension.add.button" = "Добавить в LinkShelf";
+"share.extension.url.label" = "URL";
+"share.extension.title.label" = "Название";
+"share.extension.url.exists" = "⚠️ Эта ссылка уже существует в LinkShelf";
 
