@@ -17,6 +17,9 @@ class SharedLinkStorage {
         return UserDefaults(suiteName: appGroupID)
     }
     
+    // Notification name for inter-process communication
+    static let linksChangedNotification = "com.chanchalgeek.LinkShelf.linksChanged"
+    
     private init() {}
     
     /// Load all links from shared storage
@@ -37,6 +40,12 @@ class SharedLinkStorage {
         }
         userDefaults.set(encoded, forKey: linksKey)
         userDefaults.synchronize()
+        
+        // Post Darwin notification to notify other processes
+        let center = CFNotificationCenterGetDarwinNotifyCenter()
+        let name = CFNotificationName(Self.linksChangedNotification as CFString)
+        CFNotificationCenterPostNotification(center, name, nil, nil, true)
+        print("📢 Posted Darwin notification: \(Self.linksChangedNotification)")
     }
     
     /// Add a new link to shared storage

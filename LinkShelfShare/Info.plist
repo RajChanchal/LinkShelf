@@ -35,6 +35,8 @@
 				<key>NSExtensionActivationSupportsText</key>
 				<true/>
 			</dict>
+            <key>NSExtensionJavaScriptPreprocessingFile</key>
+            <string>GetURL</string>
 		</dict>
 	</dict>
 </dict>

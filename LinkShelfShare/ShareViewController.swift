@@ -19,6 +19,8 @@ class ShareViewController: NSViewController {
     private var sharedURL: String = ""
     private var pageTitle: String = ""
     
+    private var storedContext: NSExtensionContext?
+    
     override func loadView() {
         view = NSView(frame: NSRect(x: 0, y: 0, width: 500, height: 280))
         view.wantsLayer = true
@@ -31,57 +33,176 @@ class ShareViewController: NSViewController {
     }
     
     override func beginRequest(with context: NSExtensionContext) {
-        // Extract URL and title from shared items
+        // Always call super implementation
+        super.beginRequest(with: context)
+        
+        // Store context manually as a backup
+        self.storedContext = context
+        
+        // Ensure view is loaded first
+        _ = view
+        
+        print("🚀 Share Extension beginRequest started")
+        
         guard let inputItems = context.inputItems as? [NSExtensionItem],
               let item = inputItems.first else {
-            extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
+            print("⚠️ No input items found")
+            cancelAction(nil)
             return
         }
         
-        // Extract title if available
-        if let title = item.attributedTitle?.string, !title.isEmpty {
-            pageTitle = title
-        } else if let contentText = item.attributedContentText?.string, !contentText.isEmpty {
-            pageTitle = contentText
-        }
-        
-        // Extract URL from attachments
+        // 1. Try to get data from JavaScript (Safari)
         if let attachments = item.attachments {
             for attachment in attachments {
-                if attachment.hasItemConformingToTypeIdentifier("public.url") {
-                    attachment.loadItem(forTypeIdentifier: "public.url", options: nil) { [weak self] (item, error) in
-                        DispatchQueue.main.async {
-                            guard let self = self else { return }
-                            if let url = item as? URL {
-                                self.sharedURL = url.absoluteString
-                                if self.pageTitle.isEmpty {
-                                    self.pageTitle = url.host ?? url.absoluteString
+                if attachment.hasItemConformingToTypeIdentifier("com.apple.property-list") {
+                    attachment.loadItem(forTypeIdentifier: "com.apple.property-list", options: nil) { [weak self] (result, error) in
+                        guard let self = self else { return }
+                        
+                        if let error = error {
+                            print("JS load error: \(error)")
+                            return
+                        }
+                        
+                        if let dict = result as? NSDictionary,
+                           let results = dict[NSExtensionJavaScriptPreprocessingResultsKey] as? NSDictionary {
+                            
+                            DispatchQueue.main.async {
+                                if let urlString = results["URL"] as? String {
+                                    print("🌍 JS URL: \(urlString)")
+                                    self.sharedURL = urlString
                                 }
+                                
+                                if let title = results["title"] as? String {
+                                    print("📝 JS Title: \(title)")
+                                    self.pageTitle = title
+                                }
+                                
                                 self.updateUI()
                             }
+                            return // Found JS data, stop here
                         }
                     }
-                    return
                 }
             }
-            
-            // If no URL found, try plain text
+        }
+        
+        // 2. Fallback to existing logic (non-Safari)
+        
+        // Extract title if available (and not already set by JS)
+        if pageTitle.isEmpty {
+           if let title = item.attributedTitle?.string, !title.isEmpty {
+               pageTitle = title
+               print("📝 Title from item: \(title)")
+           } else if let contentText = item.attributedContentText?.string, !contentText.isEmpty {
+               pageTitle = contentText
+               print("📝 Title from contentText: \(contentText)")
+           }
+        }
+        
+        // Extract URL from attachments if not found by JS
+        if sharedURL.isEmpty {
+            if let attachments = item.attachments {
+                // Log available types
+                for (index, attachment) in attachments.enumerated() {
+                    print("📎 Attachment \(index): \(attachment.registeredTypeIdentifiers.joined(separator: ", "))")
+                }
+                
+                findURL(in: attachments)
+            } else {
+                print("⚠️ No attachments found")
+            }
+        }
+    }
+    
+    private func findURL(in attachments: [NSItemProvider]) {
+        var foundProvider: NSItemProvider?
+        
+        // First pass: Look for direct URL
+        for attachment in attachments {
+            if attachment.hasItemConformingToTypeIdentifier("public.url") {
+                foundProvider = attachment
+                break
+            }
+        }
+        
+        // Second pass: Look for plain text if no URL found
+        if foundProvider == nil {
             for attachment in attachments {
                 if attachment.hasItemConformingToTypeIdentifier("public.plain-text") {
-                    attachment.loadItem(forTypeIdentifier: "public.plain-text", options: nil) { [weak self] (item, error) in
-                        DispatchQueue.main.async {
-                            guard let self = self else { return }
-                            if let text = item as? String, let url = self.extractURL(from: text) {
-                                self.sharedURL = url
-                                if self.pageTitle.isEmpty {
-                                    self.pageTitle = url
-                                }
-                                self.updateUI()
-                            }
-                        }
-                    }
-                    return
+                    foundProvider = attachment
+                    break
                 }
+            }
+        }
+        
+        if let provider = foundProvider {
+            print("🔍 Attempting to load item from provider: \(provider)")
+            
+            if provider.hasItemConformingToTypeIdentifier("public.url") {
+                provider.loadItem(forTypeIdentifier: "public.url", options: nil) { [weak self] (item, error) in
+                    if let error = error {
+                        print("❌ Error loading URL: \(error.localizedDescription)")
+                    }
+                    
+                    self?.handleURLItem(item)
+                }
+            } else if provider.hasItemConformingToTypeIdentifier("public.plain-text") {
+                provider.loadItem(forTypeIdentifier: "public.plain-text", options: nil) { [weak self] (item, error) in
+                    if let error = error {
+                        print("❌ Error loading text: \(error.localizedDescription)")
+                    }
+                    
+                    if let text = item as? String {
+                        self?.handleTextItem(text)
+                    }
+                }
+            }
+        } else {
+            print("❌ No suitable provider found")
+        }
+    }
+
+    private func handleURLItem(_ item: NSSecureCoding?) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            var urlString: String?
+            
+            if let url = item as? URL {
+                urlString = url.absoluteString
+            } else if let url = item as? NSURL {
+                urlString = url.absoluteString
+            }
+            
+            if let finalURL = urlString {
+                self.sharedURL = finalURL
+                if self.pageTitle.isEmpty {
+                    if let url = URL(string: finalURL) {
+                        self.pageTitle = url.host ?? finalURL
+                    }
+                }
+                print("✅ Extracted URL: \(self.sharedURL)")
+                self.updateUI()
+            } else {
+                print("❌ Failed to cast item to URL: \(String(describing: item))")
+            }
+        }
+    }
+    
+    private func handleTextItem(_ text: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            print("📝 Processing text for URL: \(text)")
+            
+            if let url = self.extractURL(from: text) {
+                self.sharedURL = url
+                if self.pageTitle.isEmpty {
+                    self.pageTitle = url
+                }
+                print("✅ Extracted URL from text: \(self.sharedURL)")
+                self.updateUI()
+            } else {
+                print("❌ No URL found in text")
             }
         }
     }
@@ -168,23 +289,23 @@ class ShareViewController: NSViewController {
         // Cancel button
         let cancelBtn = NSButton()
         cancelBtn.title = L("button.cancel", "Cancel")
-        cancelBtn.target = self
-        cancelBtn.action = #selector(cancelAction)
         cancelBtn.bezelStyle = .rounded
         cancelBtn.keyEquivalent = "\u{1b}"
         cancelBtn.translatesAutoresizingMaskIntoConstraints = false
+        cancelBtn.target = self
+        cancelBtn.action = #selector(cancelAction(_:))
         self.cancelButton = cancelBtn
         containerView.addSubview(cancelBtn)
         
         // Add button
         let addBtn = NSButton()
         addBtn.title = L("share.extension.add.button", "Add to LinkShelf")
-        addBtn.target = self
-        addBtn.action = #selector(addAction)
         addBtn.bezelStyle = .rounded
         addBtn.keyEquivalent = "\r"
         addBtn.isHighlighted = true
         addBtn.translatesAutoresizingMaskIntoConstraints = false
+        addBtn.target = self
+        addBtn.action = #selector(addAction(_:))
         self.addButton = addBtn
         containerView.addSubview(addBtn)
         
@@ -268,12 +389,31 @@ class ShareViewController: NSViewController {
         }
     }
     
-    @objc private func cancelAction() {
-        extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
+    @objc private func cancelAction(_ sender: Any?) {
+        print("🚫 Cancel button pressed")
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            guard let context = self.storedContext ?? self.extensionContext else {
+                print("❌ No extension context found to complete request")
+                // Try to find context from parent or view if possible, but usually self.extensionContext is correct
+                return
+            }
+            
+            context.completeRequest(returningItems: nil, completionHandler: { success in
+                print("Cancel completed: \(success)")
+            })
+        }
     }
     
-    @objc private func addAction() {
-        guard let titleField = titleTextField, let urlField = urlTextField else { return }
+    @objc private func addAction(_ sender: Any?) {
+        print("➕ Add button pressed")
+        
+        guard let titleField = titleTextField, let urlField = urlTextField else {
+            print("❌ Text fields not available")
+            return
+        }
         
         var title = titleField.stringValue.trimmingCharacters(in: .whitespaces)
         var url = urlField.stringValue.trimmingCharacters(in: .whitespaces)
@@ -282,6 +422,8 @@ class ShareViewController: NSViewController {
         if url.isEmpty && !sharedURL.isEmpty {
             url = sharedURL
         }
+        
+        print("📝 Title: '\(title)', URL: '\(url)'")
         
         // Validate
         if title.isEmpty {
@@ -292,12 +434,14 @@ class ShareViewController: NSViewController {
                     title = url
                 }
             } else {
+                print("⚠️ Title is empty and no URL")
                 titleField.becomeFirstResponder()
                 return
             }
         }
         
         if url.isEmpty {
+            print("⚠️ URL is empty")
             urlField.becomeFirstResponder()
             return
         }
@@ -309,13 +453,21 @@ class ShareViewController: NSViewController {
         
         // Validate URL
         guard URL(string: url) != nil else {
+            print("❌ Invalid URL: \(url)")
             return
         }
+        
+        print("💾 Saving link - Title: '\(title)', URL: '\(url)'")
         
         // Save link
         SharedLinkStorage.shared.addLink(title: title, url: url)
         
+        print("✅ Link saved, closing extension")
+        
         // Close extension
-        extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
+        let context = storedContext ?? self.extensionContext
+        context?.completeRequest(returningItems: nil, completionHandler: { success in
+            print("Add completed: \(success)")
+        })
     }
 }

@@ -27,7 +27,11 @@ class LinkManager: ObservableObject {
             self.userDefaults = UserDefaults.standard
         }
         
+        
         loadLinks()
+        
+        // Setup observer for external changes (Share Extension)
+        setupNotificationObserver()
         
         // Set default links on first launch
         if !hasLaunchedBefore() {
@@ -37,6 +41,36 @@ class LinkManager: ObservableObject {
             // Fetch favicons for existing links that don't have them
             fetchMissingFavicons()
         }
+    }
+    
+    deinit {
+        CFNotificationCenterRemoveObserver(CFNotificationCenterGetDarwinNotifyCenter(), 
+                                         Unmanaged.passUnretained(self).toOpaque(), 
+                                         CFNotificationName(SharedLinkStorage.linksChangedNotification as CFString), 
+                                         nil)
+    }
+    
+    private func setupNotificationObserver() {
+        let center = CFNotificationCenterGetDarwinNotifyCenter()
+        let observer = Unmanaged.passUnretained(self).toOpaque()
+        let name = SharedLinkStorage.linksChangedNotification as CFString
+        
+        CFNotificationCenterAddObserver(center,
+                                        observer,
+                                        { (_, observer, _, _, _) in
+                                            // Handle notification
+                                            if let observer = observer {
+                                                let manager = Unmanaged<LinkManager>.fromOpaque(observer).takeUnretainedValue()
+                                                DispatchQueue.main.async {
+                                                    manager.loadLinks()
+                                                    // Also fetch favicons for new links
+                                                    manager.fetchMissingFavicons()
+                                                }
+                                            }
+                                        },
+                                        name,
+                                        nil,
+                                        .deliverImmediately)
     }
     
     private func hasLaunchedBefore() -> Bool {
