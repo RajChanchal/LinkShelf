@@ -33,6 +33,7 @@ class StatusBarController: ObservableObject {
             button.action = #selector(togglePopover)
             button.target = self
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
+            button.toolTip = L.shortcutTooltip.localized
         }
         
         // Setup popover content
@@ -60,6 +61,15 @@ class StatusBarController: ObservableObject {
         }
     }
     
+    /// Shows the popover if it is not already visible
+    func showPopover() {
+        guard let button = statusItem.button else { return }
+        if !popover.isShown {
+            popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+            NSApp.activate(ignoringOtherApps: true)
+        }
+    }
+    
     func showMenu(_ sender: AnyObject?) {
         let menu = NSMenu()
         
@@ -78,4 +88,3 @@ class StatusBarController: ObservableObject {
         NSApplication.shared.terminate(nil)
     }
 }
-
