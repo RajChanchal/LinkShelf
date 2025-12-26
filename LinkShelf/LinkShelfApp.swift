@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Carbon.HIToolbox
 
 @main
 struct LinkShelfApp: App {
@@ -23,6 +24,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusBarController: StatusBarController?
     var linkManager: LinkManager?
     
+    private var hotKeyRef: EventHotKeyRef?
+    private var eventHandlerRef: EventHandlerRef?
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Hide dock icon
         NSApp.setActivationPolicy(.accessory)
@@ -34,10 +38,65 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let linkManager = linkManager {
             statusBarController = StatusBarController(linkManager: linkManager)
         }
+        
+        // Register global shortcut (⌥⌘L) to show the popover
+        registerHotKey()
     }
     
     func applicationWillTerminate(_ notification: Notification) {
-        // Cleanup if needed
+        unregisterHotKey()
+    }
+    
+    private func registerHotKey() {
+        let hotKeyID = EventHotKeyID(signature: "LShf".fourCharCodeValue, id: 1)
+        let modifiers = UInt32(optionKey | cmdKey) // ⌥⌘
+        let keyCode = UInt32(kVK_ANSI_L)          // L key
+        
+        var eventSpec = EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyPressed))
+        
+        // Install handler
+        let status = InstallEventHandler(
+            GetApplicationEventTarget(),
+            { (_, event, userData) -> OSStatus in
+                guard let userData = userData else { return noErr }
+                let delegate = Unmanaged<AppDelegate>.fromOpaque(userData).takeUnretainedValue()
+                delegate.handleHotKey(event: event)
+                return noErr
+            },
+            1,
+            &eventSpec,
+            UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque()),
+            &eventHandlerRef
+        )
+        
+        if status == noErr {
+            RegisterEventHotKey(keyCode, modifiers, hotKeyID, GetApplicationEventTarget(), 0, &hotKeyRef)
+        }
+    }
+    
+    private func unregisterHotKey() {
+        if let hotKeyRef = hotKeyRef {
+            UnregisterEventHotKey(hotKeyRef)
+            self.hotKeyRef = nil
+        }
+        
+        if let eventHandlerRef = eventHandlerRef {
+            RemoveEventHandler(eventHandlerRef)
+            self.eventHandlerRef = nil
+        }
+    }
+    
+    private func handleHotKey(event: EventRef?) {
+        statusBarController?.showPopover()
     }
 }
 
+private extension String {
+    var fourCharCodeValue: FourCharCode {
+        var result: FourCharCode = 0
+        for scalar in unicodeScalars {
+            result = (result << 8) + FourCharCode(scalar.value)
+        }
+        return result
+    }
+}
