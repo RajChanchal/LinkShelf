@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private var hotKeyRef: EventHotKeyRef?
     private var eventHandlerRef: EventHandlerRef?
+    private let shortcutIntroKey = "LinkShelf_ShortcutIntroShown"
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Hide dock icon
@@ -41,6 +42,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Register global shortcut (⌥⌘L) to show the popover
         registerHotKey()
+        
+        // Show one-time shortcut intro
+        showShortcutIntroIfNeeded()
     }
     
     func applicationWillTerminate(_ notification: Notification) {
@@ -88,6 +92,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func handleHotKey(event: EventRef?) {
         statusBarController?.showPopover()
+    }
+    
+    private func showShortcutIntroIfNeeded() {
+        let defaults = UserDefaults.standard
+        guard defaults.bool(forKey: shortcutIntroKey) == false else { return }
+        
+        // Mark as shown immediately to avoid repeat prompts
+        defaults.set(true, forKey: shortcutIntroKey)
+        
+        // Present a lightweight alert describing the shortcut
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            NSApp.activate(ignoringOtherApps: true)
+            let alert = NSAlert()
+            alert.messageText = L.shortcutIntroTitle.localized
+            alert.informativeText = L.shortcutIntroMessage.localized
+            alert.alertStyle = .informational
+            alert.addButton(withTitle: L.shortcutIntroButton.localized)
+            alert.runModal()
+        }
     }
 }
 

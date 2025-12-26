@@ -69,6 +69,12 @@ enum L10n: String {
     case shareExtensionTitleLabel = "share.extension.title.label"
     case shareExtensionUrlExists = "share.extension.url.exists"
     
+    // Shortcuts
+    case shortcutTooltip = "shortcut.tooltip"
+    case shortcutIntroTitle = "shortcut.intro.title"
+    case shortcutIntroMessage = "shortcut.intro.message"
+    case shortcutIntroButton = "shortcut.intro.button"
+    
     var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }
@@ -76,4 +82,3 @@ enum L10n: String {
 
 // Convenience alias for shorter usage
 typealias L = L10n
-

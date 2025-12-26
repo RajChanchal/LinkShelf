@@ -43,3 +43,8 @@
 "share.extension.title.label" = "タイトル";
 "share.extension.url.exists" = "⚠️ このURLは既にLinkShelfに存在します";
 
+// Shortcuts
+"shortcut.tooltip" = "LinkShelf — press ⌥⌘L to open";
+"shortcut.intro.title" = "Quick open shortcut";
+"shortcut.intro.message" = "Press ⌥⌘L anytime to open LinkShelf from the menu bar.";
+"shortcut.intro.button" = "Got it";

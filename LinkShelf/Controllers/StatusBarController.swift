@@ -33,6 +33,7 @@ class StatusBarController: ObservableObject {
             button.action = #selector(togglePopover)
             button.target = self
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
+            button.toolTip = L.shortcutTooltip.localized
         }
         
         // Setup popover content

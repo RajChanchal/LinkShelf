@@ -79,6 +79,7 @@ You can edit or delete these to customize your shelf.
 - **Framework**: SwiftUI + AppKit
 - **Storage**: UserDefaults (local, secure)
 - **Architecture**: MVVM pattern
+- **Shortcut**: Press ⌥⌘L to open LinkShelf from anywhere
 
 ## Future Enhancements (Not in MVP)
 
@@ -91,4 +92,3 @@ You can edit or delete these to customize your shelf.
 ## License
 
 Created for personal use. Feel free to modify and use as needed.
-
