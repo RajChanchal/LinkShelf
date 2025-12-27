@@ -10,6 +10,8 @@ A minimal macOS menu bar app for storing and quickly copying frequently used lin
 - ✏️ **Full management** - Add, edit, delete, and reorder links
 - 💾 **Local storage** - All data stored securely on your Mac
 - 🎨 **Native macOS UI** - Beautiful, minimal interface
+- 🧭 **Global shortcut** - Press ⌥⌘L to open LinkShelf from anywhere
+- 📤 **Share Extension** - Add links directly from Safari and other apps
 - 🚀 **Fast & lightweight** - No bloat, just works
 
 ## Setup Instructions
@@ -63,6 +65,8 @@ This project can also be set up as a Swift Package, though for a macOS app, Xcod
 4. **Open Links**: Click the open icon (↗️) to open in your default browser
 5. **Edit/Delete**: Click the menu (⋯) button to edit or delete links
 6. **Reorder**: Drag links in the list to reorder them
+7. **Open instantly**: Press `⌥ + ⌘ + L` to open LinkShelf without touching the mouse
+8. **Add from other apps**: Use the “LinkShelf” option in the macOS share menu (Safari and any app that supports sharing)
 
 ## Default Links
 
@@ -86,7 +90,6 @@ You can edit or delete these to customize your shelf.
 - ⌘+Number keyboard shortcuts
 - Folders/categories for links
 - iCloud sync
-- Share Sheet integration
 - Custom icons per link
 
 ## License

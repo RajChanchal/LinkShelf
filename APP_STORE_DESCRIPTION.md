@@ -14,8 +14,10 @@ Just click the menu bar icon, tap the link, and it's copied.
 
 • **Menu bar access** - Instant availability from your menu bar
 • **One-click copy** - Copy any link to clipboard instantly
+• **Global shortcut** - Press Option+Command+L to open LinkShelf instantly
 • **Visual identification** - Automatic favicon display for easy recognition
 • **Quick search** - Find links instantly with real-time search
+• **Share Extension** - Add links directly from Safari and other apps
 • **Open in browser** - Optional secondary action to open links
 • **Full management** - Add, edit, delete, and reorder links
 • **Clean interface** - Distraction-free, native macOS design
@@ -54,10 +56,12 @@ LinkShelf is a minimal macOS menu bar app for storing and quickly accessing your
 
 **KEY FEATURES:**
 • One-click copy - Copy any link to clipboard instantly
+• Global shortcut - Press Option+Command+L to open LinkShelf instantly
 • Quick access - Access links from your menu bar
 • Visual feedback - See confirmation when links are copied
 • Favicon display - Automatic website icons for easy recognition
 • Search & filter - Find links instantly with real-time search
+• Share Extension - Add links directly from Safari and other apps
 • Open in browser - Launch links directly in your default browser
 • Full management - Add, edit, delete, and reorder links
 • Local storage - All data stored securely on your Mac
