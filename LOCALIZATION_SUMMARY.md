@@ -2,7 +2,7 @@
 
 ## Languages Added
 
-LinkShelf now supports **9 languages**:
+LinkShelf now supports **10 languages**:
 
 1. **English (en)** - Base language
 2. **Spanish (es)** - Español
@@ -46,6 +46,8 @@ All strings are localized including:
 - Buttons and actions
 - Error messages
 - Menu items
+- Share Extension text
+- Global shortcut tooltip and intro dialog
 
 ## Testing Localization
 

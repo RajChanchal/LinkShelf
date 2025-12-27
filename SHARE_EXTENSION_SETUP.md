@@ -122,3 +122,4 @@ Verify that `LinkShelfShare/Info.plist` has the correct settings:
 - The extension automatically closes after saving a link
 
 
+
