@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Xcode user data
+**/xcuserdata/
+**/project.xcworkspace/
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# Build artifacts
+build/
+DerivedData/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Logs
+*.log
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Fastlane (not currently used, but safe to ignore outputs)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+
+# Tools
+.vscode/
