@@ -2,7 +2,7 @@
 
 ## Languages Added
 
-LinkShelf now supports **10 languages**:
+LinkShelf now supports **17 languages**:
 
 1. **English (en)** - Base language
 2. **Spanish (es)** - Español
@@ -14,6 +14,13 @@ LinkShelf now supports **10 languages**:
 8. **Italian (it)** - Italiano
 9. **Russian (ru)** - Русский
 10. **Korean (ko)** - 한국어
+11. **Traditional Chinese (zh-Hant)** - 繁體中文
+12. **Brazilian Portuguese (pt-BR)** - Português (Brasil)
+13. **Dutch (nl)** - Nederlands
+14. **Swedish (sv)** - Svenska
+15. **Danish (da)** - Dansk
+16. **Norwegian Bokmål (nb)** - Norsk Bokmål
+17. **Finnish (fi)** - Suomi
 
 ## Localization Files
 
@@ -55,5 +62,4 @@ To test different languages:
 1. Change system language in macOS Settings
 2. Restart the app
 3. UI will automatically use the system language
-
 

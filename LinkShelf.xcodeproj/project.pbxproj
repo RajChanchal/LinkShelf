@@ -195,6 +195,13 @@
 				it,
 				ru,
 				ko,
+				"zh-Hant",
+				"pt-BR",
+				nl,
+				sv,
+				da,
+				nb,
+				fi,
 			);
 			mainGroup = 27B287232EF4812800AE50B8;
 			minimizedProjectReferenceProxies = 1;
