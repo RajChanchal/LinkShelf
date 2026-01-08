@@ -94,7 +94,14 @@ class LinkManager: ObservableObject {
     func loadLinks() {
         if let data = userDefaults.data(forKey: linksKey),
            let decoded = try? JSONDecoder().decode([Link].self, from: data) {
-            links = decoded.sorted { $0.order < $1.order }
+            links = decoded.sorted { left, right in
+                let leftKey = sortKey(for: left.folder)
+                let rightKey = sortKey(for: right.folder)
+                if leftKey != rightKey {
+                    return leftKey < rightKey
+                }
+                return left.order < right.order
+            }
         }
     }
     
@@ -105,9 +112,10 @@ class LinkManager: ObservableObject {
         }
     }
     
-    func addLink(title: String, url: String) {
-        let newOrder = links.count
-        let newLink = Link(title: title, url: url, order: newOrder)
+    func addLink(title: String, url: String, folder: String? = nil) {
+        let normalizedFolder = normalizeFolder(folder)
+        let newOrder = links.filter { $0.folder == normalizedFolder }.count
+        let newLink = Link(title: title, url: url, order: newOrder, folder: normalizedFolder)
         links.append(newLink)
         saveLinks()
         
@@ -124,12 +132,23 @@ class LinkManager: ObservableObject {
         }
     }
     
-    func updateLink(_ link: Link, title: String, url: String) {
+    func updateLink(_ link: Link, title: String, url: String, folder: String? = nil) {
         if let index = links.firstIndex(where: { $0.id == link.id }) {
+            let previousFolder = links[index].folder
+            let normalizedFolder = normalizeFolder(folder)
             links[index].title = title
             links[index].url = url
+            links[index].folder = normalizedFolder
             // Clear old favicon - will fetch new one
             links[index].faviconData = nil
+            
+            if previousFolder != normalizedFolder {
+                // Reindex previous folder
+                reindexOrders(in: previousFolder)
+                // Place updated link at the end of the new folder
+                links[index].order = Int.max
+                reindexOrders(in: normalizedFolder)
+            }
             saveLinks()
             
             // Fetch favicon asynchronously
@@ -148,18 +167,22 @@ class LinkManager: ObservableObject {
     
     func deleteLink(_ link: Link) {
         links.removeAll { $0.id == link.id }
-        // Reorder remaining links
-        for (index, _) in links.enumerated() {
-            links[index].order = index
-        }
+        reindexOrders(in: link.folder)
         saveLinks()
     }
     
-    func moveLink(from source: IndexSet, to destination: Int) {
-        links.move(fromOffsets: source, toOffset: destination)
-        // Update order values
-        for (index, _) in links.enumerated() {
-            links[index].order = index
+    func moveLink(in folder: String?, from source: IndexSet, to destination: Int) {
+        let normalizedFolder = normalizeFolder(folder)
+        var folderLinks = links
+            .filter { $0.folder == normalizedFolder }
+            .sorted { $0.order < $1.order }
+        
+        folderLinks.move(fromOffsets: source, toOffset: destination)
+        
+        for (index, link) in folderLinks.enumerated() {
+            if let globalIndex = links.firstIndex(where: { $0.id == link.id }) {
+                links[globalIndex].order = index
+            }
         }
         saveLinks()
     }
@@ -192,6 +215,28 @@ class LinkManager: ObservableObject {
         return url.lowercased()
     }
     
+    private func normalizeFolder(_ folder: String?) -> String? {
+        let trimmed = folder?.trimmingCharacters(in: .whitespacesAndNewlines)
+        return (trimmed?.isEmpty ?? true) ? nil : trimmed
+    }
+    
+    private func sortKey(for folder: String?) -> String {
+        return normalizeFolder(folder)?.lowercased() ?? ""
+    }
+    
+    private func reindexOrders(in folder: String?) {
+        let normalizedFolder = normalizeFolder(folder)
+        let sorted = links
+            .filter { $0.folder == normalizedFolder }
+            .sorted { $0.order < $1.order }
+        
+        for (index, link) in sorted.enumerated() {
+            if let globalIndex = links.firstIndex(where: { $0.id == link.id }) {
+                links[globalIndex].order = index
+            }
+        }
+    }
+    
     /// Fetches favicons for all links that don't have one yet
     func fetchMissingFavicons() {
         let linksWithoutFavicons = links.filter { $0.faviconData == nil }
@@ -215,5 +260,17 @@ class LinkManager: ObservableObject {
             }
         }
     }
+    
+    var folderNames: [String] {
+        var seen: Set<String> = []
+        var result: [String] = []
+        for name in links.compactMap({ normalizeFolder($0.folder) }) {
+            let key = name.lowercased()
+            if !seen.contains(key) {
+                seen.insert(key)
+                result.append(name)
+            }
+        }
+        return result.sorted { $0.lowercased() < $1.lowercased() }
+    }
 }
-

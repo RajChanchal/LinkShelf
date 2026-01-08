@@ -15,6 +15,7 @@ struct LinkListView: View {
     @State private var copiedLinkId: UUID?
     @State private var searchText: String = ""
     @FocusState private var isSearchFocused: Bool
+    @State private var collapsedFolders: Set<String> = []
     
     // Filtered links based on search text
     private var filteredLinks: [Link] {
@@ -178,6 +179,61 @@ struct LinkListView: View {
         .padding(30)
     }
     
+    private func groupedLinks(_ links: [Link]) -> [(folder: String?, links: [Link])] {
+        var grouped: [String?: [Link]] = [:]
+        for link in links {
+            let normalized = normalizeFolder(link.folder)
+            grouped[normalized, default: []].append(link)
+        }
+        let sortedKeys = grouped.keys.sorted { left, right in
+            switch (left, right) {
+            case (nil, nil):
+                return false
+            case (nil, _):
+                return true
+            case (_, nil):
+                return false
+            case (let left?, let right?):
+                return left.lowercased() < right.lowercased()
+            }
+        }
+        
+        return sortedKeys.map { key in
+            let sortedLinks = (grouped[key] ?? []).sorted { $0.order < $1.order }
+            return (folder: key, links: sortedLinks)
+        }
+    }
+    
+    private func normalizeFolder(_ folder: String?) -> String? {
+        let trimmed = folder?.trimmingCharacters(in: .whitespacesAndNewlines)
+        return (trimmed?.isEmpty ?? true) ? nil : trimmed
+    }
+    
+    private func folderKey(_ folder: String?) -> String {
+        return normalizeFolder(folder)?.lowercased() ?? "__no_folder__"
+    }
+    
+    private func folderHeaderView(title: String, count: Int, isCollapsed: Bool, onToggle: @escaping () -> Void) -> some View {
+        Button(action: onToggle) {
+            HStack(spacing: 8) {
+                Image(systemName: isCollapsed ? "chevron.right" : "chevron.down")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundColor(.secondary)
+                    .padding(.leading, 10)
+                Text(title)
+                    .font(.system(size: 12, weight: .semibold))
+                Spacer()
+                Text("\(count)")
+                    .font(.system(size: 11))
+                    .foregroundColor(.secondary)
+            }
+            .padding(.vertical, 4)
+            .padding(.trailing, 8)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             // Header
@@ -248,39 +304,64 @@ struct LinkListView: View {
             } else if filteredLinks.isEmpty && !searchText.isEmpty {
                 noResultsView
             } else {
+                let groups = groupedLinks(filteredLinks)
                 List {
-                    ForEach(filteredLinks) { link in
-                        LinkRowView(
-                            link: link,
-                            isCopied: copiedLinkId == link.id,
-                            onCopy: {
-                                isSearchFocused = false
-                                linkManager.copyToClipboard(link)
-                                withAnimation {
-                                    copiedLinkId = link.id
+                    ForEach(groups, id: \.folder) { group in
+                        let key = folderKey(group.folder)
+                        let isCollapsed = searchText.isEmpty ? collapsedFolders.contains(key) : false
+                        
+                        Section(header: folderHeaderView(
+                            title: group.folder ?? L.linkNoFolder.localized,
+                            count: group.links.count,
+                            isCollapsed: isCollapsed,
+                            onToggle: {
+                                guard searchText.isEmpty else { return }
+                                if isCollapsed {
+                                    collapsedFolders.remove(key)
+                                } else {
+                                    collapsedFolders.insert(key)
                                 }
-                                // Reset copied state after 1.5 seconds
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                    if copiedLinkId == link.id {
-                                        copiedLinkId = nil
-                                    }
-                                }
-                            },
-                            onOpen: {
-                                isSearchFocused = false
-                                linkManager.openInBrowser(link)
-                            },
-                            onEdit: {
-                                isSearchFocused = false
-                                editingLink = link
-                            },
-                            onDelete: {
-                                isSearchFocused = false
-                                linkManager.deleteLink(link)
                             }
-                        )
+                        )) {
+                            if !isCollapsed {
+                                ForEach(group.links) { link in
+                                    LinkRowView(
+                                        link: link,
+                                        isCopied: copiedLinkId == link.id,
+                                        onCopy: {
+                                            isSearchFocused = false
+                                            linkManager.copyToClipboard(link)
+                                            withAnimation {
+                                                copiedLinkId = link.id
+                                            }
+                                            // Reset copied state after 1.5 seconds
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                                if copiedLinkId == link.id {
+                                                    copiedLinkId = nil
+                                                }
+                                            }
+                                        },
+                                        onOpen: {
+                                            isSearchFocused = false
+                                            linkManager.openInBrowser(link)
+                                        },
+                                        onEdit: {
+                                            isSearchFocused = false
+                                            editingLink = link
+                                        },
+                                        onDelete: {
+                                            isSearchFocused = false
+                                            linkManager.deleteLink(link)
+                                        }
+                                    )
+                                }
+                                .onMove { source, destination in
+                                    guard searchText.isEmpty else { return }
+                                    linkManager.moveLink(in: group.folder, from: source, to: destination)
+                                }
+                            }
+                        }
                     }
-                    .onMove(perform: linkManager.moveLink)
                 }
                 .listStyle(.plain)
             }
@@ -431,4 +512,3 @@ struct LinkRowView: View {
         .contentShape(Rectangle())
     }
 }
-

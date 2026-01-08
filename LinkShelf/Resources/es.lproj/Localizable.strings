@@ -22,8 +22,12 @@
 "link.edit" = "Editar Enlace";
 "link.title" = "Título";
 "link.url" = "URL";
+"link.folder" = "Folder";
 "link.title.placeholder" = "ej., Perfil de LinkedIn";
 "link.url.placeholder" = "https://ejemplo.com";
+"link.folder.placeholder" = "Optional folder";
+"link.no.folder" = "No Folder";
+"link.folder.choose" = "Choose existing folder";
 "button.cancel" = "Cancelar";
 "button.add" = "Agregar";
 "button.save" = "Guardar";

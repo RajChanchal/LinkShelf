@@ -15,6 +15,7 @@ struct AddEditLinkView: View {
     
     @State private var title: String = ""
     @State private var url: String = ""
+    @State private var folder: String = ""
     @State private var errorMessage: String?
     
     init(link: Link? = nil, isPresented: Binding<Bool>) {
@@ -23,6 +24,7 @@ struct AddEditLinkView: View {
         if let link = link {
             _title = State(initialValue: link.title)
             _url = State(initialValue: link.url)
+            _folder = State(initialValue: link.folder ?? "")
         }
     }
     
@@ -72,6 +74,36 @@ struct AddEditLinkView: View {
                             .padding(.top, 2)
                     }
                 }
+                
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(L.linkFolder.localized)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    TextField(L.linkFolderPlaceholder.localized, text: $folder)
+                        .textFieldStyle(.roundedBorder)
+                    
+                    if !linkManager.folderNames.isEmpty {
+                        Menu {
+                            Button(L.linkNoFolder.localized) {
+                                folder = ""
+                            }
+                            ForEach(linkManager.folderNames, id: \.self) { name in
+                                Button(name) {
+                                    folder = name
+                                }
+                            }
+                        } label: {
+                            HStack(spacing: 6) {
+                                Image(systemName: "folder")
+                                Text(L.linkFolderChoose.localized)
+                            }
+                            .font(.system(size: 11))
+                            .foregroundColor(.secondary)
+                        }
+                        .buttonStyle(.plain)
+                        .help(L.linkFolderChoose.localized)
+                    }
+                }
             }
             .padding(.horizontal, 20)
             .padding(.top, 20)
@@ -99,7 +131,7 @@ struct AddEditLinkView: View {
             .padding(.top, 16)
             .padding(.bottom, 20)
         }
-        .frame(width: 400, height: 280)
+        .frame(width: 400, height: 320)
         .onAppear {
             // Focus on title field
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -130,12 +162,11 @@ struct AddEditLinkView: View {
         errorMessage = nil
         
         if let existingLink = link {
-            linkManager.updateLink(existingLink, title: title, url: finalURL)
+            linkManager.updateLink(existingLink, title: title, url: finalURL, folder: folder)
         } else {
-            linkManager.addLink(title: title, url: finalURL)
+            linkManager.addLink(title: title, url: finalURL, folder: folder)
         }
         
         isPresented = false
     }
 }
-

@@ -22,8 +22,12 @@
 "link.edit" = "Modifica Link";
 "link.title" = "Titolo";
 "link.url" = "URL";
+"link.folder" = "Folder";
 "link.title.placeholder" = "es. Profilo LinkedIn";
 "link.url.placeholder" = "https://esempio.com";
+"link.folder.placeholder" = "Optional folder";
+"link.no.folder" = "No Folder";
+"link.folder.choose" = "Choose existing folder";
 "button.cancel" = "Annulla";
 "button.add" = "Aggiungi";
 "button.save" = "Salva";

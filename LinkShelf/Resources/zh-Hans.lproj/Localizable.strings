@@ -22,8 +22,12 @@
 "link.edit" = "编辑链接";
 "link.title" = "标题";
 "link.url" = "URL";
+"link.folder" = "Folder";
 "link.title.placeholder" = "例如：LinkedIn个人资料";
 "link.url.placeholder" = "https://example.com";
+"link.folder.placeholder" = "Optional folder";
+"link.no.folder" = "No Folder";
+"link.folder.choose" = "Choose existing folder";
 "button.cancel" = "取消";
 "button.add" = "添加";
 "button.save" = "保存";

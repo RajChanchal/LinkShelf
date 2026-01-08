@@ -22,8 +22,12 @@
 "link.edit" = "링크 편집";
 "link.title" = "제목";
 "link.url" = "URL";
+"link.folder" = "Folder";
 "link.title.placeholder" = "예: LinkedIn 프로필";
 "link.url.placeholder" = "https://example.com";
+"link.folder.placeholder" = "Optional folder";
+"link.no.folder" = "No Folder";
+"link.folder.choose" = "Choose existing folder";
 "button.cancel" = "취소";
 "button.add" = "추가";
 "button.save" = "저장";

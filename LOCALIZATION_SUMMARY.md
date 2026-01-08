@@ -63,3 +63,4 @@ To test different languages:
 2. Restart the app
 3. UI will automatically use the system language
 
+
