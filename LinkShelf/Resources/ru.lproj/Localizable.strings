@@ -22,8 +22,12 @@
 "link.edit" = "Редактировать Ссылку";
 "link.title" = "Название";
 "link.url" = "URL";
+"link.folder" = "Folder";
 "link.title.placeholder" = "напр. Профиль LinkedIn";
 "link.url.placeholder" = "https://example.com";
+"link.folder.placeholder" = "Optional folder";
+"link.no.folder" = "No Folder";
+"link.folder.choose" = "Choose existing folder";
 "button.cancel" = "Отмена";
 "button.add" = "Добавить";
 "button.save" = "Сохранить";

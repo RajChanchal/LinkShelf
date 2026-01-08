@@ -29,7 +29,14 @@ class SharedLinkStorage {
               let decoded = try? JSONDecoder().decode([Link].self, from: data) else {
             return []
         }
-        return decoded.sorted { $0.order < $1.order }
+        return decoded.sorted { left, right in
+            let leftKey = sortKey(for: left.folder)
+            let rightKey = sortKey(for: right.folder)
+            if leftKey != rightKey {
+                return leftKey < rightKey
+            }
+            return left.order < right.order
+        }
     }
     
     /// Save links to shared storage
@@ -51,8 +58,8 @@ class SharedLinkStorage {
     /// Add a new link to shared storage
     func addLink(title: String, url: String) {
         var links = loadLinks()
-        let newOrder = links.count
-        let newLink = Link(title: title, url: url, order: newOrder)
+        let newOrder = links.filter { $0.folder == nil }.count
+        let newLink = Link(title: title, url: url, order: newOrder, folder: nil)
         links.append(newLink)
         saveLinks(links)
     }
@@ -73,6 +80,10 @@ class SharedLinkStorage {
             url = "https://" + url
         }
         return url.lowercased()
+    }
+    
+    private func sortKey(for folder: String?) -> String {
+        return folder?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() ?? ""
     }
 }
 

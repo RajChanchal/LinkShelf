@@ -22,8 +22,12 @@
 "link.edit" = "リンクを編集";
 "link.title" = "タイトル";
 "link.url" = "URL";
+"link.folder" = "Folder";
 "link.title.placeholder" = "例：LinkedInプロフィール";
 "link.url.placeholder" = "https://example.com";
+"link.folder.placeholder" = "Optional folder";
+"link.no.folder" = "No Folder";
+"link.folder.choose" = "Choose existing folder";
 "button.cancel" = "キャンセル";
 "button.add" = "追加";
 "button.save" = "保存";

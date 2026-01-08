@@ -20,6 +20,7 @@ Just click the menu bar icon, tap the link, and it's copied.
 • **Share Extension** - Add links directly from Safari and other apps
 • **Open in browser** - Optional secondary action to open links
 • **Full management** - Add, edit, delete, and reorder links
+• **Folders** - Group links into folders (optional)
 • **Clean interface** - Distraction-free, native macOS design
 • **Local storage** - All data stored securely on your Mac, no account required
 • **Multi-language** - Supports 10 languages including English, Spanish, French, German, Japanese, Chinese, and more
@@ -64,6 +65,7 @@ LinkShelf is a minimal macOS menu bar app for storing and quickly accessing your
 • Share Extension - Add links directly from Safari and other apps
 • Open in browser - Launch links directly in your default browser
 • Full management - Add, edit, delete, and reorder links
+• Folders - Group links into folders (optional)
 • Local storage - All data stored securely on your Mac
 • Native macOS UI - Beautiful, minimal interface
 • Multi-language support - Available in 10 languages
@@ -81,5 +83,4 @@ LinkShelf is a minimal macOS menu bar app for storing and quickly accessing your
 • Your links remain private
 
 Get started in seconds - just click the menu bar icon and add your links!
-
 

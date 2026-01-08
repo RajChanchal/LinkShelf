@@ -12,13 +12,15 @@ struct Link: Identifiable, Codable, Equatable {
     var title: String
     var url: String
     var order: Int
+    var folder: String?
     var faviconData: Data?
     
-    init(id: UUID = UUID(), title: String, url: String, order: Int = 0, faviconData: Data? = nil) {
+    init(id: UUID = UUID(), title: String, url: String, order: Int = 0, folder: String? = nil, faviconData: Data? = nil) {
         self.id = id
         self.title = title
         self.url = url
         self.order = order
+        self.folder = folder
         self.faviconData = faviconData
     }
     
@@ -31,4 +33,3 @@ struct Link: Identifiable, Codable, Equatable {
         return true
     }
 }
-
