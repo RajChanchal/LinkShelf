@@ -8,6 +8,7 @@
 import Foundation
 import AppKit
 
+///Manager to show icons in front of each url
 class FaviconManager {
     static let shared = FaviconManager()
     
