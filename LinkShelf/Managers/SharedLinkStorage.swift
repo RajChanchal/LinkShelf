@@ -10,12 +10,7 @@ import Foundation
 class SharedLinkStorage {
     static let shared = SharedLinkStorage()
     
-    private let appGroupID = "group.com.chanchalgeek.LinkShelf"
-    private let linksKey = "LinkShelf_Links"
-    
-    private var userDefaults: UserDefaults? {
-        return UserDefaults(suiteName: appGroupID)
-    }
+    private let store: LinkStore = AppGroupLinkStore()
     
     // Notification name for inter-process communication
     static let linksChangedNotification = "com.chanchalgeek.LinkShelf.linksChanged"
@@ -24,11 +19,7 @@ class SharedLinkStorage {
     
     /// Load all links from shared storage
     func loadLinks() -> [Link] {
-        guard let userDefaults = userDefaults,
-              let data = userDefaults.data(forKey: linksKey),
-              let decoded = try? JSONDecoder().decode([Link].self, from: data) else {
-            return []
-        }
+        let decoded = store.loadLinks()
         return decoded.sorted { left, right in
             let leftKey = sortKey(for: left.folder)
             let rightKey = sortKey(for: right.folder)
@@ -41,18 +32,7 @@ class SharedLinkStorage {
     
     /// Save links to shared storage
     func saveLinks(_ links: [Link]) {
-        guard let userDefaults = userDefaults,
-              let encoded = try? JSONEncoder().encode(links) else {
-            return
-        }
-        userDefaults.set(encoded, forKey: linksKey)
-        userDefaults.synchronize()
-        
-        // Post Darwin notification to notify other processes
-        let center = CFNotificationCenterGetDarwinNotifyCenter()
-        let name = CFNotificationName(Self.linksChangedNotification as CFString)
-        CFNotificationCenterPostNotification(center, name, nil, nil, true)
-        print("📢 Posted Darwin notification: \(Self.linksChangedNotification)")
+        store.saveLinks(links)
     }
     
     /// Add a new link to shared storage
@@ -86,6 +66,5 @@ class SharedLinkStorage {
         return folder?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() ?? ""
     }
 }
-
 
 

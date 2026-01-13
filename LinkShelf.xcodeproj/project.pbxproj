@@ -53,6 +53,7 @@
 				"/Localized: Resources/Localizable.strings",
 				Managers/SharedLinkStorage.swift,
 				Models/Link.swift,
+				Stores/LinkStore.swift,
 			);
 			target = 279539882EFB28E7009840EC /* LinkShelfShare */;
 		};

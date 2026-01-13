@@ -13,21 +13,13 @@ import SwiftUI
 class LinkManager: ObservableObject {
     @Published var links: [Link] = []
     
-    private let appGroupID = "group.com.chanchalgeek.LinkShelf"
+    private let store: LinkStore
     private let userDefaults: UserDefaults
-    private let linksKey = "LinkShelf_Links"
     private let hasLaunchedKey = "LinkShelf_HasLaunched"
     
-    init() {
-        // Use App Group UserDefaults for sharing with Share Extension
-        // Fallback to standard UserDefaults if App Group is not available
-        if let appGroupDefaults = UserDefaults(suiteName: appGroupID) {
-            self.userDefaults = appGroupDefaults
-        } else {
-            self.userDefaults = UserDefaults.standard
-        }
-        
-        
+    init(store: LinkStore = AppGroupLinkStore()) {
+        self.store = store
+        self.userDefaults = store.userDefaults
         loadLinks()
         
         // Setup observer for external changes (Share Extension)
@@ -92,24 +84,19 @@ class LinkManager: ObservableObject {
     }
     
     func loadLinks() {
-        if let data = userDefaults.data(forKey: linksKey),
-           let decoded = try? JSONDecoder().decode([Link].self, from: data) {
-            links = decoded.sorted { left, right in
-                let leftKey = sortKey(for: left.folder)
-                let rightKey = sortKey(for: right.folder)
-                if leftKey != rightKey {
-                    return leftKey < rightKey
-                }
-                return left.order < right.order
+        let decoded = store.loadLinks()
+        links = decoded.sorted { left, right in
+            let leftKey = sortKey(for: left.folder)
+            let rightKey = sortKey(for: right.folder)
+            if leftKey != rightKey {
+                return leftKey < rightKey
             }
+            return left.order < right.order
         }
     }
     
     func saveLinks() {
-        if let encoded = try? JSONEncoder().encode(links) {
-            userDefaults.set(encoded, forKey: linksKey)
-            userDefaults.synchronize() // Ensure data is written immediately for Share Extension
-        }
+        store.saveLinks(links)
     }
     
     func addLink(title: String, url: String, folder: String? = nil) {

@@ -10,7 +10,6 @@ import Carbon.HIToolbox
 
 @main
 struct LinkShelfApp: App {
-    @StateObject private var linkManager = LinkManager()
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
