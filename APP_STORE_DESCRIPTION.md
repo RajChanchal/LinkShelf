@@ -1,6 +1,4 @@
-# App Store Description - Updated
-
-## Updated Description (Recommended)
+# App Store Description (English - master copy)
 
 LinkShelf is a simple macOS menu bar app that lets you store frequently used links and copy them instantly with a single click.
 
@@ -20,10 +18,10 @@ Just click the menu bar icon, tap the link, and it's copied.
 • **Share Extension** - Add links directly from Safari and other apps
 • **Open in browser** - Optional secondary action to open links
 • **Full management** - Add, edit, delete, and reorder links
-• **Folders** - Group links into folders (optional)
+• **Folders** - Group links into folders to stay organized
 • **Clean interface** - Distraction-free, native macOS design
 • **Local storage** - All data stored securely on your Mac, no account required
-• **Multi-language** - Supports 10 languages including English, Spanish, French, German, Japanese, Chinese, and more
+• **Multi-language** - Available in 17 languages: English, Spanish, French, German, Japanese, Chinese (Simplified & Traditional), Portuguese (Portugal & Brazil), Italian, Russian, Korean, Dutch, Swedish, Danish, Norwegian, and Finnish
 • **Fast & lightweight** - No bloat, just works
 
 ---
@@ -51,36 +49,5 @@ LinkShelf is intentionally minimal. It focuses on speed, privacy, and convenienc
 
 ---
 
-## Alternative Shorter Version
-
-LinkShelf is a minimal macOS menu bar app for storing and quickly accessing your frequently used links.
-
-**KEY FEATURES:**
-• One-click copy - Copy any link to clipboard instantly
-• Global shortcut - Press Option+Command+L to open LinkShelf instantly
-• Quick access - Access links from your menu bar
-• Visual feedback - See confirmation when links are copied
-• Favicon display - Automatic website icons for easy recognition
-• Search & filter - Find links instantly with real-time search
-• Share Extension - Add links directly from Safari and other apps
-• Open in browser - Launch links directly in your default browser
-• Full management - Add, edit, delete, and reorder links
-• Folders - Group links into folders (optional)
-• Local storage - All data stored securely on your Mac
-• Native macOS UI - Beautiful, minimal interface
-• Multi-language support - Available in 10 languages
-• Fast & lightweight - No bloat, just works
-
-**PERFECT FOR:**
-• Developers sharing GitHub, LinkedIn, Portfolio links
-• Professionals with frequently accessed resources
-• Anyone who wants quick access to important links
-
-**PRIVACY FIRST:**
-• All data stored locally on your device
-• No tracking or analytics
-• No data sent to external servers
-• Your links remain private
-
-Get started in seconds - just click the menu bar icon and add your links!
+Translated versions of this description for all 17 supported App Store Connect locales are in [APP_STORE_DESCRIPTION_LOCALIZED.md](APP_STORE_DESCRIPTION_LOCALIZED.md).
 
