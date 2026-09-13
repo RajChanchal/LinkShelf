@@ -37,6 +37,7 @@ All Share Extension files have been created:
    - `LinkShelfShare/Info.plist` → Check "LinkShelfShare" target
    - `LinkShelfShare/LinkShelfShare.entitlements` → Check "LinkShelfShare" target
    - `LinkShelf/Models/Link.swift` → Check "LinkShelfShare" target (needed by SharedLinkStorage)
+   - `LinkShelf/Stores/LinkStore.swift` → Check "LinkShelfShare" target (shared storage)
    - `LinkShelf/Managers/SharedLinkStorage.swift` → Check "LinkShelfShare" target
 
 ### 4. Add Localization Files to Share Extension
@@ -120,7 +121,6 @@ Verify that `LinkShelfShare/Info.plist` has the correct settings:
 - Data sharing is done via App Group UserDefaults
 - The extension UI uses AppKit (not SwiftUI)
 - The extension automatically closes after saving a link
-
 
 
 
