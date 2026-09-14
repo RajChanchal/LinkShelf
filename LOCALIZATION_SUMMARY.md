@@ -31,12 +31,13 @@ LinkShelf/Resources/Localizable.xcstrings
 
 ## Implementation
 
-- `LocalizedStrings.swift` exposes typed `L10n` keys backed by modern
-  `String(localized:table:bundle:locale:comment:)` lookups.
+- Xcode generates typed `LocalizedStringResource` symbols from manually
+  managed catalog entries. Use them with `String(localized: .linkFolder)`;
+  parameterized entries become generated functions such as
+  `String(localized: .searchNoResultsMessage(query))`.
 - The app and Share extension both package the same localized resources.
-- Use `L.key.formatted(value)` for translated format strings; translators can
-  use positional placeholders such as `%1$@` when a language needs a different
-  argument order.
+- Generated symbols preserve the catalog's parameter metadata, so callers do
+  not need to manually format translated strings.
 - Run `ruby Scripts/verify_localizations.rb` in CI to ensure every locale
   contains every English key.
 

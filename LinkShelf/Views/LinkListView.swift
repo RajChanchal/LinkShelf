@@ -37,11 +37,11 @@ struct LinkListView: View {
             
             // Title
             VStack(spacing: 6) {
-                Text(L.emptyStateTitle.localized)
+                Text(String(localized: .emptyStateTitle))
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(.primary)
                 
-                Text(L.emptyStateMessage.localized)
+                Text(String(localized: .emptyStateMessage))
                     .font(.system(size: 12))
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
@@ -58,7 +58,7 @@ struct LinkListView: View {
                 HStack(spacing: 6) {
                     Image(systemName: "plus.circle.fill")
                         .font(.system(size: 14))
-                    Text(L.addFirstLink.localized)
+                    Text(String(localized: .emptyStateAddFirstLink))
                         .font(.system(size: 13, weight: .medium))
                 }
                 .foregroundColor(.white)
@@ -68,11 +68,11 @@ struct LinkListView: View {
                 .cornerRadius(8)
             }
             .buttonStyle(.plain)
-            .help(L.addFirstLink.localized)
+            .help(String(localized: .emptyStateAddFirstLink))
             
             // Tips
             VStack(alignment: .leading, spacing: 8) {
-                Text(L.quickTips.localized)
+                Text(String(localized: .emptyStateQuickTips))
                     .font(.system(size: 11, weight: .semibold))
                     .foregroundColor(.secondary)
                 
@@ -80,7 +80,7 @@ struct LinkListView: View {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 10))
                         .foregroundColor(.green)
-                    Text(L.tipCopyLinks.localized)
+                    Text(String(localized: .emptyStateTipCopyLinks))
                         .font(.system(size: 10))
                         .foregroundColor(.secondary)
                 }
@@ -89,7 +89,7 @@ struct LinkListView: View {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 10))
                         .foregroundColor(.green)
-                    Text(L.tipOpenLinks.localized)
+                    Text(String(localized: .emptyStateTipOpenLinks))
                         .font(.system(size: 10))
                         .foregroundColor(.secondary)
                 }
@@ -98,7 +98,7 @@ struct LinkListView: View {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 10))
                         .foregroundColor(.green)
-                    Text(L.tipSearchLinks.localized)
+                    Text(String(localized: .emptyStateTipSearchLinks))
                         .font(.system(size: 10))
                         .foregroundColor(.secondary)
                 }
@@ -118,11 +118,11 @@ struct LinkListView: View {
             
             // Title and message
             VStack(spacing: 6) {
-                Text(L.noResultsFound.localized)
+                Text(String(localized: .searchNoResults))
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(.primary)
                 
-                Text(L.noResultsMessage.formatted(searchText))
+                Text(String(localized: .searchNoResultsMessage(searchText)))
                     .font(.system(size: 12))
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
@@ -137,7 +137,7 @@ struct LinkListView: View {
                 HStack(spacing: 6) {
                     Image(systemName: "xmark.circle.fill")
                         .font(.system(size: 12))
-                    Text(L.clearSearch.localized)
+                    Text(String(localized: .searchClear))
                         .font(.system(size: 12, weight: .medium))
                 }
                 .foregroundColor(.secondary)
@@ -147,11 +147,11 @@ struct LinkListView: View {
                 .cornerRadius(6)
             }
             .buttonStyle(.plain)
-            .help(L.clearSearch.localized)
+            .help(String(localized: .searchClear))
             
             // Alternative actions
             VStack(spacing: 8) {
-                Text(L.tryLabel.localized)
+                Text(String(localized: .searchTryLabel))
                     .font(.system(size: 11, weight: .semibold))
                     .foregroundColor(.secondary)
                 
@@ -159,7 +159,7 @@ struct LinkListView: View {
                     Image(systemName: "lightbulb.fill")
                         .font(.system(size: 10))
                         .foregroundColor(.yellow)
-                    Text(L.tryCheckSpelling.localized)
+                    Text(String(localized: .searchTryCheckSpelling))
                         .font(.system(size: 10))
                         .foregroundColor(.secondary)
                 }
@@ -168,7 +168,7 @@ struct LinkListView: View {
                     Image(systemName: "lightbulb.fill")
                         .font(.system(size: 10))
                         .foregroundColor(.yellow)
-                    Text(L.trySearchByTitle.localized)
+                    Text(String(localized: .searchTrySearchByTitle))
                         .font(.system(size: 10))
                         .foregroundColor(.secondary)
                 }
@@ -238,7 +238,7 @@ struct LinkListView: View {
         VStack(spacing: 0) {
             // Header
             HStack {
-                Text(L.appName.localized)
+                Text(String(localized: .appName))
                     .font(.headline)
                     .foregroundColor(.primary)
                 Spacer()
@@ -250,7 +250,7 @@ struct LinkListView: View {
                         .font(.system(size: 14, weight: .medium))
                 }
                 .buttonStyle(.plain)
-                .help(L.addLink.localized)
+                .help(String(localized: .linkAdd))
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
@@ -264,7 +264,7 @@ struct LinkListView: View {
                     .foregroundColor(.secondary)
                     .font(.system(size: 12))
                 
-                TextField(L.searchPlaceholder.localized, text: $searchText)
+                TextField(String(localized: .searchPlaceholder), text: $searchText)
                     .textFieldStyle(.plain)
                     .focused($isSearchFocused)
                     .onSubmit {
@@ -282,7 +282,7 @@ struct LinkListView: View {
                             .font(.system(size: 12))
                     }
                     .buttonStyle(.plain)
-                    .help(L.clearSearch.localized)
+                    .help(String(localized: .searchClear))
                 }
             }
             .padding(.horizontal, 12)
@@ -311,7 +311,7 @@ struct LinkListView: View {
                         let isCollapsed = searchText.isEmpty ? collapsedFolders.contains(key) : false
                         
                         Section(header: folderHeaderView(
-                            title: group.folder ?? L.linkNoFolder.localized,
+                            title: group.folder ?? String(localized: .linkNoFolder),
                             count: group.links.count,
                             isCollapsed: isCollapsed,
                             onToggle: {
@@ -374,7 +374,7 @@ struct LinkListView: View {
                 Button(action: {
                     NSApplication.shared.terminate(nil)
                 }) {
-                    Text(L.quitLinkShelf.localized)
+                    Text(String(localized: .menuQuitLinkshelf))
                         .font(.system(size: 12))
                         .foregroundColor(.secondary)
                 }
@@ -485,7 +485,7 @@ struct LinkRowView: View {
                 }
             }
             .buttonStyle(.plain)
-            .help(isCopied ? L.copied.localized : L.copyToClipboard.localized)
+            .help(String(localized: isCopied ? .actionCopied : .actionCopyToClipboard))
             
             // Open button
             Button(action: onOpen) {
@@ -493,13 +493,13 @@ struct LinkRowView: View {
                     .foregroundColor(.secondary)
             }
             .buttonStyle(.plain)
-            .help(L.openInBrowser.localized)
+            .help(String(localized: .actionOpenInBrowser))
             
             // Menu button
             Menu {
-                Button(L.edit.localized, action: onEdit)
+                Button(String(localized: .buttonEdit), action: onEdit)
                 Divider()
-                Button(L.delete.localized, role: .destructive, action: onDelete)
+                Button(String(localized: .buttonDelete), role: .destructive, action: onDelete)
             } label: {
                 Image(systemName: "ellipsis")
                     .foregroundColor(.secondary)

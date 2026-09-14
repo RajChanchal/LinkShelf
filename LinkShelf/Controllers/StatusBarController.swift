@@ -33,12 +33,12 @@ class StatusBarController: NSObject, ObservableObject, NSPopoverDelegate {
 
         // Setup status bar button
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "link", accessibilityDescription: L.appName.localized)
+            button.image = NSImage(systemSymbolName: "link", accessibilityDescription: String(localized: .appName))
             button.image?.isTemplate = true
             button.action = #selector(togglePopover)
             button.target = self
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
-            button.toolTip = L.shortcutTooltip.localized
+            button.toolTip = String(localized: .shortcutTooltip)
         }
 
         // Setup popover content
@@ -98,7 +98,7 @@ class StatusBarController: NSObject, ObservableObject, NSPopoverDelegate {
         let menu = NSMenu()
         
         // Quit menu item
-        let quitItem = NSMenuItem(title: L.quitLinkShelf.localized, action: #selector(quitApp), keyEquivalent: "q")
+        let quitItem = NSMenuItem(title: String(localized: .menuQuitLinkshelf), action: #selector(quitApp), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
         

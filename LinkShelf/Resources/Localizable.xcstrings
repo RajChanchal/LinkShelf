@@ -2,6 +2,7 @@
   "sourceLanguage": "en",
   "strings": {
     "action.copied": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -108,6 +109,7 @@
       }
     },
     "action.copy.to.clipboard": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -214,6 +216,7 @@
       }
     },
     "action.open.in.browser": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -320,6 +323,7 @@
       }
     },
     "action.quit.app": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -426,6 +430,7 @@
       }
     },
     "app.name": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -532,6 +537,7 @@
       }
     },
     "button.add": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -638,6 +644,7 @@
       }
     },
     "button.cancel": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -744,6 +751,7 @@
       }
     },
     "button.delete": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -850,6 +858,7 @@
       }
     },
     "button.edit": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -956,6 +965,7 @@
       }
     },
     "button.save": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1062,6 +1072,7 @@
       }
     },
     "empty.state.add.first.link": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1168,6 +1179,7 @@
       }
     },
     "empty.state.message": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1274,6 +1286,7 @@
       }
     },
     "empty.state.quick.tips": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1380,6 +1393,7 @@
       }
     },
     "empty.state.tip.copy.links": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1486,6 +1500,7 @@
       }
     },
     "empty.state.tip.open.links": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1592,6 +1607,7 @@
       }
     },
     "empty.state.tip.search.links": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1698,6 +1714,7 @@
       }
     },
     "empty.state.title": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1804,6 +1821,7 @@
       }
     },
     "error.invalid.url": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -1910,6 +1928,7 @@
       }
     },
     "error.title.required": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2016,6 +2035,7 @@
       }
     },
     "error.url.required": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2122,6 +2142,7 @@
       }
     },
     "link.add": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2228,6 +2249,7 @@
       }
     },
     "link.edit": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2334,6 +2356,7 @@
       }
     },
     "link.folder": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2440,6 +2463,7 @@
       }
     },
     "link.folder.choose": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2546,6 +2570,7 @@
       }
     },
     "link.folder.placeholder": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2652,6 +2677,7 @@
       }
     },
     "link.no.folder": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2758,6 +2784,7 @@
       }
     },
     "link.title": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2864,6 +2891,7 @@
       }
     },
     "link.title.placeholder": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -2970,6 +2998,7 @@
       }
     },
     "link.url": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3076,6 +3105,7 @@
       }
     },
     "link.url.placeholder": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3182,6 +3212,7 @@
       }
     },
     "menu.quit.linkshelf": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3288,6 +3319,7 @@
       }
     },
     "search.clear": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3394,6 +3426,7 @@
       }
     },
     "search.no.results": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3500,6 +3533,7 @@
       }
     },
     "search.no.results.message": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3606,6 +3640,7 @@
       }
     },
     "search.placeholder": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3712,6 +3747,7 @@
       }
     },
     "search.try.check.spelling": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3818,6 +3854,7 @@
       }
     },
     "search.try.label": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -3924,6 +3961,7 @@
       }
     },
     "search.try.search.by.title": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4030,6 +4068,7 @@
       }
     },
     "share.extension.add.button": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4136,6 +4175,7 @@
       }
     },
     "share.extension.title": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4242,6 +4282,7 @@
       }
     },
     "share.extension.title.label": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4348,6 +4389,7 @@
       }
     },
     "share.extension.url.exists": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4454,6 +4496,7 @@
       }
     },
     "share.extension.url.label": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4560,6 +4603,7 @@
       }
     },
     "shortcut.intro.button": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4666,6 +4710,7 @@
       }
     },
     "shortcut.intro.message": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4772,6 +4817,7 @@
       }
     },
     "shortcut.intro.title": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
@@ -4878,6 +4924,7 @@
       }
     },
     "shortcut.tooltip": {
+      "extractionState": "manual",
       "localizations": {
         "da": {
           "stringUnit": {
