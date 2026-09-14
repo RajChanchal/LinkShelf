@@ -7,11 +7,6 @@
 
 import Foundation
 
-// Convenience function for localization
-func NSLocalizedString(_ key: String, comment: String) -> String {
-    return Foundation.NSLocalizedString(key, comment: comment)
-}
-
 // Localized string keys
 enum L10n: String {
     // App name
@@ -80,7 +75,19 @@ enum L10n: String {
     case shortcutIntroButton = "shortcut.intro.button"
     
     var localized: String {
-        return NSLocalizedString(self.rawValue, comment: "")
+        String(
+            localized: String.LocalizationValue(rawValue),
+            table: "Localizable",
+            bundle: .main,
+            locale: .current,
+            comment: ""
+        )
+    }
+
+    /// Formats a translated string while honoring the user's current locale.
+    /// Translation entries may use positional placeholders such as `%1$@`.
+    func formatted(_ arguments: CVarArg...) -> String {
+        String(format: localized, locale: .current, arguments: arguments)
     }
 }
 

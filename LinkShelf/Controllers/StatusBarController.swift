@@ -33,7 +33,7 @@ class StatusBarController: NSObject, ObservableObject, NSPopoverDelegate {
 
         // Setup status bar button
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "link", accessibilityDescription: "LinkShelf")
+            button.image = NSImage(systemSymbolName: "link", accessibilityDescription: L.appName.localized)
             button.image?.isTemplate = true
             button.action = #selector(togglePopover)
             button.target = self

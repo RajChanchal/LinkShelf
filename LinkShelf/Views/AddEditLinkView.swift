@@ -131,7 +131,8 @@ struct AddEditLinkView: View {
             .padding(.top, 16)
             .padding(.bottom, 20)
         }
-        .frame(width: 400, height: 320)
+        // Let longer localized labels grow vertically instead of being clipped.
+        .frame(width: 400)
         .onAppear {
             // Focus on title field
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

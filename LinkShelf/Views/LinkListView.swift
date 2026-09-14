@@ -122,7 +122,7 @@ struct LinkListView: View {
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundColor(.primary)
                 
-                Text(L.noResultsMessage.localized.replacingOccurrences(of: "%@", with: searchText))
+                Text(L.noResultsMessage.formatted(searchText))
                     .font(.system(size: 12))
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)

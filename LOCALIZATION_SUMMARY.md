@@ -31,10 +31,14 @@ LinkShelf/Resources/{language}.lproj/Localizable.strings
 
 ## Implementation
 
-- Created `LocalizedStrings.swift` helper with `L10n` enum
-- All user-facing strings use `L.key.localized`
-- Type-safe localization with enum keys
-- Easy to add more languages by creating new `.lproj` folders
+- `LocalizedStrings.swift` exposes typed `L10n` keys backed by modern
+  `String(localized:table:bundle:locale:comment:)` lookups.
+- The app and Share extension both package the same localized resources.
+- Use `L.key.formatted(value)` for translated format strings; translators can
+  use positional placeholders such as `%1$@` when a language needs a different
+  argument order.
+- Run `ruby Scripts/verify_localizations.rb` in CI to ensure every locale
+  contains every English key.
 
 ## How to Add More Languages
 
@@ -59,8 +63,8 @@ All strings are localized including:
 ## Testing Localization
 
 To test different languages:
-1. Change system language in macOS Settings
-2. Restart the app
-3. UI will automatically use the system language
-
+1. Change the app language in Xcode’s scheme, or change the system language in
+   macOS Settings.
+2. Launch both the app and the Share extension.
+3. Check long button labels and the no-results message as well as the main UI.
 
