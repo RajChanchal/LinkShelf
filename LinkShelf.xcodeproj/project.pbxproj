@@ -50,9 +50,9 @@
 		2795399D2EFB29DD009840EC /* Exceptions for "LinkShelf" folder in "LinkShelfShare" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"/Localized: Resources/Localizable.strings",
 				Managers/SharedLinkStorage.swift,
 				Models/Link.swift,
+				Resources/Localizable.xcstrings,
 				Stores/LinkStore.swift,
 			);
 			target = 279539882EFB28E7009840EC /* LinkShelfShare */;

@@ -104,10 +104,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             NSApp.activate(ignoringOtherApps: true)
             let alert = NSAlert()
-            alert.messageText = L.shortcutIntroTitle.localized
-            alert.informativeText = L.shortcutIntroMessage.localized
+            alert.messageText = String(localized: .shortcutIntroTitle)
+            alert.informativeText = String(localized: .shortcutIntroMessage)
             alert.alertStyle = .informational
-            alert.addButton(withTitle: L.shortcutIntroButton.localized)
+            alert.addButton(withTitle: String(localized: .shortcutIntroButton))
             alert.runModal()
         }
     }

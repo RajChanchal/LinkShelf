@@ -225,12 +225,6 @@ class ShareViewController: NSViewController {
     private func setupUI() {
         view.subviews.forEach { $0.removeFromSuperview() }
         
-        // Helper for localized strings
-        func L(_ key: String, _ fallback: String) -> String {
-            let localized = NSLocalizedString(key, comment: "")
-            return localized == key ? fallback : localized
-        }
-        
         // Main container with padding
         let containerView = NSView()
         containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -244,14 +238,14 @@ class ShareViewController: NSViewController {
         ])
         
         // Title label
-        let titleLabel = NSTextField(labelWithString: L("share.extension.title.label", "Title"))
+        let titleLabel = NSTextField(labelWithString: String(localized: "share.extension.title.label", defaultValue: "Title", table: "Localizable", bundle: .main, comment: "Label for the shared link title."))
         titleLabel.font = .systemFont(ofSize: 13, weight: .medium)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(titleLabel)
         
         // Title text field
         let titleField = NSTextField()
-        titleField.placeholderString = L("link.title.placeholder", "e.g., LinkedIn Profile")
+        titleField.placeholderString = String(localized: "link.title.placeholder", defaultValue: "e.g., LinkedIn Profile", table: "Localizable", bundle: .main, comment: "Example link title.")
         titleField.font = .systemFont(ofSize: 13)
         titleField.isBordered = true
         titleField.bezelStyle = .roundedBezel
@@ -260,7 +254,7 @@ class ShareViewController: NSViewController {
         containerView.addSubview(titleField)
         
         // URL label
-        let urlLabel = NSTextField(labelWithString: L("share.extension.url.label", "URL"))
+        let urlLabel = NSTextField(labelWithString: String(localized: "share.extension.url.label", defaultValue: "URL", table: "Localizable", bundle: .main, comment: "Label for the shared link URL."))
         urlLabel.font = .systemFont(ofSize: 13, weight: .medium)
         urlLabel.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(urlLabel)
@@ -288,7 +282,7 @@ class ShareViewController: NSViewController {
         
         // Cancel button
         let cancelBtn = NSButton()
-        cancelBtn.title = L("button.cancel", "Cancel")
+        cancelBtn.title = String(localized: "button.cancel", defaultValue: "Cancel", table: "Localizable", bundle: .main, comment: "Cancels sharing a link.")
         cancelBtn.bezelStyle = .rounded
         cancelBtn.keyEquivalent = "\u{1b}"
         cancelBtn.translatesAutoresizingMaskIntoConstraints = false
@@ -299,7 +293,7 @@ class ShareViewController: NSViewController {
         
         // Add button
         let addBtn = NSButton()
-        addBtn.title = L("share.extension.add.button", "Add to LinkShelf")
+        addBtn.title = String(localized: "share.extension.add.button", defaultValue: "Add to LinkShelf", table: "Localizable", bundle: .main, comment: "Saves the shared link.")
         addBtn.bezelStyle = .rounded
         addBtn.keyEquivalent = "\r"
         addBtn.isHighlighted = true
@@ -341,12 +335,12 @@ class ShareViewController: NSViewController {
             // Buttons
             cancelBtn.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
             cancelBtn.trailingAnchor.constraint(equalTo: addBtn.leadingAnchor, constant: -10),
-            cancelBtn.widthAnchor.constraint(equalToConstant: 80),
+            cancelBtn.widthAnchor.constraint(greaterThanOrEqualToConstant: 80),
             cancelBtn.heightAnchor.constraint(equalToConstant: 32),
             
             addBtn.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
             addBtn.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            addBtn.widthAnchor.constraint(equalToConstant: 140),
+            addBtn.widthAnchor.constraint(greaterThanOrEqualToConstant: 140),
             addBtn.heightAnchor.constraint(equalToConstant: 32)
         ])
     }
@@ -382,7 +376,14 @@ class ShareViewController: NSViewController {
         
         // Check for duplicate
         if SharedLinkStorage.shared.linkExists(url: finalURL) {
-            warningLabel.stringValue = NSLocalizedString("share.extension.url.exists", comment: "⚠️ This URL already exists in LinkShelf")
+            warningLabel.stringValue = String(
+                localized: "share.extension.url.exists",
+                defaultValue: "⚠️ This URL already exists in LinkShelf",
+                table: "Localizable",
+                bundle: .main,
+                locale: .current,
+                comment: "Shown when the shared URL is already saved."
+            )
             warningLabel.isHidden = false
         } else {
             warningLabel.isHidden = true

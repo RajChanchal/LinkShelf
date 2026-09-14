@@ -32,7 +32,7 @@ struct AddEditLinkView: View {
         VStack(spacing: 0) {
             // Header
             HStack {
-                Text(link == nil ? L.addLink.localized : L.editLink.localized)
+                Text(String(localized: link == nil ? .linkAdd : .linkEdit))
                     .font(.headline)
                 Spacer()
                 Button(action: {
@@ -53,18 +53,18 @@ struct AddEditLinkView: View {
             // Form
             VStack(alignment: .leading, spacing: 16) {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(L.linkTitle.localized)
+                    Text(String(localized: .linkTitle))
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                    TextField(L.linkTitlePlaceholder.localized, text: $title)
+                    TextField(String(localized: .linkTitlePlaceholder), text: $title)
                         .textFieldStyle(.roundedBorder)
                 }
                 
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(L.linkURL.localized)
+                    Text(String(localized: .linkUrl))
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                    TextField(L.linkURLPlaceholder.localized, text: $url)
+                    TextField(String(localized: .linkUrlPlaceholder), text: $url)
                         .textFieldStyle(.roundedBorder)
                     
                     if let errorMessage = errorMessage {
@@ -76,15 +76,15 @@ struct AddEditLinkView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(L.linkFolder.localized)
+                    Text(String(localized: .linkFolder))
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                    TextField(L.linkFolderPlaceholder.localized, text: $folder)
+                    TextField(String(localized: .linkFolderPlaceholder), text: $folder)
                         .textFieldStyle(.roundedBorder)
                     
                     if !linkManager.folderNames.isEmpty {
                         Menu {
-                            Button(L.linkNoFolder.localized) {
+                            Button(String(localized: .linkNoFolder)) {
                                 folder = ""
                             }
                             ForEach(linkManager.folderNames, id: \.self) { name in
@@ -95,13 +95,13 @@ struct AddEditLinkView: View {
                         } label: {
                             HStack(spacing: 6) {
                                 Image(systemName: "folder")
-                                Text(L.linkFolderChoose.localized)
+                                Text(String(localized: .linkFolderChoose))
                             }
                             .font(.system(size: 11))
                             .foregroundColor(.secondary)
                         }
                         .buttonStyle(.plain)
-                        .help(L.linkFolderChoose.localized)
+                        .help(String(localized: .linkFolderChoose))
                     }
                 }
             }
@@ -113,14 +113,14 @@ struct AddEditLinkView: View {
             
             // Buttons
             HStack(spacing: 12) {
-                Button(L.cancel.localized) {
+                Button(String(localized: .buttonCancel)) {
                     isPresented = false
                 }
                 .keyboardShortcut(.cancelAction)
                 
                 Spacer()
                 
-                Button(link == nil ? L.add.localized : L.save.localized) {
+                Button(String(localized: link == nil ? .buttonAdd : .buttonSave)) {
                     saveLink()
                 }
                 .keyboardShortcut(.defaultAction)
@@ -131,7 +131,8 @@ struct AddEditLinkView: View {
             .padding(.top, 16)
             .padding(.bottom, 20)
         }
-        .frame(width: 400, height: 320)
+        // Let longer localized labels grow vertically instead of being clipped.
+        .frame(width: 400)
         .onAppear {
             // Focus on title field
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -143,7 +144,7 @@ struct AddEditLinkView: View {
     private func saveLink() {
         // Validate URL
         guard !title.isEmpty, !url.isEmpty else {
-            errorMessage = L.errorTitleRequired.localized
+            errorMessage = String(localized: .errorTitleRequired)
             return
         }
         
@@ -155,7 +156,7 @@ struct AddEditLinkView: View {
         
         // Basic URL validation
         guard URL(string: finalURL) != nil else {
-            errorMessage = L.errorInvalidURL.localized
+            errorMessage = String(localized: .errorInvalidUrl)
             return
         }
         
