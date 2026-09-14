@@ -22,11 +22,11 @@ LinkShelf now supports **17 languages**:
 16. **Norwegian Bokmål (nb)** - Norsk Bokmål
 17. **Finnish (fi)** - Suomi
 
-## Localization Files
+## String Catalog
 
-All localization files are located in:
+All translations live in the Xcode String Catalog:
 ```
-LinkShelf/Resources/{language}.lproj/Localizable.strings
+LinkShelf/Resources/Localizable.xcstrings
 ```
 
 ## Implementation
@@ -42,10 +42,10 @@ LinkShelf/Resources/{language}.lproj/Localizable.strings
 
 ## How to Add More Languages
 
-1. Create a new folder: `LinkShelf/Resources/{language-code}.lproj/`
-2. Copy `Localizable.strings` from `en.lproj`
-3. Translate all strings
-4. Add language to Xcode project settings
+1. Open `Localizable.xcstrings` in Xcode.
+2. Add the language from the catalog inspector.
+3. Translate the catalog entries.
+4. Run `ruby Scripts/verify_localizations.rb`.
 
 ## Localized Strings
 
@@ -67,4 +67,3 @@ To test different languages:
    macOS Settings.
 2. Launch both the app and the Share extension.
 3. Check long button labels and the no-results message as well as the main UI.
-

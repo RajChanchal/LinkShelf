@@ -4,23 +4,25 @@
 # Fails when any supported locale is missing a key that exists in English.
 # Run with: ruby Scripts/verify_localizations.rb
 
-def entries(path)
-  File.read(path).scan(/^\s*"((?:\\.|[^\"])*)"\s*=\s*"/).flatten.to_set
-end
-
 require "set"
+require "json"
 
 root = File.expand_path("..", __dir__)
-base_path = File.join(root, "LinkShelf/Resources/en.lproj/Localizable.strings")
-base = entries(base_path)
+catalog_path = File.join(root, "LinkShelf/Resources/Localizable.xcstrings")
+catalog = JSON.parse(File.read(catalog_path))
+strings = catalog.fetch("strings")
+base = strings.select { |_key, entry| entry.dig("localizations", "en", "stringUnit", "value") }.keys.to_set
+locales = strings.values.flat_map { |entry| entry.fetch("localizations", {}).keys }.uniq.sort
 failed = false
 
-Dir.glob(File.join(root, "LinkShelf/Resources/*.lproj/Localizable.strings")).sort.each do |path|
-  missing = base - entries(path)
+locales.each do |locale|
+  translated = strings.each_with_object(Set.new) do |(key, entry), result|
+    result << key if entry.dig("localizations", locale, "stringUnit", "value")
+  end
+  missing = base - translated
   next if missing.empty?
 
   failed = true
-  locale = File.basename(File.dirname(path), ".lproj")
   warn "#{locale}: missing #{missing.to_a.sort.join(", ")}" 
 end
 
