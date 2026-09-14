@@ -1,2 +1,4988 @@
-
-{"sourceLanguage":"en","strings":{"action.copied":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Copied!"}},"de":{"stringUnit":{"state":"translated","value":"Kopiert!"}},"en":{"stringUnit":{"state":"translated","value":"Copied!"}},"es":{"stringUnit":{"state":"translated","value":"¡Copiado!"}},"fi":{"stringUnit":{"state":"translated","value":"Copied!"}},"fr":{"stringUnit":{"state":"translated","value":"Copié !"}},"it":{"stringUnit":{"state":"translated","value":"Copiato!"}},"ja":{"stringUnit":{"state":"translated","value":"コピーしました！"}},"ko":{"stringUnit":{"state":"translated","value":"복사됨!"}},"nb":{"stringUnit":{"state":"translated","value":"Copied!"}},"nl":{"stringUnit":{"state":"translated","value":"Copied!"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Copied!"}},"pt":{"stringUnit":{"state":"translated","value":"Copiado!"}},"ru":{"stringUnit":{"state":"translated","value":"Скопировано!"}},"sv":{"stringUnit":{"state":"translated","value":"Copied!"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"已复制！"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Copied!"}}}},"action.copy.to.clipboard":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Copy to clipboard"}},"de":{"stringUnit":{"state":"translated","value":"In Zwischenablage kopieren"}},"en":{"stringUnit":{"state":"translated","value":"Copy to clipboard"}},"es":{"stringUnit":{"state":"translated","value":"Copiar al portapapeles"}},"fi":{"stringUnit":{"state":"translated","value":"Copy to clipboard"}},"fr":{"stringUnit":{"state":"translated","value":"Copier dans le presse-papiers"}},"it":{"stringUnit":{"state":"translated","value":"Copia negli appunti"}},"ja":{"stringUnit":{"state":"translated","value":"クリップボードにコピー"}},"ko":{"stringUnit":{"state":"translated","value":"클립보드에 복사"}},"nb":{"stringUnit":{"state":"translated","value":"Copy to clipboard"}},"nl":{"stringUnit":{"state":"translated","value":"Copy to clipboard"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Copy to clipboard"}},"pt":{"stringUnit":{"state":"translated","value":"Copiar para área de transferência"}},"ru":{"stringUnit":{"state":"translated","value":"Копировать в буфер обмена"}},"sv":{"stringUnit":{"state":"translated","value":"Copy to clipboard"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"复制到剪贴板"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Copy to clipboard"}}}},"action.open.in.browser":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Open in browser"}},"de":{"stringUnit":{"state":"translated","value":"Im Browser öffnen"}},"en":{"stringUnit":{"state":"translated","value":"Open in browser"}},"es":{"stringUnit":{"state":"translated","value":"Abrir en navegador"}},"fi":{"stringUnit":{"state":"translated","value":"Open in browser"}},"fr":{"stringUnit":{"state":"translated","value":"Ouvrir dans le navigateur"}},"it":{"stringUnit":{"state":"translated","value":"Apri nel browser"}},"ja":{"stringUnit":{"state":"translated","value":"ブラウザで開く"}},"ko":{"stringUnit":{"state":"translated","value":"브라우저에서 열기"}},"nb":{"stringUnit":{"state":"translated","value":"Open in browser"}},"nl":{"stringUnit":{"state":"translated","value":"Open in browser"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Open in browser"}},"pt":{"stringUnit":{"state":"translated","value":"Abrir no navegador"}},"ru":{"stringUnit":{"state":"translated","value":"Открыть в браузере"}},"sv":{"stringUnit":{"state":"translated","value":"Open in browser"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"在浏览器中打开"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Open in browser"}}}},"action.quit.app":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"de":{"stringUnit":{"state":"translated","value":"LinkShelf Beenden"}},"en":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"es":{"stringUnit":{"state":"translated","value":"Salir de LinkShelf"}},"fi":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"fr":{"stringUnit":{"state":"translated","value":"Quitter LinkShelf"}},"it":{"stringUnit":{"state":"translated","value":"Esci da LinkShelf"}},"ja":{"stringUnit":{"state":"translated","value":"LinkShelfを終了"}},"ko":{"stringUnit":{"state":"translated","value":"LinkShelf 종료"}},"nb":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"nl":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"pt":{"stringUnit":{"state":"translated","value":"Sair do LinkShelf"}},"ru":{"stringUnit":{"state":"translated","value":"Выйти из LinkShelf"}},"sv":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"退出LinkShelf"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}}}},"app.name":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"de":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"en":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"es":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"fi":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"fr":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"it":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"ja":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"ko":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"nb":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"nl":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"pt-BR":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"pt":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"ru":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"sv":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"LinkShelf"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"LinkShelf"}}}},"button.add":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Add"}},"de":{"stringUnit":{"state":"translated","value":"Hinzufügen"}},"en":{"stringUnit":{"state":"translated","value":"Add"}},"es":{"stringUnit":{"state":"translated","value":"Agregar"}},"fi":{"stringUnit":{"state":"translated","value":"Add"}},"fr":{"stringUnit":{"state":"translated","value":"Ajouter"}},"it":{"stringUnit":{"state":"translated","value":"Aggiungi"}},"ja":{"stringUnit":{"state":"translated","value":"追加"}},"ko":{"stringUnit":{"state":"translated","value":"추가"}},"nb":{"stringUnit":{"state":"translated","value":"Add"}},"nl":{"stringUnit":{"state":"translated","value":"Add"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Add"}},"pt":{"stringUnit":{"state":"translated","value":"Adicionar"}},"ru":{"stringUnit":{"state":"translated","value":"Добавить"}},"sv":{"stringUnit":{"state":"translated","value":"Add"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"添加"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Add"}}}},"button.cancel":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Cancel"}},"de":{"stringUnit":{"state":"translated","value":"Abbrechen"}},"en":{"stringUnit":{"state":"translated","value":"Cancel"}},"es":{"stringUnit":{"state":"translated","value":"Cancelar"}},"fi":{"stringUnit":{"state":"translated","value":"Cancel"}},"fr":{"stringUnit":{"state":"translated","value":"Annuler"}},"it":{"stringUnit":{"state":"translated","value":"Annulla"}},"ja":{"stringUnit":{"state":"translated","value":"キャンセル"}},"ko":{"stringUnit":{"state":"translated","value":"취소"}},"nb":{"stringUnit":{"state":"translated","value":"Cancel"}},"nl":{"stringUnit":{"state":"translated","value":"Cancel"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Cancel"}},"pt":{"stringUnit":{"state":"translated","value":"Cancelar"}},"ru":{"stringUnit":{"state":"translated","value":"Отмена"}},"sv":{"stringUnit":{"state":"translated","value":"Cancel"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"取消"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Cancel"}}}},"button.delete":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Delete"}},"de":{"stringUnit":{"state":"translated","value":"Löschen"}},"en":{"stringUnit":{"state":"translated","value":"Delete"}},"es":{"stringUnit":{"state":"translated","value":"Eliminar"}},"fi":{"stringUnit":{"state":"translated","value":"Delete"}},"fr":{"stringUnit":{"state":"translated","value":"Supprimer"}},"it":{"stringUnit":{"state":"translated","value":"Elimina"}},"ja":{"stringUnit":{"state":"translated","value":"削除"}},"ko":{"stringUnit":{"state":"translated","value":"삭제"}},"nb":{"stringUnit":{"state":"translated","value":"Delete"}},"nl":{"stringUnit":{"state":"translated","value":"Delete"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Delete"}},"pt":{"stringUnit":{"state":"translated","value":"Excluir"}},"ru":{"stringUnit":{"state":"translated","value":"Удалить"}},"sv":{"stringUnit":{"state":"translated","value":"Delete"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"删除"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Delete"}}}},"button.edit":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Edit"}},"de":{"stringUnit":{"state":"translated","value":"Bearbeiten"}},"en":{"stringUnit":{"state":"translated","value":"Edit"}},"es":{"stringUnit":{"state":"translated","value":"Editar"}},"fi":{"stringUnit":{"state":"translated","value":"Edit"}},"fr":{"stringUnit":{"state":"translated","value":"Modifier"}},"it":{"stringUnit":{"state":"translated","value":"Modifica"}},"ja":{"stringUnit":{"state":"translated","value":"編集"}},"ko":{"stringUnit":{"state":"translated","value":"편집"}},"nb":{"stringUnit":{"state":"translated","value":"Edit"}},"nl":{"stringUnit":{"state":"translated","value":"Edit"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Edit"}},"pt":{"stringUnit":{"state":"translated","value":"Editar"}},"ru":{"stringUnit":{"state":"translated","value":"Редактировать"}},"sv":{"stringUnit":{"state":"translated","value":"Edit"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"编辑"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Edit"}}}},"button.save":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Save"}},"de":{"stringUnit":{"state":"translated","value":"Speichern"}},"en":{"stringUnit":{"state":"translated","value":"Save"}},"es":{"stringUnit":{"state":"translated","value":"Guardar"}},"fi":{"stringUnit":{"state":"translated","value":"Save"}},"fr":{"stringUnit":{"state":"translated","value":"Enregistrer"}},"it":{"stringUnit":{"state":"translated","value":"Salva"}},"ja":{"stringUnit":{"state":"translated","value":"保存"}},"ko":{"stringUnit":{"state":"translated","value":"저장"}},"nb":{"stringUnit":{"state":"translated","value":"Save"}},"nl":{"stringUnit":{"state":"translated","value":"Save"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Save"}},"pt":{"stringUnit":{"state":"translated","value":"Salvar"}},"ru":{"stringUnit":{"state":"translated","value":"Сохранить"}},"sv":{"stringUnit":{"state":"translated","value":"Save"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"保存"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Save"}}}},"empty.state.add.first.link":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Add Your First Link"}},"de":{"stringUnit":{"state":"translated","value":"Ihren Ersten Link Hinzufügen"}},"en":{"stringUnit":{"state":"translated","value":"Add Your First Link"}},"es":{"stringUnit":{"state":"translated","value":"Agregar Tu Primer Enlace"}},"fi":{"stringUnit":{"state":"translated","value":"Add Your First Link"}},"fr":{"stringUnit":{"state":"translated","value":"Ajouter Votre Premier Lien"}},"it":{"stringUnit":{"state":"translated","value":"Aggiungi il Tuo Primo Link"}},"ja":{"stringUnit":{"state":"translated","value":"最初のリンクを追加"}},"ko":{"stringUnit":{"state":"translated","value":"첫 번째 링크 추가"}},"nb":{"stringUnit":{"state":"translated","value":"Add Your First Link"}},"nl":{"stringUnit":{"state":"translated","value":"Add Your First Link"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Add Your First Link"}},"pt":{"stringUnit":{"state":"translated","value":"Adicionar Seu Primeiro Link"}},"ru":{"stringUnit":{"state":"translated","value":"Добавить Первую Ссылку"}},"sv":{"stringUnit":{"state":"translated","value":"Add Your First Link"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"添加您的第一个链接"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Add Your First Link"}}}},"empty.state.message":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Start building your collection of frequently used links"}},"de":{"stringUnit":{"state":"translated","value":"Beginnen Sie, Ihre Sammlung häufig verwendeter Links zu erstellen"}},"en":{"stringUnit":{"state":"translated","value":"Start building your collection of frequently used links"}},"es":{"stringUnit":{"state":"translated","value":"Comienza a construir tu colección de enlaces frecuentemente usados"}},"fi":{"stringUnit":{"state":"translated","value":"Start building your collection of frequently used links"}},"fr":{"stringUnit":{"state":"translated","value":"Commencez à créer votre collection de liens fréquemment utilisés"}},"it":{"stringUnit":{"state":"translated","value":"Inizia a creare la tua collezione di link usati frequentemente"}},"ja":{"stringUnit":{"state":"translated","value":"よく使うリンクのコレクションを作り始めましょう"}},"ko":{"stringUnit":{"state":"translated","value":"자주 사용하는 링크 컬렉션을 만들기 시작하세요"}},"nb":{"stringUnit":{"state":"translated","value":"Start building your collection of frequently used links"}},"nl":{"stringUnit":{"state":"translated","value":"Start building your collection of frequently used links"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Start building your collection of frequently used links"}},"pt":{"stringUnit":{"state":"translated","value":"Comece a construir sua coleção de links frequentemente usados"}},"ru":{"stringUnit":{"state":"translated","value":"Начните создавать коллекцию часто используемых ссылок"}},"sv":{"stringUnit":{"state":"translated","value":"Start building your collection of frequently used links"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"开始构建您常用链接的收藏"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Start building your collection of frequently used links"}}}},"empty.state.quick.tips":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Quick Tips:"}},"de":{"stringUnit":{"state":"translated","value":"Schnelle Tipps:"}},"en":{"stringUnit":{"state":"translated","value":"Quick Tips:"}},"es":{"stringUnit":{"state":"translated","value":"Consejos Rápidos:"}},"fi":{"stringUnit":{"state":"translated","value":"Quick Tips:"}},"fr":{"stringUnit":{"state":"translated","value":"Conseils Rapides :"}},"it":{"stringUnit":{"state":"translated","value":"Suggerimenti Rapidi:"}},"ja":{"stringUnit":{"state":"translated","value":"クイックヒント："}},"ko":{"stringUnit":{"state":"translated","value":"빠른 팁:"}},"nb":{"stringUnit":{"state":"translated","value":"Quick Tips:"}},"nl":{"stringUnit":{"state":"translated","value":"Quick Tips:"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Quick Tips:"}},"pt":{"stringUnit":{"state":"translated","value":"Dicas Rápidas:"}},"ru":{"stringUnit":{"state":"translated","value":"Быстрые Советы:"}},"sv":{"stringUnit":{"state":"translated","value":"Quick Tips:"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"快速提示："}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Quick Tips:"}}}},"empty.state.tip.copy.links":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Copy links to clipboard with one click"}},"de":{"stringUnit":{"state":"translated","value":"Links mit einem Klick in die Zwischenablage kopieren"}},"en":{"stringUnit":{"state":"translated","value":"Copy links to clipboard with one click"}},"es":{"stringUnit":{"state":"translated","value":"Copia enlaces al portapapeles con un clic"}},"fi":{"stringUnit":{"state":"translated","value":"Copy links to clipboard with one click"}},"fr":{"stringUnit":{"state":"translated","value":"Copiez les liens dans le presse-papiers en un clic"}},"it":{"stringUnit":{"state":"translated","value":"Copia i link negli appunti con un clic"}},"ja":{"stringUnit":{"state":"translated","value":"ワンクリックでリンクをクリップボードにコピー"}},"ko":{"stringUnit":{"state":"translated","value":"원클릭으로 링크를 클립보드에 복사"}},"nb":{"stringUnit":{"state":"translated","value":"Copy links to clipboard with one click"}},"nl":{"stringUnit":{"state":"translated","value":"Copy links to clipboard with one click"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Copy links to clipboard with one click"}},"pt":{"stringUnit":{"state":"translated","value":"Copie links para a área de transferência com um clique"}},"ru":{"stringUnit":{"state":"translated","value":"Копируйте ссылки в буфер обмена одним кликом"}},"sv":{"stringUnit":{"state":"translated","value":"Copy links to clipboard with one click"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"一键将链接复制到剪贴板"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Copy links to clipboard with one click"}}}},"empty.state.tip.open.links":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Open links directly in your browser"}},"de":{"stringUnit":{"state":"translated","value":"Links direkt in Ihrem Browser öffnen"}},"en":{"stringUnit":{"state":"translated","value":"Open links directly in your browser"}},"es":{"stringUnit":{"state":"translated","value":"Abre enlaces directamente en tu navegador"}},"fi":{"stringUnit":{"state":"translated","value":"Open links directly in your browser"}},"fr":{"stringUnit":{"state":"translated","value":"Ouvrez les liens directement dans votre navigateur"}},"it":{"stringUnit":{"state":"translated","value":"Apri i link direttamente nel tuo browser"}},"ja":{"stringUnit":{"state":"translated","value":"リンクをブラウザで直接開く"}},"ko":{"stringUnit":{"state":"translated","value":"링크를 브라우저에서 직접 열기"}},"nb":{"stringUnit":{"state":"translated","value":"Open links directly in your browser"}},"nl":{"stringUnit":{"state":"translated","value":"Open links directly in your browser"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Open links directly in your browser"}},"pt":{"stringUnit":{"state":"translated","value":"Abra links diretamente no seu navegador"}},"ru":{"stringUnit":{"state":"translated","value":"Открывайте ссылки прямо в браузере"}},"sv":{"stringUnit":{"state":"translated","value":"Open links directly in your browser"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"直接在浏览器中打开链接"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Open links directly in your browser"}}}},"empty.state.tip.search.links":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Search and filter your links instantly"}},"de":{"stringUnit":{"state":"translated","value":"Ihre Links sofort durchsuchen und filtern"}},"en":{"stringUnit":{"state":"translated","value":"Search and filter your links instantly"}},"es":{"stringUnit":{"state":"translated","value":"Busca y filtra tus enlaces al instante"}},"fi":{"stringUnit":{"state":"translated","value":"Search and filter your links instantly"}},"fr":{"stringUnit":{"state":"translated","value":"Recherchez et filtrez vos liens instantanément"}},"it":{"stringUnit":{"state":"translated","value":"Cerca e filtra i tuoi link istantaneamente"}},"ja":{"stringUnit":{"state":"translated","value":"リンクを瞬時に検索・フィルタ"}},"ko":{"stringUnit":{"state":"translated","value":"링크를 즉시 검색 및 필터링"}},"nb":{"stringUnit":{"state":"translated","value":"Search and filter your links instantly"}},"nl":{"stringUnit":{"state":"translated","value":"Search and filter your links instantly"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Search and filter your links instantly"}},"pt":{"stringUnit":{"state":"translated","value":"Pesquise e filtre seus links instantaneamente"}},"ru":{"stringUnit":{"state":"translated","value":"Мгновенно ищите и фильтруйте ссылки"}},"sv":{"stringUnit":{"state":"translated","value":"Search and filter your links instantly"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"即时搜索和筛选您的链接"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Search and filter your links instantly"}}}},"empty.state.title":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Your Link Shelf is Empty"}},"de":{"stringUnit":{"state":"translated","value":"Ihr Link-Regal ist Leer"}},"en":{"stringUnit":{"state":"translated","value":"Your Link Shelf is Empty"}},"es":{"stringUnit":{"state":"translated","value":"Tu Estante de Enlaces está Vacío"}},"fi":{"stringUnit":{"state":"translated","value":"Your Link Shelf is Empty"}},"fr":{"stringUnit":{"state":"translated","value":"Votre Étagère de Liens est Vide"}},"it":{"stringUnit":{"state":"translated","value":"La Tua Mensola dei Link è Vuota"}},"ja":{"stringUnit":{"state":"translated","value":"リンク棚が空です"}},"ko":{"stringUnit":{"state":"translated","value":"링크 선반이 비어 있습니다"}},"nb":{"stringUnit":{"state":"translated","value":"Your Link Shelf is Empty"}},"nl":{"stringUnit":{"state":"translated","value":"Your Link Shelf is Empty"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Your Link Shelf is Empty"}},"pt":{"stringUnit":{"state":"translated","value":"Sua Estante de Links está Vazia"}},"ru":{"stringUnit":{"state":"translated","value":"Ваша Полка Ссылок Пуста"}},"sv":{"stringUnit":{"state":"translated","value":"Your Link Shelf is Empty"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"您的链接架是空的"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Your Link Shelf is Empty"}}}},"error.invalid.url":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Please enter a valid URL"}},"de":{"stringUnit":{"state":"translated","value":"Bitte geben Sie eine gültige URL ein"}},"en":{"stringUnit":{"state":"translated","value":"Please enter a valid URL"}},"es":{"stringUnit":{"state":"translated","value":"Por favor ingresa una URL válida"}},"fi":{"stringUnit":{"state":"translated","value":"Please enter a valid URL"}},"fr":{"stringUnit":{"state":"translated","value":"Veuillez entrer une URL valide"}},"it":{"stringUnit":{"state":"translated","value":"Inserisci un URL valido"}},"ja":{"stringUnit":{"state":"translated","value":"有効なURLを入力してください"}},"ko":{"stringUnit":{"state":"translated","value":"유효한 URL을 입력하세요"}},"nb":{"stringUnit":{"state":"translated","value":"Please enter a valid URL"}},"nl":{"stringUnit":{"state":"translated","value":"Please enter a valid URL"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Please enter a valid URL"}},"pt":{"stringUnit":{"state":"translated","value":"Por favor, insira uma URL válida"}},"ru":{"stringUnit":{"state":"translated","value":"Пожалуйста, введите действительный URL"}},"sv":{"stringUnit":{"state":"translated","value":"Please enter a valid URL"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"请输入有效的URL"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Please enter a valid URL"}}}},"error.title.required":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"de":{"stringUnit":{"state":"translated","value":"Titel und URL sind erforderlich"}},"en":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"es":{"stringUnit":{"state":"translated","value":"El título y la URL son requeridos"}},"fi":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"fr":{"stringUnit":{"state":"translated","value":"Le titre et l'URL sont requis"}},"it":{"stringUnit":{"state":"translated","value":"Titolo e URL sono obbligatori"}},"ja":{"stringUnit":{"state":"translated","value":"タイトルとURLが必要です"}},"ko":{"stringUnit":{"state":"translated","value":"제목과 URL이 필요합니다"}},"nb":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"nl":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"pt":{"stringUnit":{"state":"translated","value":"Título e URL são obrigatórios"}},"ru":{"stringUnit":{"state":"translated","value":"Название и URL обязательны"}},"sv":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"标题和URL是必需的"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Title and URL are required"}}}},"error.url.required":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"de":{"stringUnit":{"state":"translated","value":"Titel und URL sind erforderlich"}},"en":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"es":{"stringUnit":{"state":"translated","value":"El título y la URL son requeridos"}},"fi":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"fr":{"stringUnit":{"state":"translated","value":"Le titre et l'URL sont requis"}},"it":{"stringUnit":{"state":"translated","value":"Titolo e URL sono obbligatori"}},"ja":{"stringUnit":{"state":"translated","value":"タイトルとURLが必要です"}},"ko":{"stringUnit":{"state":"translated","value":"제목과 URL이 필요합니다"}},"nb":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"nl":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"pt":{"stringUnit":{"state":"translated","value":"Título e URL são obrigatórios"}},"ru":{"stringUnit":{"state":"translated","value":"Название и URL обязательны"}},"sv":{"stringUnit":{"state":"translated","value":"Title and URL are required"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"标题和URL是必需的"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Title and URL are required"}}}},"link.add":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Add Link"}},"de":{"stringUnit":{"state":"translated","value":"Link Hinzufügen"}},"en":{"stringUnit":{"state":"translated","value":"Add Link"}},"es":{"stringUnit":{"state":"translated","value":"Agregar Enlace"}},"fi":{"stringUnit":{"state":"translated","value":"Add Link"}},"fr":{"stringUnit":{"state":"translated","value":"Ajouter un Lien"}},"it":{"stringUnit":{"state":"translated","value":"Aggiungi Link"}},"ja":{"stringUnit":{"state":"translated","value":"リンクを追加"}},"ko":{"stringUnit":{"state":"translated","value":"링크 추가"}},"nb":{"stringUnit":{"state":"translated","value":"Add Link"}},"nl":{"stringUnit":{"state":"translated","value":"Add Link"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Add Link"}},"pt":{"stringUnit":{"state":"translated","value":"Adicionar Link"}},"ru":{"stringUnit":{"state":"translated","value":"Добавить Ссылку"}},"sv":{"stringUnit":{"state":"translated","value":"Add Link"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"添加链接"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Add Link"}}}},"link.edit":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Edit Link"}},"de":{"stringUnit":{"state":"translated","value":"Link Bearbeiten"}},"en":{"stringUnit":{"state":"translated","value":"Edit Link"}},"es":{"stringUnit":{"state":"translated","value":"Editar Enlace"}},"fi":{"stringUnit":{"state":"translated","value":"Edit Link"}},"fr":{"stringUnit":{"state":"translated","value":"Modifier le Lien"}},"it":{"stringUnit":{"state":"translated","value":"Modifica Link"}},"ja":{"stringUnit":{"state":"translated","value":"リンクを編集"}},"ko":{"stringUnit":{"state":"translated","value":"링크 편집"}},"nb":{"stringUnit":{"state":"translated","value":"Edit Link"}},"nl":{"stringUnit":{"state":"translated","value":"Edit Link"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Edit Link"}},"pt":{"stringUnit":{"state":"translated","value":"Editar Link"}},"ru":{"stringUnit":{"state":"translated","value":"Редактировать Ссылку"}},"sv":{"stringUnit":{"state":"translated","value":"Edit Link"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"编辑链接"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Edit Link"}}}},"link.folder":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Mappe"}},"de":{"stringUnit":{"state":"translated","value":"Ordner"}},"en":{"stringUnit":{"state":"translated","value":"Folder"}},"es":{"stringUnit":{"state":"translated","value":"Carpeta"}},"fi":{"stringUnit":{"state":"translated","value":"Kansio"}},"fr":{"stringUnit":{"state":"translated","value":"Dossier"}},"it":{"stringUnit":{"state":"translated","value":"Cartella"}},"ja":{"stringUnit":{"state":"translated","value":"フォルダ"}},"ko":{"stringUnit":{"state":"translated","value":"폴더"}},"nb":{"stringUnit":{"state":"translated","value":"Mappe"}},"nl":{"stringUnit":{"state":"translated","value":"Map"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Pasta"}},"pt":{"stringUnit":{"state":"translated","value":"Pasta"}},"ru":{"stringUnit":{"state":"translated","value":"Папка"}},"sv":{"stringUnit":{"state":"translated","value":"Mapp"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"文件夹"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"資料夾"}}}},"link.folder.choose":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Vælg eksisterende mappe"}},"de":{"stringUnit":{"state":"translated","value":"Vorhandenen Ordner auswählen"}},"en":{"stringUnit":{"state":"translated","value":"Choose existing folder"}},"es":{"stringUnit":{"state":"translated","value":"Elegir carpeta existente"}},"fi":{"stringUnit":{"state":"translated","value":"Valitse olemassa oleva kansio"}},"fr":{"stringUnit":{"state":"translated","value":"Choisir un dossier existant"}},"it":{"stringUnit":{"state":"translated","value":"Scegli una cartella esistente"}},"ja":{"stringUnit":{"state":"translated","value":"既存のフォルダを選択"}},"ko":{"stringUnit":{"state":"translated","value":"기존 폴더 선택"}},"nb":{"stringUnit":{"state":"translated","value":"Velg eksisterende mappe"}},"nl":{"stringUnit":{"state":"translated","value":"Kies bestaande map"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Escolher pasta existente"}},"pt":{"stringUnit":{"state":"translated","value":"Escolher pasta existente"}},"ru":{"stringUnit":{"state":"translated","value":"Выбрать существующую папку"}},"sv":{"stringUnit":{"state":"translated","value":"Välj befintlig mapp"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"选择现有文件夹"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"選擇現有資料夾"}}}},"link.folder.placeholder":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Valgfri mappe"}},"de":{"stringUnit":{"state":"translated","value":"Optionaler Ordner"}},"en":{"stringUnit":{"state":"translated","value":"Optional folder"}},"es":{"stringUnit":{"state":"translated","value":"Carpeta opcional"}},"fi":{"stringUnit":{"state":"translated","value":"Valinnainen kansio"}},"fr":{"stringUnit":{"state":"translated","value":"Dossier facultatif"}},"it":{"stringUnit":{"state":"translated","value":"Cartella facoltativa"}},"ja":{"stringUnit":{"state":"translated","value":"任意のフォルダ"}},"ko":{"stringUnit":{"state":"translated","value":"선택 사항 폴더"}},"nb":{"stringUnit":{"state":"translated","value":"Valgfri mappe"}},"nl":{"stringUnit":{"state":"translated","value":"Optionele map"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Pasta opcional"}},"pt":{"stringUnit":{"state":"translated","value":"Pasta opcional"}},"ru":{"stringUnit":{"state":"translated","value":"Необязательная папка"}},"sv":{"stringUnit":{"state":"translated","value":"Valfri mapp"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"可选文件夹"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"選填資料夾"}}}},"link.no.folder":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Ingen mappe"}},"de":{"stringUnit":{"state":"translated","value":"Kein Ordner"}},"en":{"stringUnit":{"state":"translated","value":"No Folder"}},"es":{"stringUnit":{"state":"translated","value":"Sin carpeta"}},"fi":{"stringUnit":{"state":"translated","value":"Ei kansiota"}},"fr":{"stringUnit":{"state":"translated","value":"Aucun dossier"}},"it":{"stringUnit":{"state":"translated","value":"Nessuna cartella"}},"ja":{"stringUnit":{"state":"translated","value":"フォルダなし"}},"ko":{"stringUnit":{"state":"translated","value":"폴더 없음"}},"nb":{"stringUnit":{"state":"translated","value":"Ingen mappe"}},"nl":{"stringUnit":{"state":"translated","value":"Geen map"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Sem pasta"}},"pt":{"stringUnit":{"state":"translated","value":"Sem pasta"}},"ru":{"stringUnit":{"state":"translated","value":"Без папки"}},"sv":{"stringUnit":{"state":"translated","value":"Ingen mapp"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"无文件夹"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"無資料夾"}}}},"link.title":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Title"}},"de":{"stringUnit":{"state":"translated","value":"Titel"}},"en":{"stringUnit":{"state":"translated","value":"Title"}},"es":{"stringUnit":{"state":"translated","value":"Título"}},"fi":{"stringUnit":{"state":"translated","value":"Title"}},"fr":{"stringUnit":{"state":"translated","value":"Titre"}},"it":{"stringUnit":{"state":"translated","value":"Titolo"}},"ja":{"stringUnit":{"state":"translated","value":"タイトル"}},"ko":{"stringUnit":{"state":"translated","value":"제목"}},"nb":{"stringUnit":{"state":"translated","value":"Title"}},"nl":{"stringUnit":{"state":"translated","value":"Title"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Title"}},"pt":{"stringUnit":{"state":"translated","value":"Título"}},"ru":{"stringUnit":{"state":"translated","value":"Название"}},"sv":{"stringUnit":{"state":"translated","value":"Title"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"标题"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Title"}}}},"link.title.placeholder":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"e.g., LinkedIn Profile"}},"de":{"stringUnit":{"state":"translated","value":"z.B. LinkedIn-Profil"}},"en":{"stringUnit":{"state":"translated","value":"e.g., LinkedIn Profile"}},"es":{"stringUnit":{"state":"translated","value":"ej., Perfil de LinkedIn"}},"fi":{"stringUnit":{"state":"translated","value":"e.g., LinkedIn Profile"}},"fr":{"stringUnit":{"state":"translated","value":"ex. : Profil LinkedIn"}},"it":{"stringUnit":{"state":"translated","value":"es. Profilo LinkedIn"}},"ja":{"stringUnit":{"state":"translated","value":"例：LinkedInプロフィール"}},"ko":{"stringUnit":{"state":"translated","value":"예: LinkedIn 프로필"}},"nb":{"stringUnit":{"state":"translated","value":"e.g., LinkedIn Profile"}},"nl":{"stringUnit":{"state":"translated","value":"e.g., LinkedIn Profile"}},"pt-BR":{"stringUnit":{"state":"translated","value":"e.g., LinkedIn Profile"}},"pt":{"stringUnit":{"state":"translated","value":"ex.: Perfil do LinkedIn"}},"ru":{"stringUnit":{"state":"translated","value":"напр. Профиль LinkedIn"}},"sv":{"stringUnit":{"state":"translated","value":"e.g., LinkedIn Profile"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"例如：LinkedIn个人资料"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"e.g., LinkedIn Profile"}}}},"link.url":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"URL"}},"de":{"stringUnit":{"state":"translated","value":"URL"}},"en":{"stringUnit":{"state":"translated","value":"URL"}},"es":{"stringUnit":{"state":"translated","value":"URL"}},"fi":{"stringUnit":{"state":"translated","value":"URL"}},"fr":{"stringUnit":{"state":"translated","value":"URL"}},"it":{"stringUnit":{"state":"translated","value":"URL"}},"ja":{"stringUnit":{"state":"translated","value":"URL"}},"ko":{"stringUnit":{"state":"translated","value":"URL"}},"nb":{"stringUnit":{"state":"translated","value":"URL"}},"nl":{"stringUnit":{"state":"translated","value":"URL"}},"pt-BR":{"stringUnit":{"state":"translated","value":"URL"}},"pt":{"stringUnit":{"state":"translated","value":"URL"}},"ru":{"stringUnit":{"state":"translated","value":"URL"}},"sv":{"stringUnit":{"state":"translated","value":"URL"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"URL"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"URL"}}}},"link.url.placeholder":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"https://example.com"}},"de":{"stringUnit":{"state":"translated","value":"https://beispiel.com"}},"en":{"stringUnit":{"state":"translated","value":"https://example.com"}},"es":{"stringUnit":{"state":"translated","value":"https://ejemplo.com"}},"fi":{"stringUnit":{"state":"translated","value":"https://example.com"}},"fr":{"stringUnit":{"state":"translated","value":"https://exemple.com"}},"it":{"stringUnit":{"state":"translated","value":"https://esempio.com"}},"ja":{"stringUnit":{"state":"translated","value":"https://example.com"}},"ko":{"stringUnit":{"state":"translated","value":"https://example.com"}},"nb":{"stringUnit":{"state":"translated","value":"https://example.com"}},"nl":{"stringUnit":{"state":"translated","value":"https://example.com"}},"pt-BR":{"stringUnit":{"state":"translated","value":"https://example.com"}},"pt":{"stringUnit":{"state":"translated","value":"https://exemplo.com"}},"ru":{"stringUnit":{"state":"translated","value":"https://example.com"}},"sv":{"stringUnit":{"state":"translated","value":"https://example.com"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"https://example.com"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"https://example.com"}}}},"menu.quit.linkshelf":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"de":{"stringUnit":{"state":"translated","value":"LinkShelf Beenden"}},"en":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"es":{"stringUnit":{"state":"translated","value":"Salir de LinkShelf"}},"fi":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"fr":{"stringUnit":{"state":"translated","value":"Quitter LinkShelf"}},"it":{"stringUnit":{"state":"translated","value":"Esci da LinkShelf"}},"ja":{"stringUnit":{"state":"translated","value":"LinkShelfを終了"}},"ko":{"stringUnit":{"state":"translated","value":"LinkShelf 종료"}},"nb":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"nl":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"pt":{"stringUnit":{"state":"translated","value":"Sair do LinkShelf"}},"ru":{"stringUnit":{"state":"translated","value":"Выйти из LinkShelf"}},"sv":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"退出LinkShelf"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Quit LinkShelf"}}}},"search.clear":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Clear Search"}},"de":{"stringUnit":{"state":"translated","value":"Suche Löschen"}},"en":{"stringUnit":{"state":"translated","value":"Clear Search"}},"es":{"stringUnit":{"state":"translated","value":"Limpiar Búsqueda"}},"fi":{"stringUnit":{"state":"translated","value":"Clear Search"}},"fr":{"stringUnit":{"state":"translated","value":"Effacer la Recherche"}},"it":{"stringUnit":{"state":"translated","value":"Cancella Ricerca"}},"ja":{"stringUnit":{"state":"translated","value":"検索をクリア"}},"ko":{"stringUnit":{"state":"translated","value":"검색 지우기"}},"nb":{"stringUnit":{"state":"translated","value":"Clear Search"}},"nl":{"stringUnit":{"state":"translated","value":"Clear Search"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Clear Search"}},"pt":{"stringUnit":{"state":"translated","value":"Limpar Pesquisa"}},"ru":{"stringUnit":{"state":"translated","value":"Очистить Поиск"}},"sv":{"stringUnit":{"state":"translated","value":"Clear Search"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"清除搜索"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Clear Search"}}}},"search.no.results":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"No Results Found"}},"de":{"stringUnit":{"state":"translated","value":"Keine Ergebnisse Gefunden"}},"en":{"stringUnit":{"state":"translated","value":"No Results Found"}},"es":{"stringUnit":{"state":"translated","value":"No se Encontraron Resultados"}},"fi":{"stringUnit":{"state":"translated","value":"No Results Found"}},"fr":{"stringUnit":{"state":"translated","value":"Aucun Résultat Trouvé"}},"it":{"stringUnit":{"state":"translated","value":"Nessun Risultato Trovato"}},"ja":{"stringUnit":{"state":"translated","value":"結果が見つかりません"}},"ko":{"stringUnit":{"state":"translated","value":"결과를 찾을 수 없음"}},"nb":{"stringUnit":{"state":"translated","value":"No Results Found"}},"nl":{"stringUnit":{"state":"translated","value":"No Results Found"}},"pt-BR":{"stringUnit":{"state":"translated","value":"No Results Found"}},"pt":{"stringUnit":{"state":"translated","value":"Nenhum Resultado Encontrado"}},"ru":{"stringUnit":{"state":"translated","value":"Результаты Не Найдены"}},"sv":{"stringUnit":{"state":"translated","value":"No Results Found"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"未找到结果"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"No Results Found"}}}},"search.no.results.message":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"No links match \"%@\""}},"de":{"stringUnit":{"state":"translated","value":"Keine Links entsprechen \"%@\""}},"en":{"stringUnit":{"state":"translated","value":"No links match \"%@\""}},"es":{"stringUnit":{"state":"translated","value":"Ningún enlace coincide con \"%@\""}},"fi":{"stringUnit":{"state":"translated","value":"No links match \"%@\""}},"fr":{"stringUnit":{"state":"translated","value":"Aucun lien ne correspond à \"%@\""}},"it":{"stringUnit":{"state":"translated","value":"Nessun link corrisponde a \"%@\""}},"ja":{"stringUnit":{"state":"translated","value":"\"%@\" に一致するリンクがありません"}},"ko":{"stringUnit":{"state":"translated","value":"\"%@\"와 일치하는 링크가 없습니다"}},"nb":{"stringUnit":{"state":"translated","value":"No links match \"%@\""}},"nl":{"stringUnit":{"state":"translated","value":"No links match \"%@\""}},"pt-BR":{"stringUnit":{"state":"translated","value":"No links match \"%@\""}},"pt":{"stringUnit":{"state":"translated","value":"Nenhum link corresponde a \"%@\""}},"ru":{"stringUnit":{"state":"translated","value":"Нет ссылок, соответствующих \"%@\""}},"sv":{"stringUnit":{"state":"translated","value":"No links match \"%@\""}},"zh-Hans":{"stringUnit":{"state":"translated","value":"没有链接匹配 \"%@\""}},"zh-Hant":{"stringUnit":{"state":"translated","value":"No links match \"%@\""}}}},"search.placeholder":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Search links..."}},"de":{"stringUnit":{"state":"translated","value":"Links suchen..."}},"en":{"stringUnit":{"state":"translated","value":"Search links..."}},"es":{"stringUnit":{"state":"translated","value":"Buscar enlaces..."}},"fi":{"stringUnit":{"state":"translated","value":"Search links..."}},"fr":{"stringUnit":{"state":"translated","value":"Rechercher des liens..."}},"it":{"stringUnit":{"state":"translated","value":"Cerca link..."}},"ja":{"stringUnit":{"state":"translated","value":"リンクを検索..."}},"ko":{"stringUnit":{"state":"translated","value":"링크 검색..."}},"nb":{"stringUnit":{"state":"translated","value":"Search links..."}},"nl":{"stringUnit":{"state":"translated","value":"Search links..."}},"pt-BR":{"stringUnit":{"state":"translated","value":"Search links..."}},"pt":{"stringUnit":{"state":"translated","value":"Pesquisar links..."}},"ru":{"stringUnit":{"state":"translated","value":"Поиск ссылок..."}},"sv":{"stringUnit":{"state":"translated","value":"Search links..."}},"zh-Hans":{"stringUnit":{"state":"translated","value":"搜索链接..."}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Search links..."}}}},"search.try.check.spelling":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Check your spelling"}},"de":{"stringUnit":{"state":"translated","value":"Rechtschreibung überprüfen"}},"en":{"stringUnit":{"state":"translated","value":"Check your spelling"}},"es":{"stringUnit":{"state":"translated","value":"Revisa la ortografía"}},"fi":{"stringUnit":{"state":"translated","value":"Check your spelling"}},"fr":{"stringUnit":{"state":"translated","value":"Vérifiez l'orthographe"}},"it":{"stringUnit":{"state":"translated","value":"Controlla l'ortografia"}},"ja":{"stringUnit":{"state":"translated","value":"スペルを確認"}},"ko":{"stringUnit":{"state":"translated","value":"철자 확인"}},"nb":{"stringUnit":{"state":"translated","value":"Check your spelling"}},"nl":{"stringUnit":{"state":"translated","value":"Check your spelling"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Check your spelling"}},"pt":{"stringUnit":{"state":"translated","value":"Verifique a ortografia"}},"ru":{"stringUnit":{"state":"translated","value":"Проверьте правописание"}},"sv":{"stringUnit":{"state":"translated","value":"Check your spelling"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"检查拼写"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Check your spelling"}}}},"search.try.label":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Try:"}},"de":{"stringUnit":{"state":"translated","value":"Versuchen Sie:"}},"en":{"stringUnit":{"state":"translated","value":"Try:"}},"es":{"stringUnit":{"state":"translated","value":"Intenta:"}},"fi":{"stringUnit":{"state":"translated","value":"Try:"}},"fr":{"stringUnit":{"state":"translated","value":"Essayez :"}},"it":{"stringUnit":{"state":"translated","value":"Prova:"}},"ja":{"stringUnit":{"state":"translated","value":"試してください："}},"ko":{"stringUnit":{"state":"translated","value":"시도:"}},"nb":{"stringUnit":{"state":"translated","value":"Try:"}},"nl":{"stringUnit":{"state":"translated","value":"Try:"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Try:"}},"pt":{"stringUnit":{"state":"translated","value":"Tente:"}},"ru":{"stringUnit":{"state":"translated","value":"Попробуйте:"}},"sv":{"stringUnit":{"state":"translated","value":"Try:"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"尝试："}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Try:"}}}},"search.try.search.by.title":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Search by title or URL"}},"de":{"stringUnit":{"state":"translated","value":"Nach Titel oder URL suchen"}},"en":{"stringUnit":{"state":"translated","value":"Search by title or URL"}},"es":{"stringUnit":{"state":"translated","value":"Buscar por título o URL"}},"fi":{"stringUnit":{"state":"translated","value":"Search by title or URL"}},"fr":{"stringUnit":{"state":"translated","value":"Rechercher par titre ou URL"}},"it":{"stringUnit":{"state":"translated","value":"Cerca per titolo o URL"}},"ja":{"stringUnit":{"state":"translated","value":"タイトルまたはURLで検索"}},"ko":{"stringUnit":{"state":"translated","value":"제목 또는 URL로 검색"}},"nb":{"stringUnit":{"state":"translated","value":"Search by title or URL"}},"nl":{"stringUnit":{"state":"translated","value":"Search by title or URL"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Search by title or URL"}},"pt":{"stringUnit":{"state":"translated","value":"Pesquisar por título ou URL"}},"ru":{"stringUnit":{"state":"translated","value":"Искать по названию или URL"}},"sv":{"stringUnit":{"state":"translated","value":"Search by title or URL"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"按标题或URL搜索"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Search by title or URL"}}}},"share.extension.add.button":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"de":{"stringUnit":{"state":"translated","value":"Zu LinkShelf Hinzufügen"}},"en":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"es":{"stringUnit":{"state":"translated","value":"Agregar a LinkShelf"}},"fi":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"fr":{"stringUnit":{"state":"translated","value":"Ajouter à LinkShelf"}},"it":{"stringUnit":{"state":"translated","value":"Aggiungi a LinkShelf"}},"ja":{"stringUnit":{"state":"translated","value":"LinkShelfに追加"}},"ko":{"stringUnit":{"state":"translated","value":"LinkShelf에 추가"}},"nb":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"nl":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"pt":{"stringUnit":{"state":"translated","value":"Adicionar ao LinkShelf"}},"ru":{"stringUnit":{"state":"translated","value":"Добавить в LinkShelf"}},"sv":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"添加到LinkShelf"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}}}},"share.extension.title":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"de":{"stringUnit":{"state":"translated","value":"Zu LinkShelf Hinzufügen"}},"en":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"es":{"stringUnit":{"state":"translated","value":"Agregar a LinkShelf"}},"fi":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"fr":{"stringUnit":{"state":"translated","value":"Ajouter à LinkShelf"}},"it":{"stringUnit":{"state":"translated","value":"Aggiungi a LinkShelf"}},"ja":{"stringUnit":{"state":"translated","value":"LinkShelfに追加"}},"ko":{"stringUnit":{"state":"translated","value":"LinkShelf에 추가"}},"nb":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"nl":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"pt":{"stringUnit":{"state":"translated","value":"Adicionar ao LinkShelf"}},"ru":{"stringUnit":{"state":"translated","value":"Добавить в LinkShelf"}},"sv":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"添加到LinkShelf"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Add to LinkShelf"}}}},"share.extension.title.label":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Title"}},"de":{"stringUnit":{"state":"translated","value":"Titel"}},"en":{"stringUnit":{"state":"translated","value":"Title"}},"es":{"stringUnit":{"state":"translated","value":"Título"}},"fi":{"stringUnit":{"state":"translated","value":"Title"}},"fr":{"stringUnit":{"state":"translated","value":"Titre"}},"it":{"stringUnit":{"state":"translated","value":"Titolo"}},"ja":{"stringUnit":{"state":"translated","value":"タイトル"}},"ko":{"stringUnit":{"state":"translated","value":"제목"}},"nb":{"stringUnit":{"state":"translated","value":"Title"}},"nl":{"stringUnit":{"state":"translated","value":"Title"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Title"}},"pt":{"stringUnit":{"state":"translated","value":"Título"}},"ru":{"stringUnit":{"state":"translated","value":"Название"}},"sv":{"stringUnit":{"state":"translated","value":"Title"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"标题"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Title"}}}},"share.extension.url.exists":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"⚠️ This URL already exists in LinkShelf"}},"de":{"stringUnit":{"state":"translated","value":"⚠️ Diese URL existiert bereits in LinkShelf"}},"en":{"stringUnit":{"state":"translated","value":"⚠️ This URL already exists in LinkShelf"}},"es":{"stringUnit":{"state":"translated","value":"⚠️ Esta URL ya existe en LinkShelf"}},"fi":{"stringUnit":{"state":"translated","value":"⚠️ This URL already exists in LinkShelf"}},"fr":{"stringUnit":{"state":"translated","value":"⚠️ Cette URL existe déjà dans LinkShelf"}},"it":{"stringUnit":{"state":"translated","value":"⚠️ Questo URL esiste già in LinkShelf"}},"ja":{"stringUnit":{"state":"translated","value":"⚠️ このURLは既にLinkShelfに存在します"}},"ko":{"stringUnit":{"state":"translated","value":"⚠️ 이 URL이 이미 LinkShelf에 존재합니다"}},"nb":{"stringUnit":{"state":"translated","value":"⚠️ This URL already exists in LinkShelf"}},"nl":{"stringUnit":{"state":"translated","value":"⚠️ This URL already exists in LinkShelf"}},"pt-BR":{"stringUnit":{"state":"translated","value":"⚠️ This URL already exists in LinkShelf"}},"pt":{"stringUnit":{"state":"translated","value":"⚠️ Esta URL já existe no LinkShelf"}},"ru":{"stringUnit":{"state":"translated","value":"⚠️ Эта ссылка уже существует в LinkShelf"}},"sv":{"stringUnit":{"state":"translated","value":"⚠️ This URL already exists in LinkShelf"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"⚠️ 此URL已存在于LinkShelf中"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"⚠️ This URL already exists in LinkShelf"}}}},"share.extension.url.label":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"URL"}},"de":{"stringUnit":{"state":"translated","value":"URL"}},"en":{"stringUnit":{"state":"translated","value":"URL"}},"es":{"stringUnit":{"state":"translated","value":"URL"}},"fi":{"stringUnit":{"state":"translated","value":"URL"}},"fr":{"stringUnit":{"state":"translated","value":"URL"}},"it":{"stringUnit":{"state":"translated","value":"URL"}},"ja":{"stringUnit":{"state":"translated","value":"URL"}},"ko":{"stringUnit":{"state":"translated","value":"URL"}},"nb":{"stringUnit":{"state":"translated","value":"URL"}},"nl":{"stringUnit":{"state":"translated","value":"URL"}},"pt-BR":{"stringUnit":{"state":"translated","value":"URL"}},"pt":{"stringUnit":{"state":"translated","value":"URL"}},"ru":{"stringUnit":{"state":"translated","value":"URL"}},"sv":{"stringUnit":{"state":"translated","value":"URL"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"URL"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"URL"}}}},"shortcut.intro.button":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Got it"}},"de":{"stringUnit":{"state":"translated","value":"Got it"}},"en":{"stringUnit":{"state":"translated","value":"Got it"}},"es":{"stringUnit":{"state":"translated","value":"Got it"}},"fi":{"stringUnit":{"state":"translated","value":"Got it"}},"fr":{"stringUnit":{"state":"translated","value":"Got it"}},"it":{"stringUnit":{"state":"translated","value":"Got it"}},"ja":{"stringUnit":{"state":"translated","value":"Got it"}},"ko":{"stringUnit":{"state":"translated","value":"Got it"}},"nb":{"stringUnit":{"state":"translated","value":"Got it"}},"nl":{"stringUnit":{"state":"translated","value":"Got it"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Got it"}},"pt":{"stringUnit":{"state":"translated","value":"Got it"}},"ru":{"stringUnit":{"state":"translated","value":"Got it"}},"sv":{"stringUnit":{"state":"translated","value":"Got it"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"Got it"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Got it"}}}},"shortcut.intro.message":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"de":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"en":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"es":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"fi":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"fr":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"it":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"ja":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"ko":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"nb":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"nl":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"pt-BR":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"pt":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"ru":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"sv":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"zh-Hans":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Press ⌥⌘L anytime to open LinkShelf from the menu bar."}}}},"shortcut.intro.title":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"de":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"en":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"es":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"fi":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"fr":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"it":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"ja":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"ko":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"nb":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"nl":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"pt-BR":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"pt":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"ru":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"sv":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"Quick open shortcut"}}}},"shortcut.tooltip":{"localizations":{"da":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"de":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"en":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"es":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"fi":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"fr":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"it":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"ja":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"ko":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"nb":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"nl":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"pt-BR":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"pt":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"ru":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"sv":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"zh-Hans":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}},"zh-Hant":{"stringUnit":{"state":"translated","value":"LinkShelf — press ⌥⌘L to open"}}}}},"version":"1.0"}
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "action.copied": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopieret!"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiert!"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copied!"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¡Copiado!"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopioitu!"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copié !"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiato!"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コピーしました！"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "복사됨!"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiert!"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gekopieerd!"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiado!"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiado!"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скопировано!"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopierat!"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已复制！"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已複製！"
+          }
+        }
+      }
+    },
+    "action.copy.to.clipboard": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiér til udklipsholder"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Zwischenablage kopieren"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy to clipboard"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar al portapapeles"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopioi leikepöydälle"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copier dans le presse-papiers"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia negli appunti"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クリップボードにコピー"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "클립보드에 복사"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopier til utklippstavlen"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiëren naar klembord"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar para a área de transferência"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar para área de transferência"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Копировать в буфер обмена"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiera till urklipp"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复制到剪贴板"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "複製到剪貼簿"
+          }
+        }
+      }
+    },
+    "action.open.in.browser": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Åbn i browser"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Im Browser öffnen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open in browser"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir en navegador"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avaa selaimessa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir dans le navigateur"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri nel browser"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブラウザで開く"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "브라우저에서 열기"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Åpne i nettleser"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Openen in browser"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir no navegador"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir no navegador"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Открыть в браузере"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Öppna i webbläsaren"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在浏览器中打开"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在瀏覽器中開啟"
+          }
+        }
+      }
+    },
+    "action.quit.app": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afslut LinkShelf"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf Beenden"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit LinkShelf"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salir de LinkShelf"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sulje LinkShelf"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitter LinkShelf"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esci da LinkShelf"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelfを終了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf 종료"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avslutt LinkShelf"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf afsluiten"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair do LinkShelf"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair do LinkShelf"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выйти из LinkShelf"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avsluta LinkShelf"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出LinkShelf"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結束 LinkShelf"
+          }
+        }
+      }
+    },
+    "app.name": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf"
+          }
+        }
+      }
+    },
+    "button.add": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilføj"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hinzufügen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisää"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "追加"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "추가"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Legg til"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toevoegen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新增"
+          }
+        }
+      }
+    },
+    "button.cancel": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuller"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peruuta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャンセル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "취소"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avbryt"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuleren"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отмена"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avbryt"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "button.delete": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slet"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poista"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elimina"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "削除"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "삭제"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slett"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwijderen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluir"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excluir"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta bort"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刪除"
+          }
+        }
+      }
+    },
+    "button.edit": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rediger"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bearbeiten"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muokkaa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifier"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifica"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "編集"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "편집"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rediger"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewerken"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Редактировать"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redigera"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "編輯"
+          }
+        }
+      }
+    },
+    "button.save": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gem"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speichern"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallenna"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "저장"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagre"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opslaan"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvar"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvar"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохранить"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spara"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "儲存"
+          }
+        }
+      }
+    },
+    "empty.state.add.first.link": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilføj dit første link"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ihren Ersten Link Hinzufügen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Your First Link"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar Tu Primer Enlace"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisää ensimmäinen linkkisi"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter Votre Premier Lien"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi il Tuo Primo Link"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最初のリンクを追加"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "첫 번째 링크 추가"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Legg til din første lenke"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voeg je eerste link toe"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicione seu primeiro link"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar Seu Primeiro Link"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить Первую Ссылку"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till din första länk"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加您的第一个链接"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新增你的第一個連結"
+          }
+        }
+      }
+    },
+    "empty.state.message": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begynd at opbygge din samling af ofte anvendte links"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beginnen Sie, Ihre Sammlung häufig verwendeter Links zu erstellen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start building your collection of frequently used links"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comienza a construir tu colección de enlaces frecuentemente usados"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aloita usein käyttämiesi linkkien kokoelman rakentaminen"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commencez à créer votre collection de liens fréquemment utilisés"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inizia a creare la tua collezione di link usati frequentemente"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "よく使うリンクのコレクションを作り始めましょう"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "자주 사용하는 링크 컬렉션을 만들기 시작하세요"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begynn å bygge samlingen din av ofte brukte lenker"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begin met het opbouwen van je verzameling veelgebruikte links"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comece a criar sua coleção de links usados com frequência"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comece a construir sua coleção de links frequentemente usados"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Начните создавать коллекцию часто используемых ссылок"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Börja bygga din samling av ofta använda länkar"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始构建您常用链接的收藏"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始建立你常用連結的收藏"
+          }
+        }
+      }
+    },
+    "empty.state.quick.tips": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hurtige tips:"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnelle Tipps:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quick Tips:"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consejos Rápidos:"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pikavinkit:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conseils Rapides :"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggerimenti Rapidi:"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クイックヒント："
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "빠른 팁:"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hurtigtips:"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Snelle tips:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicas rápidas:"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicas Rápidas:"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Быстрые Советы:"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Snabba tips:"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速提示："
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速提示："
+          }
+        }
+      }
+    },
+    "empty.state.tip.copy.links": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiér links til udklipsholderen med ét klik"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links mit einem Klick in die Zwischenablage kopieren"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy links to clipboard with one click"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia enlaces al portapapeles con un clic"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopioi linkit leikepöydälle yhdellä napsautuksella"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiez les liens dans le presse-papiers en un clic"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia i link negli appunti con un clic"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ワンクリックでリンクをクリップボードにコピー"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "원클릭으로 링크를 클립보드에 복사"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopier lenker til utklippstavlen med ett klikk"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopieer links met één klik naar het klembord"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copie links para a área de transferência com um clique"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copie links para a área de transferência com um clique"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Копируйте ссылки в буфер обмена одним кликом"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiera länkar till urklipp med ett klick"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一键将链接复制到剪贴板"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一鍵將連結複製到剪貼簿"
+          }
+        }
+      }
+    },
+    "empty.state.tip.open.links": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Åbn links direkte i din browser"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links direkt in Ihrem Browser öffnen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open links directly in your browser"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre enlaces directamente en tu navegador"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avaa linkit suoraan selaimessa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrez les liens directement dans votre navigateur"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apri i link direttamente nel tuo browser"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リンクをブラウザで直接開く"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "링크를 브라우저에서 직접 열기"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Åpne lenker direkte i nettleseren"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open links rechtstreeks in je browser"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abra links diretamente no navegador"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abra links diretamente no seu navegador"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Открывайте ссылки прямо в браузере"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Öppna länkar direkt i webbläsaren"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "直接在浏览器中打开链接"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "直接在瀏覽器中開啟連結"
+          }
+        }
+      }
+    },
+    "empty.state.tip.search.links": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Søg og filtrer dine links med det samme"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ihre Links sofort durchsuchen und filtern"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search and filter your links instantly"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Busca y filtra tus enlaces al instante"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hae ja suodata linkkejäsi välittömästi"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recherchez et filtrez vos liens instantanément"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca e filtra i tuoi link istantaneamente"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リンクを瞬時に検索・フィルタ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "링크를 즉시 검색 및 필터링"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Søk i og filtrer lenkene dine umiddelbart"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoek en filter je links direct"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesquise e filtre seus links na hora"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesquise e filtre seus links instantaneamente"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мгновенно ищите и фильтруйте ссылки"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sök och filtrera dina länkar direkt"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "即时搜索和筛选您的链接"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即搜尋並篩選你的連結"
+          }
+        }
+      }
+    },
+    "empty.state.title": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din linkhylde er tom"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ihr Link-Regal ist Leer"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your Link Shelf is Empty"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu Estante de Enlaces está Vacío"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Linkkihyllysi on tyhjä"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre Étagère de Liens est Vide"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La Tua Mensola dei Link è Vuota"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リンク棚が空です"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "링크 선반이 비어 있습니다"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lenkehyllen din er tom"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je linkplank is leeg"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sua estante de links está vazia"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sua Estante de Links está Vazia"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваша Полка Ссылок Пуста"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Din länkhylla är tom"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "您的链接架是空的"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的連結架是空的"
+          }
+        }
+      }
+    },
+    "error.invalid.url": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indtast venligst en gyldig URL"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bitte geben Sie eine gültige URL ein"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please enter a valid URL"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por favor ingresa una URL válida"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anna kelvollinen URL-osoite"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veuillez entrer une URL valide"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inserisci un URL valido"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有効なURLを入力してください"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "유효한 URL을 입력하세요"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skriv inn en gyldig URL"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voer een geldige URL in"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insira uma URL válida"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por favor, insira uma URL válida"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пожалуйста, введите действительный URL"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ange en giltig URL"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入有效的URL"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "請輸入有效的網址"
+          }
+        }
+      }
+    },
+    "error.title.required": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel og URL er påkrævet"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel und URL sind erforderlich"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Title and URL are required"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El título y la URL son requeridos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otsikko ja URL-osoite vaaditaan"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le titre et l'URL sont requis"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titolo e URL sono obbligatori"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タイトルとURLが必要です"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제목과 URL이 필요합니다"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tittel og URL kreves"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel en URL zijn vereist"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título e URL são obrigatórios"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título e URL são obrigatórios"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название и URL обязательны"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel och URL krävs"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标题和URL是必需的"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必須填寫標題和網址"
+          }
+        }
+      }
+    },
+    "error.url.required": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel og URL er påkrævet"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel und URL sind erforderlich"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Title and URL are required"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El título y la URL son requeridos"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otsikko ja URL-osoite vaaditaan"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le titre et l'URL sont requis"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titolo e URL sono obbligatori"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タイトルとURLが必要です"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제목과 URL이 필요합니다"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tittel og URL kreves"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel en URL zijn vereist"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título e URL são obrigatórios"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título e URL são obrigatórios"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название и URL обязательны"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel och URL krävs"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标题和URL是必需的"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "必須填寫標題和網址"
+          }
+        }
+      }
+    },
+    "link.add": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilføj link"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Link Hinzufügen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Link"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar Enlace"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisää linkki"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter un Lien"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi Link"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リンクを追加"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "링크 추가"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Legg til lenke"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Link toevoegen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar link"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar Link"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить Ссылку"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till länk"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加链接"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新增連結"
+          }
+        }
+      }
+    },
+    "link.edit": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rediger link"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Link Bearbeiten"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit Link"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar Enlace"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muokkaa linkkiä"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifier le Lien"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifica Link"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リンクを編集"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "링크 편집"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rediger lenke"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Link bewerken"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar link"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar Link"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Редактировать Ссылку"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redigera länk"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑链接"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "編輯連結"
+          }
+        }
+      }
+    },
+    "link.folder": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mappe"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordner"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carpeta"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kansio"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dossier"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cartella"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フォルダ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "폴더"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mappe"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Map"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Папка"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mapp"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件夹"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "資料夾"
+          }
+        }
+      }
+    },
+    "link.folder.choose": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vælg eksisterende mappe"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vorhandenen Ordner auswählen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose existing folder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elegir carpeta existente"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valitse olemassa oleva kansio"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choisir un dossier existant"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scegli una cartella esistente"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "既存のフォルダを選択"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "기존 폴더 선택"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Velg eksisterende mappe"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies bestaande map"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolher pasta existente"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolher pasta existente"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбрать существующую папку"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Välj befintlig mapp"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择现有文件夹"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選擇現有資料夾"
+          }
+        }
+      }
+    },
+    "link.folder.placeholder": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valgfri mappe"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optionaler Ordner"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional folder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carpeta opcional"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valinnainen kansio"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dossier facultatif"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cartella facoltativa"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任意のフォルダ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "선택 사항 폴더"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valgfri mappe"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optionele map"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta opcional"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta opcional"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Необязательная папка"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valfri mapp"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可选文件夹"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選填資料夾"
+          }
+        }
+      }
+    },
+    "link.no.folder": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen mappe"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein Ordner"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Folder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin carpeta"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ei kansiota"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun dossier"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuna cartella"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フォルダなし"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "폴더 없음"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen mappe"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen map"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem pasta"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem pasta"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Без папки"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen mapp"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无文件夹"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無資料夾"
+          }
+        }
+      }
+    },
+    "link.title": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Title"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otsikko"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titre"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titolo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タイトル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제목"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tittel"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标题"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "標題"
+          }
+        }
+      }
+    },
+    "link.title.placeholder": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "f.eks. LinkedIn-profil"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "z.B. LinkedIn-Profil"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "e.g., LinkedIn Profile"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ej., Perfil de LinkedIn"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "esim. LinkedIn-profiili"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ex. : Profil LinkedIn"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "es. Profilo LinkedIn"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例：LinkedInプロフィール"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "예: LinkedIn 프로필"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "f.eks. LinkedIn-profil"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bijv. LinkedIn-profiel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ex.: perfil do LinkedIn"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ex.: Perfil do LinkedIn"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "напр. Профиль LinkedIn"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "t.ex. LinkedIn-profil"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如：LinkedIn个人资料"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如：LinkedIn 個人檔案"
+          }
+        }
+      }
+    },
+    "link.url": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        }
+      }
+    },
+    "link.url.placeholder": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://beispiel.com"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://ejemplo.com"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://exemple.com"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://esempio.com"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://exemplo.com"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://example.com"
+          }
+        }
+      }
+    },
+    "menu.quit.linkshelf": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afslut LinkShelf"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf Beenden"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit LinkShelf"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salir de LinkShelf"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sulje LinkShelf"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitter LinkShelf"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esci da LinkShelf"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelfを終了"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf 종료"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avslutt LinkShelf"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf afsluiten"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair do LinkShelf"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sair do LinkShelf"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выйти из LinkShelf"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avsluta LinkShelf"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出LinkShelf"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結束 LinkShelf"
+          }
+        }
+      }
+    },
+    "search.clear": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ryd søgning"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suche Löschen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear Search"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpiar Búsqueda"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tyhjennä haku"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effacer la Recherche"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancella Ricerca"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "検索をクリア"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "검색 지우기"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tøm søk"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoekopdracht wissen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar busca"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar Pesquisa"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Очистить Поиск"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rensa sökning"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除搜索"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除搜尋"
+          }
+        }
+      }
+    },
+    "search.no.results": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen resultater fundet"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Ergebnisse Gefunden"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Results Found"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se Encontraron Resultados"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ei tuloksia"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun Résultat Trouvé"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessun Risultato Trovato"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "結果が見つかりません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "결과를 찾을 수 없음"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen resultater funnet"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen resultaten gevonden"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum resultado encontrado"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum Resultado Encontrado"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Результаты Не Найдены"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inga resultat hittades"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到结果"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到結果"
+          }
+        }
+      }
+    },
+    "search.no.results.message": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen links matcher \"%@\""
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Links entsprechen \"%@\""
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No links match \"%@\""
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ningún enlace coincide con \"%@\""
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yksikään linkki ei vastaa hakua \"%@\""
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun lien ne correspond à \"%@\""
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessun link corrisponde a \"%@\""
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" に一致するリンクがありません"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\"와 일치하는 링크가 없습니다"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen lenker samsvarer med \"%@\""
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen links komen overeen met \"%@\""
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum link corresponde a \"%@\""
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhum link corresponde a \"%@\""
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нет ссылок, соответствующих \"%@\""
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inga länkar matchar \"%@\""
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有链接匹配 \"%@\""
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "沒有連結符合 \"%@\""
+          }
+        }
+      }
+    },
+    "search.placeholder": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Søg i links..."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links suchen..."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search links..."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar enlaces..."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hae linkeistä..."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher des liens..."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca link..."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "リンクを検索..."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "링크 검색..."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Søk i lenker..."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links zoeken..."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesquisar links..."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesquisar links..."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поиск ссылок..."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sök länkar..."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索链接..."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜尋連結..."
+          }
+        }
+      }
+    },
+    "search.try.check.spelling": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tjek stavningen"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechtschreibung überprüfen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check your spelling"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisa la ortografía"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tarkista oikeinkirjoitus"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérifiez l'orthographe"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Controlla l'ortografia"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スペルを確認"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "철자 확인"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kontroller stavingen"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Controleer de spelling"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifique a ortografia"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifique a ortografia"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Проверьте правописание"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kontrollera stavningen"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检查拼写"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "檢查拼寫"
+          }
+        }
+      }
+    },
+    "search.try.label": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prøv:"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versuchen Sie:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try:"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intenta:"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kokeile:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Essayez :"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prova:"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "試してください："
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시도:"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prøv:"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Probeer:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tente:"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tente:"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Попробуйте:"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prova:"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尝试："
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "試試："
+          }
+        }
+      }
+    },
+    "search.try.search.by.title": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Søg efter titel eller URL"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nach Titel oder URL suchen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search by title or URL"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar por título o URL"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hae otsikon tai URL-osoitteen perusteella"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechercher par titre ou URL"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerca per titolo o URL"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タイトルまたはURLで検索"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제목 또는 URL로 검색"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Søk etter tittel eller URL"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoek op titel of URL"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesquise por título ou URL"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesquisar por título ou URL"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Искать по названию или URL"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sök efter titel eller URL"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按标题或URL搜索"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "依標題或網址搜尋"
+          }
+        }
+      }
+    },
+    "share.extension.add.button": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Føj til LinkShelf"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zu LinkShelf Hinzufügen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add to LinkShelf"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar a LinkShelf"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisää LinkShelfiin"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter à LinkShelf"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi a LinkShelf"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelfに追加"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf에 추가"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Legg til i LinkShelf"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toevoegen aan LinkShelf"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar ao LinkShelf"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar ao LinkShelf"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить в LinkShelf"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till i LinkShelf"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加到LinkShelf"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入 LinkShelf"
+          }
+        }
+      }
+    },
+    "share.extension.title": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Føj til LinkShelf"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zu LinkShelf Hinzufügen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add to LinkShelf"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar a LinkShelf"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisää LinkShelfiin"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter à LinkShelf"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi a LinkShelf"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelfに追加"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf에 추가"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Legg til i LinkShelf"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toevoegen aan LinkShelf"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar ao LinkShelf"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar ao LinkShelf"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить в LinkShelf"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till i LinkShelf"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加到LinkShelf"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加入 LinkShelf"
+          }
+        }
+      }
+    },
+    "share.extension.title.label": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Title"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otsikko"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titre"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titolo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タイトル"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "제목"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tittel"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Título"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titel"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标题"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "標題"
+          }
+        }
+      }
+    },
+    "share.extension.url.exists": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Denne URL findes allerede i LinkShelf"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Diese URL existiert bereits in LinkShelf"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ This URL already exists in LinkShelf"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Esta URL ya existe en LinkShelf"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Tämä URL-osoite on jo LinkShelfissä"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Cette URL existe déjà dans LinkShelf"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Questo URL esiste già in LinkShelf"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ このURLは既にLinkShelfに存在します"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ 이 URL이 이미 LinkShelf에 존재합니다"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Denne URL-en finnes allerede i LinkShelf"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Deze URL bestaat al in LinkShelf"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Esta URL já existe no LinkShelf"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Esta URL já existe no LinkShelf"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Эта ссылка уже существует в LinkShelf"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ Den här URL:en finns redan i LinkShelf"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ 此URL已存在于LinkShelf中"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ 此網址已存在於 LinkShelf"
+          }
+        }
+      }
+    },
+    "share.extension.url.label": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL"
+          }
+        }
+      }
+    },
+    "shortcut.intro.button": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forstået"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verstanden"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Got it"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entendido"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selvä"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compris"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ho capito"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "了解"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "알겠습니다"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skjønner"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begrepen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entendi"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entendido"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Понятно"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jag förstår"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "知道了"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "知道了"
+          }
+        }
+      }
+    },
+    "shortcut.intro.message": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tryk på ⌥⌘L når som helst for at åbne LinkShelf fra menulinjen."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drücke ⌥⌘L, um LinkShelf jederzeit über die Menüleiste zu öffnen."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Press ⌥⌘L anytime to open LinkShelf from the menu bar."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulsa ⌥⌘L para abrir LinkShelf desde la barra de menús en cualquier momento."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avaa LinkShelf valikkoriviltä milloin tahansa painamalla ⌥⌘L."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appuyez sur ⌥⌘L pour ouvrir LinkShelf depuis la barre des menus à tout moment."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premi ⌥⌘L per aprire LinkShelf dalla barra dei menu in qualsiasi momento."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌥⌘Lを押すと、いつでもメニューバーからLinkShelfを開けます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌥⌘L을 누르면 언제든지 메뉴 막대에서 LinkShelf를 열 수 있습니다."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trykk på ⌥⌘L når som helst for å åpne LinkShelf fra menylinjen."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Druk op ⌥⌘L om LinkShelf op elk moment via de menubalk te openen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pressione ⌥⌘L a qualquer momento para abrir o LinkShelf pela barra de menus."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prima ⌥⌘L a qualquer momento para abrir o LinkShelf a partir da barra de menus."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нажмите ⌥⌘L, чтобы в любое время открыть LinkShelf из строки меню."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tryck på ⌥⌘L när som helst för att öppna LinkShelf från menyraden."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按下 ⌥⌘L 即可随时从菜单栏打开 LinkShelf。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按下 ⌥⌘L 即可隨時從選單列開啟 LinkShelf。"
+          }
+        }
+      }
+    },
+    "shortcut.intro.title": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Genvej til hurtig åbning"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnellöffnungs-Kurzbefehl"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quick open shortcut"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atajo de apertura rápida"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pikatoiminnon pikanäppäin"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raccourci d’ouverture rapide"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scorciatoia di apertura rapida"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クイック起動ショートカット"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "빠른 열기 단축키"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hurtigåpningssnarvei"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sneltoets voor snel openen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atalho para abertura rápida"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atalho de abertura rápida"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сочетание клавиш для быстрого открытия"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kortkommando för snabböppning"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速打开快捷键"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速開啟快捷鍵"
+          }
+        }
+      }
+    },
+    "shortcut.tooltip": {
+      "localizations": {
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — tryk på ⌥⌘L for at åbne"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — ⌥⌘L drücken zum Öffnen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — press ⌥⌘L to open"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — pulsa ⌥⌘L para abrir"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — avaa painamalla ⌥⌘L"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — appuyez sur ⌥⌘L pour ouvrir"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — premi ⌥⌘L per aprire"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — ⌥⌘Lを押して開く"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — ⌥⌘L을 눌러 열기"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — trykk ⌥⌘L for å åpne"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — druk op ⌥⌘L om te openen"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — pressione ⌥⌘L para abrir"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — prima ⌥⌘L para abrir"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — нажмите ⌥⌘L, чтобы открыть"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — tryck på ⌥⌘L för att öppna"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — 按下 ⌥⌘L 以打开"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LinkShelf — 按下 ⌥⌘L 以開啟"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
