@@ -17,6 +17,12 @@ struct AddEditLinkView: View {
     @State private var url: String = ""
     @State private var folder: String = ""
     @State private var errorMessage: String?
+    @State private var titleWasEdited = false
+    @FocusState private var focusedField: Field?
+
+    private enum Field {
+        case title, url, folder
+    }
     
     init(link: Link? = nil, isPresented: Binding<Bool>) {
         self.link = link
@@ -58,6 +64,8 @@ struct AddEditLinkView: View {
                         .foregroundColor(.secondary)
                     TextField(String(localized: .linkTitlePlaceholder), text: $title)
                         .textFieldStyle(.roundedBorder)
+                        .focused($focusedField, equals: .title)
+                        .onChange(of: title) { _, _ in titleWasEdited = true }
                 }
                 
                 VStack(alignment: .leading, spacing: 6) {
@@ -66,6 +74,12 @@ struct AddEditLinkView: View {
                         .foregroundColor(.secondary)
                     TextField(String(localized: .linkUrlPlaceholder), text: $url)
                         .textFieldStyle(.roundedBorder)
+                        .focused($focusedField, equals: .url)
+                        .onChange(of: url) { _, newValue in
+                            guard link == nil, !titleWasEdited, let suggestedTitle = suggestedTitle(from: newValue) else { return }
+                            title = suggestedTitle
+                            titleWasEdited = false
+                        }
                     
                     if let errorMessage = errorMessage {
                         Text(errorMessage)
@@ -81,6 +95,7 @@ struct AddEditLinkView: View {
                         .foregroundColor(.secondary)
                     TextField(String(localized: .linkFolderPlaceholder), text: $folder)
                         .textFieldStyle(.roundedBorder)
+                        .focused($focusedField, equals: .folder)
                     
                     if !linkManager.folderNames.isEmpty {
                         Menu {
@@ -134,40 +149,65 @@ struct AddEditLinkView: View {
         // Let longer localized labels grow vertically instead of being clipped.
         .frame(width: 400)
         .onAppear {
-            // Focus on title field
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                NSApp.keyWindow?.makeFirstResponder(nil)
+            titleWasEdited = link != nil
+            if link == nil, url.isEmpty,
+               let clipboardValue = NSPasteboard.general.string(forType: .string),
+               normalizedURL(from: clipboardValue) != nil {
+                url = clipboardValue.trimmingCharacters(in: .whitespacesAndNewlines)
             }
+            focusedField = title.isEmpty ? .title : .url
         }
     }
     
     private func saveLink() {
         // Validate URL
-        guard !title.isEmpty, !url.isEmpty else {
+        let trimmedTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedFolder = folder.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmedTitle.isEmpty, !url.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
             errorMessage = String(localized: .errorTitleRequired)
             return
         }
-        
-        // Add http:// if no scheme
-        var finalURL = url
-        if !finalURL.hasPrefix("http://") && !finalURL.hasPrefix("https://") {
-            finalURL = "https://" + finalURL
-        }
-        
-        // Basic URL validation
-        guard URL(string: finalURL) != nil else {
+
+        guard let finalURL = normalizedURL(from: url) else {
             errorMessage = String(localized: .errorInvalidUrl)
+            return
+        }
+
+        if linkManager.linkExists(url: finalURL), link?.url.caseInsensitiveCompare(finalURL) != .orderedSame {
+            errorMessage = String(localized: "error.duplicate.url", defaultValue: "This link is already on your shelf.")
             return
         }
         
         errorMessage = nil
         
         if let existingLink = link {
-            linkManager.updateLink(existingLink, title: title, url: finalURL, folder: folder)
+            linkManager.updateLink(existingLink, title: trimmedTitle, url: finalURL, folder: trimmedFolder)
         } else {
-            linkManager.addLink(title: title, url: finalURL, folder: folder)
+            linkManager.addLink(title: trimmedTitle, url: finalURL, folder: trimmedFolder)
         }
         
         isPresented = false
+    }
+
+    private func normalizedURL(from value: String) -> String? {
+        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return nil }
+        let candidate = trimmed.contains("://") ? trimmed : "https://\(trimmed)"
+        guard let components = URLComponents(string: candidate),
+              let scheme = components.scheme?.lowercased(),
+              ["http", "https"].contains(scheme),
+              components.host?.isEmpty == false,
+              let result = components.url else { return nil }
+        return result.absoluteString
+    }
+
+    private func suggestedTitle(from value: String) -> String? {
+        guard let normalized = normalizedURL(from: value),
+              let host = URL(string: normalized)?.host else { return nil }
+        return host
+            .replacingOccurrences(of: "www.", with: "")
+            .split(separator: ".")
+            .first
+            .map { String($0).replacingOccurrences(of: "-", with: " ").capitalized }
     }
 }

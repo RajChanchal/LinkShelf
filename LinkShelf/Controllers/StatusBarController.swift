@@ -14,6 +14,7 @@ class StatusBarController: NSObject, ObservableObject, NSPopoverDelegate {
     private var popover: NSPopover
     private var linkManager: LinkManager
     private var outsideClickMonitor: Any?
+    private var closeObserver: NSObjectProtocol?
 
     init(linkManager: LinkManager) {
         // Create status bar item
@@ -45,6 +46,19 @@ class StatusBarController: NSObject, ObservableObject, NSPopoverDelegate {
         let contentView = LinkListView()
             .environmentObject(linkManager)
         popover.contentViewController = NSHostingController(rootView: contentView)
+
+        closeObserver = NotificationCenter.default.addObserver(
+            forName: .closeLinkShelfPopover,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            self?.popover.performClose(nil)
+        }
+    }
+
+    deinit {
+        if let closeObserver { NotificationCenter.default.removeObserver(closeObserver) }
+        if let outsideClickMonitor { NSEvent.removeMonitor(outsideClickMonitor) }
     }
 
     @objc func togglePopover(_ sender: AnyObject?) {
@@ -96,7 +110,12 @@ class StatusBarController: NSObject, ObservableObject, NSPopoverDelegate {
     
     func showMenu(_ sender: AnyObject?) {
         let menu = NSMenu()
-        
+
+        let settingsItem = NSMenuItem(title: String(localized: "Settings…"), action: #selector(openSettings), keyEquivalent: ",")
+        settingsItem.target = self
+        menu.addItem(settingsItem)
+        menu.addItem(.separator())
+
         // Quit menu item
         let quitItem = NSMenuItem(title: String(localized: .menuQuitLinkshelf), action: #selector(quitApp), keyEquivalent: "q")
         quitItem.target = self
@@ -106,6 +125,11 @@ class StatusBarController: NSObject, ObservableObject, NSPopoverDelegate {
         if let button = statusItem.button {
             menu.popUp(positioning: nil, at: NSPoint(x: 0, y: button.bounds.height), in: button)
         }
+    }
+
+    @objc private func openSettings() {
+        NSApp.activate(ignoringOtherApps: true)
+        NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
     }
     
     @objc func quitApp(_ sender: AnyObject?) {
