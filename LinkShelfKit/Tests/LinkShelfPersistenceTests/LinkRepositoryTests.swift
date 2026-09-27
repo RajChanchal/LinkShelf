@@ -119,3 +119,41 @@ struct LinkRepositoryTests {
         #expect(try await repository.reconcileDuplicates().redundantIDs.isEmpty)
     }
 }
+
+struct RepositoryEditingTests {
+    @Test func restoresDeletedLinkWithIdentityAndPosition() async throws {
+        let repository = try makeRepository()
+        let first = try await repository.addLink(LinkDraft(title: "A", url: "a.com"))
+        let second = try await repository.addLink(LinkDraft(title: "B", url: "b.com"))
+        try await repository.deleteLinks(ids: [first.id])
+        try await repository.restoreLink(first)
+        try await repository.restoreLink(first)
+        #expect(try await repository.links().map(\.id) == [first.id, second.id])
+    }
+
+    @Test func reordersSeveralLinksAtOnce() async throws {
+        let repository = try makeRepository()
+        var ids: [UUID] = []
+        for name in ["a", "b", "c", "d"] {
+            ids.append(try await repository.addLink(LinkDraft(title: name, url: "\(name).com")).id)
+        }
+        try await repository.reorderLinks(inFolder: nil, orderedIDs: [ids[3], ids[0], ids[2], ids[1]])
+        #expect(try await repository.links().map(\.id) == [ids[3], ids[0], ids[2], ids[1]])
+    }
+
+    @Test func renamesAndMovesFolderAtomically() async throws {
+        let repository = try makeRepository()
+        let work = try await repository.createFolder(named: "Work", inside: nil)
+        let docs = try await repository.createFolder(named: "Docs", inside: work.id)
+        let home = try await repository.createFolder(named: "Home", inside: nil)
+        let link = try await repository.addLink(LinkDraft(title: "A", url: "a.com", folderID: docs.id))
+
+        try await repository.updateFolder(id: docs.id, name: "Papers", parentID: home.id)
+        let moved = try #require(try await repository.folders().first { $0.id == docs.id })
+        #expect(moved.name == "Papers" && moved.parentID == home.id)
+        #expect(try await repository.link(id: link.id)?.folderID == docs.id)
+        await #expect(throws: LinkShelfError.folderCycle) {
+            try await repository.updateFolder(id: home.id, name: "Home", parentID: docs.id)
+        }
+    }
+}

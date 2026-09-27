@@ -69,11 +69,14 @@ public struct ValidatedLink: Hashable, Sendable {
 }
 
 public enum FolderName {
-    /// Trims the name and rejects empty names, newlines, and `/`, which the
-    /// Mac app uses to display nested paths.
+    /// Separator used when a folder's ancestry is displayed or typed as a path.
+    public static let pathSeparator = " / "
+
+    /// Trims the name and rejects empty names, newlines, and the path
+    /// separator. A bare `/` is allowed, as in imported bookmark folders.
     public static func validate(_ name: String) throws -> String {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty, !trimmed.contains("/"),
+        guard !trimmed.isEmpty, !trimmed.contains(pathSeparator),
               trimmed.rangeOfCharacter(from: .newlines) == nil else {
             throw LinkShelfError.invalidFolderName
         }

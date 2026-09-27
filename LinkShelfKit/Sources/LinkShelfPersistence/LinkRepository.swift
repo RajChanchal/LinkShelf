@@ -112,6 +112,38 @@ public actor LinkRepository {
         try save()
     }
 
+    /// Rewrites the order of a container's links to match `orderedIDs`, for
+    /// multi-item moves. Links not listed keep their relative order after them.
+    public func reorderLinks(inFolder folderID: UUID?, orderedIDs: [UUID], now: Date = .now) throws {
+        let current = try links(in: folderID.map(LinkScope.folder) ?? .unfiled)
+        let listed = orderedIDs.filter { id in current.contains { $0.id == id } }
+        let finalOrder = listed + current.map(\.id).filter { !listed.contains($0) }
+        let ranks = Dictionary(current.map { ($0.id, $0.rank) }, uniquingKeysWith: { first, _ in first })
+        for (offset, id) in finalOrder.enumerated() {
+            let rank = Int64(offset + 1) * Ranking.spacing
+            guard ranks[id] != rank else { continue }
+            for record in try linkRecords(id) {
+                record.rank = rank
+                record.updatedAt = now
+            }
+        }
+        try save()
+    }
+
+    /// Re-inserts a deleted link with its original identity, for undo. The
+    /// original folder is used when it still exists; otherwise it is unfiled.
+    @discardableResult
+    public func restoreLink(_ snapshot: LinkSnapshot) throws -> LinkSnapshot {
+        if let existing = try linkRecords(snapshot.id).first { return LinkSnapshot(existing) }
+        let record = LinkRecord(uuid: snapshot.id, title: snapshot.title, urlString: snapshot.url,
+                                comparisonKey: snapshot.comparisonKey, rank: snapshot.rank,
+                                createdAt: snapshot.createdAt, updatedAt: snapshot.updatedAt)
+        modelContext.insert(record)
+        record.folder = try snapshot.folderID.flatMap { try folderRecords($0).first }
+        try save()
+        return LinkSnapshot(record)
+    }
+
     public func deleteLinks(ids: Set<UUID>) throws {
         for id in ids {
             for record in try linkRecords(id) { modelContext.delete(record) }
@@ -143,28 +175,30 @@ public actor LinkRepository {
 
     /// Renames in place; identity and contents are unchanged.
     public func renameFolder(id: UUID, to name: String, now: Date = .now) throws {
-        let name = try FolderName.validate(name)
-        let record = try requireFolder(id)
-        let tree = FolderTree(try folders())
-        guard !tree.hasSibling(named: name, under: record.parent?.uuid, excluding: id) else {
-            throw LinkShelfError.duplicateFolderName
-        }
-        record.name = name
-        record.updatedAt = now
-        try save()
+        try updateFolder(id: id, name: name, parentID: try requireFolder(id).parent?.uuid, now: now)
     }
 
     public func moveFolder(id: UUID, inside parentID: UUID?, now: Date = .now) throws {
+        try updateFolder(id: id, name: try requireFolder(id).name, parentID: parentID, now: now)
+    }
+
+    /// Renames and/or moves a folder in one save. Identity, links, and
+    /// descendants are preserved; cycles and sibling name clashes are rejected.
+    public func updateFolder(id: UUID, name: String, parentID: UUID?, now: Date = .now) throws {
+        let name = try FolderName.validate(name)
         let record = try requireFolder(id)
         let parent = try parentID.map(requireFolder)
         let tree = FolderTree(try folders())
         guard !tree.wouldCreateCycle(moving: id, under: parentID) else { throw LinkShelfError.folderCycle }
-        guard !tree.hasSibling(named: record.name, under: parentID, excluding: id) else {
+        guard !tree.hasSibling(named: name, under: parentID, excluding: id) else {
             throw LinkShelfError.duplicateFolderName
         }
-        let siblings = tree.children(of: parentID).map { RankedItem(id: $0.id, rank: $0.rank) }
-        record.parent = parent
-        try applyFolderRanks(Ranking.changes(placing: id, at: siblings.count, among: siblings))
+        if record.parent?.uuid != parentID {
+            let siblings = tree.children(of: parentID).map { RankedItem(id: $0.id, rank: $0.rank) }
+            record.parent = parent
+            try applyFolderRanks(Ranking.changes(placing: id, at: siblings.count, among: siblings))
+        }
+        record.name = name
         record.updatedAt = now
         try save()
     }

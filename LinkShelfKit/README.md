@@ -5,7 +5,7 @@ The shared data layer that the multi-device plan proposes in
 [`docs/FEATURE_SPECIFICATION.md`](../docs/FEATURE_SPECIFICATION.md).
 It lives in this repository while it is a prototype, and it will move to its own repository once the device prototype has confirmed its design.
 
-**Status:** package v0.x, not yet linked into the macOS app or the Share Extension. CloudKit sync is not enabled anywhere.
+**Status:** package v0.x, linked into the macOS app and its Share Extension through a local package reference. Both use a local-only store in the App Group container. CloudKit sync is not enabled anywhere.
 
 ## Products
 
@@ -24,9 +24,8 @@ cd LinkShelfKit && swift test
 
 Tests use in-memory or temporary on-disk stores only. Anything involving CloudKit, App Group access, or cross-process behavior still needs the real-device prototype described in the requirements, step 1.
 
-## Known gaps before Mac cutover
+## Known gaps
 
-- There is no cross-process change signal yet. Apps still post and observe the existing Darwin notification and refetch on each one.
-- Favicon cache service: the legacy plan exposes `favicons` for seeding, but the cache itself is app-owned and not written yet.
+- `LinkShelfChangeSignal` is a Darwin-notification hint, not a durable change ledger. Observers refetch through a fresh `LinkRepository` context when they receive it.
 - `#Index` on `comparisonKey` and `uuid` requires macOS 15 / iOS 18; lookups currently use predicates without an index.
 - Folder delete-versus-move and concurrent rank rebalance behavior under CloudKit are uncharacterized.

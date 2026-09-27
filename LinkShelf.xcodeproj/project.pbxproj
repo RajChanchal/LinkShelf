@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		279539952EFB28E7009840EC /* LinkShelfShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 279539892EFB28E7009840EC /* LinkShelfShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B1A00062F0A000000A1B001 /* LinkShelfDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 2B1A00022F0A000000A1B001 /* LinkShelfDomain */; };
+		2B1A00072F0A000000A1B001 /* LinkShelfPersistence in Frameworks */ = {isa = PBXBuildFile; productRef = 2B1A00032F0A000000A1B001 /* LinkShelfPersistence */; };
+		2B1A00082F0A000000A1B001 /* LinkShelfDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 2B1A00042F0A000000A1B001 /* LinkShelfDomain */; };
+		2B1A00092F0A000000A1B001 /* LinkShelfPersistence in Frameworks */ = {isa = PBXBuildFile; productRef = 2B1A00052F0A000000A1B001 /* LinkShelfPersistence */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +54,7 @@
 		2795399D2EFB29DD009840EC /* Exceptions for "LinkShelf" folder in "LinkShelfShare" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Managers/SharedLinkStorage.swift,
-				Models/Link.swift,
 				Resources/Localizable.xcstrings,
-				Stores/LinkStore.swift,
 			);
 			target = 279539882EFB28E7009840EC /* LinkShelfShare */;
 		};
@@ -83,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1A00082F0A000000A1B001 /* LinkShelfDomain in Frameworks */,
+				2B1A00092F0A000000A1B001 /* LinkShelfPersistence in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1A00062F0A000000A1B001 /* LinkShelfDomain in Frameworks */,
+				2B1A00072F0A000000A1B001 /* LinkShelfPersistence in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +139,8 @@
 			);
 			name = LinkShelfShare;
 			packageProductDependencies = (
+				2B1A00042F0A000000A1B001 /* LinkShelfDomain */,
+				2B1A00052F0A000000A1B001 /* LinkShelfPersistence */,
 			);
 			productName = LinkShelfShare;
 			productReference = 279539892EFB28E7009840EC /* LinkShelfShare.appex */;
@@ -159,6 +166,8 @@
 			);
 			name = LinkShelf;
 			packageProductDependencies = (
+				2B1A00022F0A000000A1B001 /* LinkShelfDomain */,
+				2B1A00032F0A000000A1B001 /* LinkShelfPersistence */,
 			);
 			productName = LinkShelf;
 			productReference = 27B2872C2EF4812800AE50B8 /* LinkShelf.app */;
@@ -207,6 +216,9 @@
 			);
 			mainGroup = 27B287232EF4812800AE50B8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2B1A00012F0A000000A1B001 /* XCLocalSwiftPackageReference "LinkShelfKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 27B2872D2EF4812800AE50B8 /* Products */;
 			projectDirPath = "";
@@ -567,6 +579,32 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		2B1A00012F0A000000A1B001 /* XCLocalSwiftPackageReference "LinkShelfKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = LinkShelfKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B1A00022F0A000000A1B001 /* LinkShelfDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LinkShelfDomain;
+		};
+		2B1A00032F0A000000A1B001 /* LinkShelfPersistence */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LinkShelfPersistence;
+		};
+		2B1A00042F0A000000A1B001 /* LinkShelfDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LinkShelfDomain;
+		};
+		2B1A00052F0A000000A1B001 /* LinkShelfPersistence */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LinkShelfPersistence;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27B287242EF4812800AE50B8 /* Project object */;
 }

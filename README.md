@@ -86,7 +86,7 @@ You can edit or delete these to customize your shelf.
 
 - **Platform**: macOS 14.0+
 - **Framework**: SwiftUI + AppKit
-- **Storage**: UserDefaults (local, secure)
+- **Storage**: SwiftData via the in-repo [`LinkShelfKit`](LinkShelfKit/README.md) package, in the App Group container on your Mac. Links saved by version 1.4 and earlier are migrated automatically on first launch, and a backup of the original data is kept.
 - **Architecture**: MVVM pattern
 - **Shortcut**: Press ⌥⌘L to open LinkShelf from anywhere
 

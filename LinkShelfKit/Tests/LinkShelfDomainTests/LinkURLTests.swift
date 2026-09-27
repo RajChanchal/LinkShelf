@@ -60,7 +60,8 @@ struct LinkURLTests {
 
     @Test func folderNamesRejectSeparators() throws {
         #expect(try FolderName.validate("  Work ") == "Work")
-        #expect(throws: LinkShelfError.invalidFolderName) { try FolderName.validate("a/b") }
+        #expect(try FolderName.validate("News/Tech") == "News/Tech")
+        #expect(throws: LinkShelfError.invalidFolderName) { try FolderName.validate("a / b") }
         #expect(throws: LinkShelfError.invalidFolderName) { try FolderName.validate(" \n ") }
     }
 }

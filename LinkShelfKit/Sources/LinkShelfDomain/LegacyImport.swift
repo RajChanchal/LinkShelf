@@ -81,7 +81,7 @@ public struct LegacyImportPlan: Sendable {
 
 /// Converts the 1.x format into records without touching any store (FR-10).
 public enum LegacyImportPlanner {
-    static let pathSeparator = " / "
+    static let pathSeparator = FolderName.pathSeparator
 
     public static func plan(from source: LegacySource, importedAt date: Date) throws -> LegacyImportPlan {
         var issues: [LegacyImportIssue] = []
