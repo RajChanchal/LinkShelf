@@ -31,6 +31,9 @@ final class LinkManager: ObservableObject {
     @Published private(set) var links: [Link] = []
     @Published private(set) var folderNames: [String] = []
     @Published var storageIssue: LinkStorageIssue?
+    /// False until the first fetch (or a reported failure), so an empty
+    /// collection is never shown while the store is still opening or migrating.
+    @Published private(set) var hasLoaded = false
 
     private let storage: LinkShelfAppGroupStorage
     private var repository: LinkRepository?
@@ -63,6 +66,7 @@ final class LinkManager: ObservableObject {
                 repository = try storage.makeRepository()
             } catch {
                 storageIssue = .loadFailed
+                hasLoaded = true
                 return
             }
             do {
@@ -75,6 +79,7 @@ final class LinkManager: ObservableObject {
                 // Leave the store untouched and the legacy data in place; the
                 // migration is retried on the next launch.
                 storageIssue = .migrationFailed
+                hasLoaded = true
                 return
             }
             self.repository = repository
@@ -135,6 +140,7 @@ final class LinkManager: ObservableObject {
         } catch {
             storageIssue = .loadFailed
         }
+        hasLoaded = true
     }
 
     private func apply(folders: [FolderSnapshot], links snapshots: [LinkSnapshot]) {
