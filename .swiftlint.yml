@@ -3,9 +3,11 @@
 included:
   - LinkShelf
   - LinkShelfShare
+  - LinkShelfKit
 
 excluded:
   - .build
+  - LinkShelfKit/.build
   - DerivedData
 
 only_rules:

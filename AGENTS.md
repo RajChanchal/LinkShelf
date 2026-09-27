@@ -2,7 +2,7 @@
 
 ## Project scope
 
-LinkShelf is a macOS menu bar application targeting macOS 11+. It uses SwiftUI for views, AppKit for menu bar and global shortcut integration, and a Share Extension for adding links from other apps.
+LinkShelf is a macOS menu bar application targeting macOS 14+. It uses SwiftUI for views, AppKit for menu bar and global shortcut integration, and a Share Extension for adding links from other apps.
 
 Before changing behavior, understand whether the change affects the main app, the Share Extension, or their shared app-group storage.
 
@@ -11,12 +11,13 @@ Before changing behavior, understand whether the change affects the main app, th
 - `LinkShelfApp.swift` owns app lifecycle, menu-bar activation policy, global shortcut registration, and settings state.
 - `StatusBarController` owns the AppKit status-bar item and popover presentation.
 - `LinkListView` and `AddEditLinkView` are SwiftUI presentation layers. Keep business logic out of views when it can live in `LinkManager`.
-- `LinkManager` is the observable application-facing model. It coordinates link mutations, ordering, favicon fetching, and cross-process refresh notifications.
-- `LinkStore` and its implementations own persistence. Keep `UserDefaults`, encoding/decoding, app-group identifiers, and storage migration details behind this boundary.
-- `LinkShelfShare/ShareViewController.swift` is the Share Extension entry point. It must use the same app-group storage contract as the main app.
+- `LinkManager` is the observable application-facing model. It maps views' `Link` values and folder paths onto `LinkRepository` operations, and it coordinates favicon loading and cross-process refresh.
+- The in-repo `LinkShelfKit` package owns domain rules (`LinkShelfDomain`) and persistence (`LinkShelfPersistence`): the SwiftData schema, `LinkRepository`, legacy UserDefaults migration, and `LinkShelfAppGroupStorage`. Keep schema, validation, ordering, and app-group storage details behind this boundary.
+- `LinkShelfShare/ShareViewController.swift` is the Share Extension entry point. It must open the store through `LinkShelfAppGroupStorage` and must not write while the legacy migration is pending.
+- Favicons live in the app's local `FaviconCache`, never in link records.
 - Prefer small, testable types and dependency injection through protocols or initializer parameters when adding new services.
 
-Do not introduce a second persistence path, duplicate link sorting rules, or direct `UserDefaults` access from views without a clear reason.
+Do not introduce a second persistence path, duplicate link sorting or URL validation rules, or direct `UserDefaults` access from views without a clear reason. Settings remain in `UserDefaults`/`@AppStorage`.
 
 ## Localization
 
@@ -49,6 +50,7 @@ Run these checks after Swift changes:
 swiftlint lint --strict --quiet --no-cache
 git diff --check
 xcodebuild -project LinkShelf.xcodeproj -list
+(cd LinkShelfKit && swift test)
 ```
 
 When building locally, use a writable DerivedData directory if the default Xcode location is unavailable:
@@ -62,7 +64,7 @@ xcodebuild -project LinkShelf.xcodeproj \
   CODE_SIGNING_ALLOWED=NO build
 ```
 
-There is currently no committed unit-test target. If adding substantial business logic, add tests or explain why the change is covered by another verification path.
+Business rules and persistence are tested in `LinkShelfKit` with Swift Testing. The app targets have no unit-test target; put new logic in the package when it can be tested there.
 
 ## Change discipline
 

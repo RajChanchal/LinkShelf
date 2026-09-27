@@ -36,9 +36,7 @@ All Share Extension files have been created:
    - `LinkShelfShare/ShareViewController.swift` → Check "LinkShelfShare" target
    - `LinkShelfShare/Info.plist` → Check "LinkShelfShare" target
    - `LinkShelfShare/LinkShelfShare.entitlements` → Check "LinkShelfShare" target
-   - `LinkShelf/Models/Link.swift` → Check "LinkShelfShare" target (needed by SharedLinkStorage)
-   - `LinkShelf/Stores/LinkStore.swift` → Check "LinkShelfShare" target (shared storage)
-   - `LinkShelf/Managers/SharedLinkStorage.swift` → Check "LinkShelfShare" target
+2. Under the target's **Frameworks and Libraries**, add the `LinkShelfDomain` and `LinkShelfPersistence` products from the local `LinkShelfKit` package. The extension reads and writes the same SwiftData store as the app through `LinkShelfAppGroupStorage`.
 
 ### 4. Add Localization Files to Share Extension
 
@@ -54,7 +52,7 @@ All Share Extension files have been created:
    - **Product Bundle Identifier**: `com.chanchalgeek.LinkShelf.ShareExtension`
    - **Info.plist File**: `LinkShelfShare/Info.plist`
    - **Code Signing Entitlements**: `LinkShelfShare/LinkShelfShare.entitlements`
-   - **Deployment Target**: Same as main app (macOS 11.0+)
+   - **Deployment Target**: Same as main app (macOS 14.0+)
 
 ### 6. Configure Capabilities
 
@@ -94,15 +92,14 @@ Verify that `LinkShelfShare/Info.plist` has the correct settings:
 3. Restart the Mac (extensions are cached)
 4. Check Console.app for error messages
 
-### "Cannot find 'Link' in scope"
+### "No such module 'LinkShelfPersistence'"
 
-- Ensure `Link.swift` is added to the Share Extension target
+- Ensure the `LinkShelfKit` package products are linked to the Share Extension target
 - Clean build folder (⌘ShiftK) and rebuild
 
-### "Cannot find 'SharedLinkStorage' in scope"
+### "Open LinkShelf once to finish updating your links"
 
-- Ensure `SharedLinkStorage.swift` is added to the Share Extension target
-- Clean build folder and rebuild
+- Links saved by LinkShelf 1.4 or earlier are migrated by the main app on first launch. The extension waits until that migration is complete before saving, so open LinkShelf once and share again.
 
 ### Localization Not Working
 
@@ -113,12 +110,12 @@ Verify that `LinkShelfShare/Info.plist` has the correct settings:
 
 - Verify both main app and extension have the same App Group ID
 - Check entitlements files match
-- Ensure UserDefaults(suiteName:) uses the exact same string
+- Ensure `LinkShelfAppGroupStorage` uses the exact same App Group ID
 
 ## Notes
 
 - The Share Extension runs in a separate process from the main app
-- Data sharing is done via App Group UserDefaults
+- Data sharing is done through a SwiftData store in the App Group container
 - The extension UI uses AppKit (not SwiftUI)
 - The extension automatically closes after saving a link
 

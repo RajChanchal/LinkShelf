@@ -7,6 +7,8 @@
 
 import Cocoa
 import AppKit
+import LinkShelfDomain
+import LinkShelfPersistence
 
 class ShareViewController: NSViewController {
     
@@ -20,6 +22,9 @@ class ShareViewController: NSViewController {
     private var pageTitle: String = ""
     
     private var storedContext: NSExtensionContext?
+
+    private let storage = LinkShelfAppGroupStorage()
+    private var repository: LinkRepository?
     
     override func loadView() {
         view = NSView(frame: NSRect(x: 0, y: 0, width: 500, height: 280))
@@ -30,6 +35,31 @@ class ShareViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        prepareStorage()
+    }
+
+    /// Opens the shared store only after the host app has migrated any legacy
+    /// data, so the extension never writes to a store that is being imported.
+    private func prepareStorage() {
+        guard storage.migrationState() == .ready else {
+            showBlockingMessage(String(localized: "share.extension.migration.pending"))
+            return
+        }
+        do {
+            repository = try storage.makeRepository()
+        } catch {
+            showBlockingMessage(String(localized: "share.extension.save.failed"))
+        }
+    }
+
+    private func showBlockingMessage(_ message: String) {
+        showWarning(message)
+        addButton.isEnabled = false
+    }
+
+    private func showWarning(_ message: String) {
+        warningLabel.stringValue = message
+        warningLabel.isHidden = false
     }
     
     override func beginRequest(with context: NSExtensionContext) {
@@ -68,12 +98,10 @@ class ShareViewController: NSViewController {
                             
                             DispatchQueue.main.async {
                                 if let urlString = results["URL"] as? String {
-                                    print("🌍 JS URL: \(urlString)")
                                     self.sharedURL = urlString
                                 }
                                 
                                 if let title = results["title"] as? String {
-                                    print("📝 JS Title: \(title)")
                                     self.pageTitle = title
                                 }
                                 
@@ -92,10 +120,8 @@ class ShareViewController: NSViewController {
         if pageTitle.isEmpty {
            if let title = item.attributedTitle?.string, !title.isEmpty {
                pageTitle = title
-               print("📝 Title from item: \(title)")
            } else if let contentText = item.attributedContentText?.string, !contentText.isEmpty {
                pageTitle = contentText
-               print("📝 Title from contentText: \(contentText)")
            }
         }
         
@@ -181,10 +207,7 @@ class ShareViewController: NSViewController {
                         self.pageTitle = url.host ?? finalURL
                     }
                 }
-                print("✅ Extracted URL: \(self.sharedURL)")
                 self.updateUI()
-            } else {
-                print("❌ Failed to cast item to URL: \(String(describing: item))")
             }
         }
     }
@@ -192,14 +215,12 @@ class ShareViewController: NSViewController {
     private func handleTextItem(_ text: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            print("📝 Processing text for URL: \(text)")
             
             if let url = self.extractURL(from: text) {
                 self.sharedURL = url
                 if self.pageTitle.isEmpty {
                     self.pageTitle = url
                 }
-                print("✅ Extracted URL from text: \(self.sharedURL)")
                 self.updateUI()
             } else {
                 print("❌ No URL found in text")
@@ -355,12 +376,8 @@ class ShareViewController: NSViewController {
             return
         }
         
-        // Normalize URL
-        var finalURL = sharedURL.trimmingCharacters(in: .whitespaces)
-        if !finalURL.hasPrefix("http://") && !finalURL.hasPrefix("https://") {
-            finalURL = "https://" + finalURL
-        }
-        
+        let finalURL = (try? LinkURL(validating: sharedURL).string)
+            ?? sharedURL.trimmingCharacters(in: .whitespacesAndNewlines)
         urlField.stringValue = finalURL
         
         // Set title
@@ -374,19 +391,16 @@ class ShareViewController: NSViewController {
             }
         }
         
-        // Check for duplicate
-        if SharedLinkStorage.shared.linkExists(url: finalURL) {
-            warningLabel.stringValue = String(
-                localized: "share.extension.url.exists",
-                defaultValue: "⚠️ This URL already exists in LinkShelf",
-                table: "Localizable",
-                bundle: .main,
-                locale: .current,
-                comment: "Shown when the shared URL is already saved."
-            )
-            warningLabel.isHidden = false
-        } else {
-            warningLabel.isHidden = true
+        // Warn about a duplicate before saving; saving is still allowed.
+        guard let repository else { return }
+        Task { @MainActor [weak self] in
+            let existing = try? await repository.existingLink(matching: finalURL)
+            guard let self, self.addButton.isEnabled else { return }
+            if existing != nil {
+                self.showWarning(String(localized: "share.extension.url.exists"))
+            } else {
+                self.warningLabel.isHidden = true
+            }
         }
     }
     
@@ -424,8 +438,6 @@ class ShareViewController: NSViewController {
             url = sharedURL
         }
         
-        print("📝 Title: '\(title)', URL: '\(url)'")
-        
         // Validate
         if title.isEmpty {
             if !url.isEmpty {
@@ -447,28 +459,32 @@ class ShareViewController: NSViewController {
             return
         }
         
-        // Normalize URL
-        if !url.hasPrefix("http://") && !url.hasPrefix("https://") {
-            url = "https://" + url
+        guard let repository else { return }
+        let draft = LinkDraft(title: title, url: url)
+        addButton.isEnabled = false
+        Task { @MainActor [weak self] in
+            do {
+                // The duplicate warning was already shown; the person chose to save.
+                try await repository.addLink(draft, allowingDuplicate: true)
+                LinkShelfChangeSignal.post()
+            } catch {
+                self?.addButton.isEnabled = true
+                self?.showWarning(Self.message(for: error))
+                return
+            }
+            // Report success only after the save is durable.
+            guard let self else { return }
+            let context = self.storedContext ?? self.extensionContext
+            context?.completeRequest(returningItems: nil, completionHandler: nil)
         }
-        
-        // Validate URL
-        guard URL(string: url) != nil else {
-            print("❌ Invalid URL: \(url)")
-            return
+    }
+
+    private static func message(for error: Error) -> String {
+        switch error as? LinkShelfError {
+        case .emptyTitle, .emptyURL, .malformedURL, .unsupportedScheme, .missingHost, .embeddedCredentials:
+            return String(localized: "error.invalid.url")
+        default:
+            return String(localized: "share.extension.save.failed")
         }
-        
-        print("💾 Saving link - Title: '\(title)', URL: '\(url)'")
-        
-        // Save link
-        SharedLinkStorage.shared.addLink(title: title, url: url)
-        
-        print("✅ Link saved, closing extension")
-        
-        // Close extension
-        let context = storedContext ?? self.extensionContext
-        context?.completeRequest(returningItems: nil, completionHandler: { success in
-            print("Add completed: \(success)")
-        })
     }
 }

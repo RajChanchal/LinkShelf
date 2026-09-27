@@ -87,6 +87,12 @@ struct LinkListView: View {
         .onChange(of: linkManager.links) { _, _ in ensureValidSelection() }
         .onMoveCommand(perform: moveSelection)
         .onExitCommand(perform: handleEscape)
+        .alert(String(localized: "storage.error.title"), isPresented: Binding(
+            get: { linkManager.storageIssue != nil },
+            set: { if !$0 { linkManager.storageIssue = nil } }
+        )) {} message: {
+            Text(storageIssueMessage)
+        }
         .alert(String(localized: "folder.new.title"), isPresented: $showingNewFolder) {
             TextField(String(localized: .linkFolder), text: $childFolderName)
             Button(String(localized: .buttonCancel), role: .cancel) {}
@@ -323,6 +329,14 @@ struct LinkListView: View {
                     folderToDelete = folder
                 }
             }
+        }
+    }
+
+    private var storageIssueMessage: String {
+        switch linkManager.storageIssue {
+        case .loadFailed: return String(localized: "storage.error.load")
+        case .migrationFailed: return String(localized: "storage.error.migration")
+        case .saveFailed, nil: return String(localized: "storage.error.save")
         }
     }
 

@@ -59,8 +59,8 @@ All information stored by LinkShelf is kept **exclusively on your device**:
 
 ### Storage Location
 
-- All data is stored locally on your Mac using macOS **UserDefaults**
-- Data is stored in the app's sandboxed container
+- All data is stored locally on your Mac in a database inside the app's sandboxed App Group container
+- Website icons are kept in a local cache on your Mac and are never stored with your links
 - Data is encrypted by macOS system-level encryption
 
 ### Security Measures

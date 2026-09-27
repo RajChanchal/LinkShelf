@@ -1,6 +1,648 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "share.extension.migration.pending" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn LinkShelf én gang for at færdiggøre opdateringen af dine links, og del derefter denne side igen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffne LinkShelf einmal, um die Aktualisierung deiner Links abzuschließen, und teile diese Seite dann erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open LinkShelf once to finish updating your links, then share this page again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre LinkShelf una vez para terminar de actualizar tus enlaces y, después, vuelve a compartir esta página."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa LinkShelf kerran linkkiesi päivityksen viimeistelemiseksi ja jaa sitten tämä sivu uudelleen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez LinkShelf une fois pour terminer la mise à jour de vos liens, puis partagez à nouveau cette page."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri LinkShelf una volta per completare l'aggiornamento dei link, poi condividi di nuovo questa pagina."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelfを一度開いてリンクの更新を完了してから、このページをもう一度共有してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf를 한 번 열어 링크 업데이트를 완료한 다음 이 페이지를 다시 공유하십시오."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne LinkShelf én gang for å fullføre oppdateringen av lenkene, og del deretter denne siden på nytt."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open LinkShelf één keer om het bijwerken van je links te voltooien en deel deze pagina daarna opnieuw."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abra o LinkShelf uma vez para concluir a atualização das ligações e, depois, partilhe esta página novamente."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abra o LinkShelf uma vez para concluir a atualização dos seus links e depois compartilhe esta página novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте LinkShelf один раз, чтобы завершить обновление ссылок, затем поделитесь этой страницей снова."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna LinkShelf en gång för att slutföra uppdateringen av dina länkar och dela sedan den här sidan igen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请先打开 LinkShelf 一次以完成链接更新，然后再次共享此页面。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請先打開 LinkShelf 一次以完成連結更新，然後再次分享此頁面。"
+          }
+        }
+      }
+    },
+    "share.extension.save.failed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dette link kunne ikke gemmes. Prøv igen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Link konnte nicht gesichert werden. Bitte versuche es erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This link couldn't be saved. Please try again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se ha podido guardar este enlace. Inténtalo de nuevo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tätä linkkiä ei voitu tallentaa. Yritä uudelleen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce lien n'a pas pu être enregistré. Veuillez réessayer."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non è stato possibile salvare questo link. Riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このリンクを保存できませんでした。もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 링크를 저장할 수 없습니다. 다시 시도하십시오."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne lenken kunne ikke lagres. Prøv igjen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze link kon niet worden bewaard. Probeer het opnieuw."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível guardar esta ligação. Tente novamente."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível salvar este link. Tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось сохранить эту ссылку. Повторите попытку."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Länken kunde inte sparas. Försök igen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法存储此链接。请重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法儲存此連結。請再試一次。"
+          }
+        }
+      }
+    },
+    "storage.error.load" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dine links kunne ikke indlæses. Intet er blevet slettet. Afslut og åbn LinkShelf igen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Links konnten nicht geladen werden. Es wurde nichts gelöscht. Beende LinkShelf und öffne es erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your links couldn't be loaded. Nothing has been deleted. Please quit and reopen LinkShelf."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se han podido cargar tus enlaces. No se ha eliminado nada. Sal de LinkShelf y vuelve a abrirlo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linkkejäsi ei voitu ladata. Mitään ei ole poistettu. Lopeta LinkShelf ja avaa se uudelleen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de charger vos liens. Rien n'a été supprimé. Quittez puis rouvrez LinkShelf."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non è stato possibile caricare i link. Non è stato eliminato nulla. Esci da LinkShelf e riaprilo."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リンクを読み込めませんでした。何も削除されていません。LinkShelfを終了して、もう一度開いてください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "링크를 불러올 수 없습니다. 삭제된 항목은 없습니다. LinkShelf를 종료한 후 다시 여십시오."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lenkene kunne ikke lastes inn. Ingenting er slettet. Avslutt og åpne LinkShelf på nytt."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je links konden niet worden geladen. Er is niets verwijderd. Stop LinkShelf en open het opnieuw."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível carregar as ligações. Nada foi apagado. Encerre e volte a abrir o LinkShelf."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível carregar seus links. Nada foi apagado. Encerre e abra o LinkShelf novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить ссылки. Ничего не удалено. Завершите и снова откройте LinkShelf."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dina länkar kunde inte läsas in. Inget har raderats. Avsluta och öppna LinkShelf igen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法载入你的链接。没有任何内容被删除。请退出并重新打开 LinkShelf。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法載入你的連結。沒有任何內容被刪除。請結束並重新打開 LinkShelf。"
+          }
+        }
+      }
+    },
+    "storage.error.migration" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf kunne ikke færdiggøre opdateringen af dine gemte links. Dine oprindelige links er gemt sikkert. Afslut og åbn LinkShelf igen for at prøve igen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf konnte die Aktualisierung deiner gesicherten Links nicht abschließen. Deine ursprünglichen Links bleiben sicher erhalten. Beende LinkShelf und öffne es erneut, um es noch einmal zu versuchen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf couldn't finish updating your saved links. Your original links are kept safely. Please quit and reopen LinkShelf to try again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf no ha podido terminar de actualizar tus enlaces guardados. Tus enlaces originales se conservan de forma segura. Sal de LinkShelf y vuelve a abrirlo para intentarlo de nuevo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf ei voinut viimeistellä tallennettujen linkkiesi päivitystä. Alkuperäiset linkkisi ovat tallessa. Lopeta LinkShelf ja avaa se uudelleen yrittääksesi uudestaan."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf n'a pas pu terminer la mise à jour de vos liens enregistrés. Vos liens d'origine sont conservés en toute sécurité. Quittez puis rouvrez LinkShelf pour réessayer."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf non è riuscito a completare l'aggiornamento dei link salvati. I link originali sono conservati in modo sicuro. Esci da LinkShelf e riaprilo per riprovare."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelfは保存済みリンクの更新を完了できませんでした。元のリンクは安全に保持されています。LinkShelfを終了して、もう一度開いてやり直してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf가 저장된 링크 업데이트를 완료하지 못했습니다. 원래 링크는 안전하게 보관되어 있습니다. LinkShelf를 종료한 후 다시 열어 재시도하십시오."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf kunne ikke fullføre oppdateringen av de lagrede lenkene. De opprinnelige lenkene er trygt bevart. Avslutt og åpne LinkShelf på nytt for å prøve igjen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf kon het bijwerken van je bewaarde links niet voltooien. Je oorspronkelijke links blijven veilig bewaard. Stop LinkShelf en open het opnieuw om het nogmaals te proberen."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O LinkShelf não conseguiu concluir a atualização das ligações guardadas. As ligações originais estão preservadas em segurança. Encerre e volte a abrir o LinkShelf para tentar novamente."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O LinkShelf não conseguiu concluir a atualização dos seus links salvos. Seus links originais estão preservados com segurança. Encerre e abra o LinkShelf novamente para tentar de novo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf не удалось завершить обновление сохраненных ссылок. Исходные ссылки надежно сохранены. Завершите и снова откройте LinkShelf, чтобы повторить попытку."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf kunde inte slutföra uppdateringen av dina sparade länkar. Dina ursprungliga länkar finns kvar på ett säkert sätt. Avsluta och öppna LinkShelf igen för att försöka på nytt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf 无法完成已存储链接的更新。你的原始链接已安全保留。请退出并重新打开 LinkShelf 以重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinkShelf 無法完成已儲存連結的更新。你的原始連結已安全保留。請結束並重新打開 LinkShelf 以再試一次。"
+          }
+        }
+      }
+    },
+    "storage.error.save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din ændring kunne ikke gemmes. Prøv igen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Änderung konnte nicht gesichert werden. Bitte versuche es erneut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your change couldn't be saved. Please try again."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se ha podido guardar el cambio. Inténtalo de nuevo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muutosta ei voitu tallentaa. Yritä uudelleen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre modification n'a pas pu être enregistrée. Veuillez réessayer."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non è stato possibile salvare la modifica. Riprova."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変更を保存できませんでした。もう一度お試しください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "변경 사항을 저장할 수 없습니다. 다시 시도하십시오."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endringen kunne ikke lagres. Prøv igjen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je wijziging kon niet worden bewaard. Probeer het opnieuw."
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível guardar a alteração. Tente novamente."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Não foi possível salvar a alteração. Tente novamente."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось сохранить изменение. Повторите попытку."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ändringen kunde inte sparas. Försök igen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法存储你的更改。请重试。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法儲存你的更改。請再試一次。"
+          }
+        }
+      }
+    },
+    "storage.error.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noget gik galt"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etwas ist schiefgelaufen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something Went Wrong"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Algo salió mal"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jokin meni vikaan"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un problème est survenu"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si è verificato un problema"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "問題が発生しました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "문제가 발생했습니다"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noe gikk galt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is iets misgegaan"
+          }
+        },
+        "pt" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Algo correu mal"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Algo deu errado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что-то пошло не так"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Något gick fel"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出现问题"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "發生問題"
+          }
+        }
+      }
+    },
     "folder.new.title" : {
       "extractionState": "manual",
       "localizations": {
