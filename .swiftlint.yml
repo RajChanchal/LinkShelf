@@ -1,0 +1,20 @@
+# SwiftLint baseline for LinkShelf.
+
+included:
+  - LinkShelf
+  - LinkShelfShare
+
+excluded:
+  - .build
+  - DerivedData
+
+only_rules:
+  - empty_count
+  - empty_enum_arguments
+  - fatal_error_message
+  - force_unwrapping
+  - redundant_nil_coalescing
+  - syntactic_sugar
+  - unused_import
+
+reporter: xcode
