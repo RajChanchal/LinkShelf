@@ -43,7 +43,10 @@ class StatusBarController: NSObject, ObservableObject, NSPopoverDelegate {
         }
 
         // Setup popover content
-        let contentView = LinkListView()
+        let contentView = LinkListView(
+            hidePopover: { [weak self] in self?.popover.close() },
+            showPopover: { [weak self] in self?.showPopover() }
+        )
             .environmentObject(linkManager)
         popover.contentViewController = NSHostingController(rootView: contentView)
 

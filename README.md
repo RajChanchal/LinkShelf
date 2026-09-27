@@ -68,6 +68,9 @@ This project can also be set up as a Swift Package, though for a macOS app, Xcod
 6. **Reorder**: Drag links in the list to reorder them
 7. **Open instantly**: Press `⌥ + ⌘ + L` to open LinkShelf without touching the mouse
 8. **Add from other apps**: Use the “LinkShelf” option in the macOS share menu (Safari and any app that supports sharing)
+9. **Rename a folder**: Right-click its header and choose “Rename folder…”. Renaming also updates nested folder paths; names that collide with another folder cannot be saved.
+10. **Delete a folder**: Right-click its header and choose “Delete folder…”. Confirm to permanently delete its bookmarks and all nested folders.
+11. **Create folders**: Use “New folder…” in the main menu, or right-click a folder and choose “New subfolder…”. Empty folders are saved. Nested folders appear indented; collapse a parent to hide its descendants.
 9. **Organize**: Add an optional folder name when creating or editing a link
 
 ## Default Links

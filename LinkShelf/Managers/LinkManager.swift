@@ -12,6 +12,7 @@ import SwiftUI
 
 class LinkManager: ObservableObject {
     @Published var links: [Link] = []
+    @Published private(set) var folders: [String] = []
     
     private let store: LinkStore
     private let userDefaults: UserDefaults
@@ -81,6 +82,7 @@ class LinkManager: ObservableObject {
     }
     
     func loadLinks() {
+        folders = store.loadFolders()
         let decoded = store.loadLinks()
         links = decoded.sorted { left, right in
             let leftKey = sortKey(for: left.folder)
@@ -93,6 +95,8 @@ class LinkManager: ObservableObject {
     }
     
     func saveLinks() {
+        folders = folderNames
+        store.saveFolders(folders)
         store.saveLinks(links)
     }
     
@@ -116,6 +120,16 @@ class LinkManager: ObservableObject {
                 }
             }
         }
+    }
+
+    func importLinks(_ importedLinks: [ImportedBookmark]) {
+        for imported in importedLinks where !linkExists(url: imported.url) {
+            let folder = normalizeFolder(imported.folder)
+            let order = links.filter { $0.folder == folder }.count
+            links.append(Link(title: imported.title, url: imported.url, order: order, folder: folder))
+        }
+        saveLinks()
+        fetchMissingFavicons()
     }
     
     func updateLink(_ link: Link, title: String, url: String, folder: String? = nil) {
@@ -156,6 +170,13 @@ class LinkManager: ObservableObject {
     func deleteLink(_ link: Link) {
         links.removeAll { $0.id == link.id }
         reindexOrders(in: link.folder)
+        saveLinks()
+    }
+
+    func deleteLinks(withIDs ids: Set<UUID>) {
+        let folders = Set(links.filter { ids.contains($0.id) }.map(\.folder))
+        links.removeAll { ids.contains($0.id) }
+        for folder in folders { reindexOrders(in: folder) }
         saveLinks()
     }
 
@@ -257,10 +278,55 @@ class LinkManager: ObservableObject {
         }
     }
     
+    func deleteFolder(_ folder: String) {
+        let prefix = folder + " / "
+        let ids = Set(links.filter {
+            $0.folder == folder || ($0.folder?.hasPrefix(prefix) ?? false)
+        }.map(\.id))
+        folders = folderNames.filter { $0 != folder && !$0.hasPrefix(prefix) }
+        links.removeAll { ids.contains($0.id) }
+        store.saveFolders(folders)
+        store.saveLinks(links)
+    }
+
+    func canRenameFolder(_ folder: String, to name: String) -> Bool {
+        guard let name = normalizeFolder(name) else { return false }
+        let prefix = folder + " / "
+        let affected = folderNames.filter { $0 == folder || $0.hasPrefix(prefix) }
+        let remaining = Set(folderNames.filter { !affected.contains($0) }.map { $0.lowercased() })
+        return !affected.isEmpty && affected.allSatisfy {
+            !remaining.contains((name + String($0.dropFirst(folder.count))).lowercased())
+        }
+    }
+
+    @discardableResult
+    func renameFolder(_ folder: String, to name: String) -> Bool {
+        guard let name = normalizeFolder(name), canRenameFolder(folder, to: name) else { return false }
+        let prefix = folder + " / "
+        for index in links.indices {
+            guard let current = links[index].folder,
+                  current == folder || current.hasPrefix(prefix) else { continue }
+            links[index].folder = name + String(current.dropFirst(folder.count))
+        }
+        folders = folders.map { current in
+            current == folder || current.hasPrefix(prefix)
+                ? name + String(current.dropFirst(folder.count)) : current
+        }
+        store.saveFolders(folders)
+        saveLinks()
+        loadLinks()
+        return true
+    }
+
     var folderNames: [String] {
         var seen: Set<String> = []
         var result: [String] = []
-        for name in links.compactMap({ normalizeFolder($0.folder) }) {
+        for name in folders + links.compactMap({ normalizeFolder($0.folder) }) {
+            let components = name.components(separatedBy: " / ")
+            for depth in 1...components.count {
+                let parent = components.prefix(depth).joined(separator: " / ")
+                if seen.insert(parent.lowercased()).inserted { result.append(parent) }
+            }
             let key = name.lowercased()
             if !seen.contains(key) {
                 seen.insert(key)
@@ -268,5 +334,20 @@ class LinkManager: ObservableObject {
             }
         }
         return result.sorted { $0.lowercased() < $1.lowercased() }
+    }
+
+    func canAddFolder(named name: String, inside parent: String?) -> Bool {
+        let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty, !trimmed.contains("/"), !trimmed.contains("\n") else { return false }
+        let path = parent.map { $0 + " / " + trimmed } ?? trimmed
+        return !folderNames.contains { $0.caseInsensitiveCompare(path) == .orderedSame }
+    }
+
+    func addFolder(named name: String, inside parent: String?) {
+        guard canAddFolder(named: name, inside: parent) else { return }
+        let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        folders = folderNames
+        folders.append(parent.map { $0 + " / " + trimmed } ?? trimmed)
+        store.saveFolders(folders)
     }
 }

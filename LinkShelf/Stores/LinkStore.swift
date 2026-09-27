@@ -11,6 +11,8 @@ protocol LinkStore {
     var userDefaults: UserDefaults { get }
     func loadLinks() -> [Link]
     func saveLinks(_ links: [Link])
+    func loadFolders() -> [String]
+    func saveFolders(_ folders: [String])
 }
 
 final class AppGroupLinkStore: LinkStore {
@@ -44,5 +46,16 @@ final class AppGroupLinkStore: LinkStore {
         let center = CFNotificationCenterGetDarwinNotifyCenter()
         let name = CFNotificationName(SharedLinkStorage.linksChangedNotification as CFString)
         CFNotificationCenterPostNotification(center, name, nil, nil, true)
+    }
+
+    func loadFolders() -> [String] {
+        userDefaults.stringArray(forKey: "LinkShelf_Folders") ?? []
+    }
+
+    func saveFolders(_ folders: [String]) {
+        userDefaults.set(folders, forKey: "LinkShelf_Folders")
+        userDefaults.synchronize()
+        CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(),
+            CFNotificationName(SharedLinkStorage.linksChangedNotification as CFString), nil, nil, true)
     }
 }

@@ -1,11 +1,14 @@
 import SwiftUI
 import AppKit
+import UniformTypeIdentifiers
 
 extension Notification.Name {
     static let closeLinkShelfPopover = Notification.Name("CloseLinkShelfPopover")
 }
 
 struct LinkListView: View {
+    var hidePopover: () -> Void = {}
+    var showPopover: () -> Void = {}
     @EnvironmentObject private var linkManager: LinkManager
     @AppStorage("defaultLinkAction") private var defaultLinkAction = "copy"
     @AppStorage("closeAfterAction") private var closeAfterAction = true
@@ -17,6 +20,15 @@ struct LinkListView: View {
     @State private var selectedLinkId: UUID?
     @State private var collapsedFolders: Set<String> = []
     @State private var deletedLink: Link?
+    @State private var bookmarkImport: [ImportedBookmark]?
+    @State private var isSelecting = false
+    @State private var folderToRename: String?
+    @State private var folderToDelete: String?
+    @State private var showingNewFolder = false
+    @State private var parentFolder: String?
+    @State private var childFolderName = ""
+    @State private var newFolderName = ""
+    @State private var selectedLinkIDs: Set<UUID> = []
     @State private var undoTask: Task<Void, Never>?
     @AppStorage("collapsedFolders") private var collapsedFoldersStorage = ""
     @FocusState private var isSearchFocused: Bool
@@ -46,8 +58,8 @@ struct LinkListView: View {
             Divider()
 
             Group {
-                if linkManager.links.isEmpty { emptyState }
-                else if filteredLinks.isEmpty { noResultsState }
+                if linkManager.links.isEmpty && linkManager.folderNames.isEmpty { emptyState }
+                else if filteredLinks.isEmpty && !searchText.isEmpty { noResultsState }
                 else { linkList }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -75,8 +87,39 @@ struct LinkListView: View {
         .onChange(of: linkManager.links) { _, _ in ensureValidSelection() }
         .onMoveCommand(perform: moveSelection)
         .onExitCommand(perform: handleEscape)
+        .alert(String(localized: "folder.new.title"), isPresented: $showingNewFolder) {
+            TextField(String(localized: .linkFolder), text: $childFolderName)
+            Button(String(localized: .buttonCancel), role: .cancel) {}
+            Button(String(localized: .buttonAdd)) {
+                linkManager.addFolder(named: childFolderName, inside: parentFolder)
+                if let parentFolder { collapsedFolders.remove(folderKey(parentFolder)) }
+                collapsedFoldersStorage = collapsedFolders.sorted().joined(separator: "\n")
+            }
+            .disabled(!linkManager.canAddFolder(named: childFolderName, inside: parentFolder))
+        } message: { Text(String(localized: "folder.new.hint")) }
+        .alert(String(localized: "folder.rename.title"), isPresented: Binding(
+            get: { folderToRename != nil },
+            set: { if !$0 { folderToRename = nil } }
+        )) {
+            TextField(String(localized: .linkFolder), text: $newFolderName)
+            Button(String(localized: .buttonCancel), role: .cancel) { folderToRename = nil }
+            Button(String(localized: .buttonSave)) { renameFolder() }
+                .disabled(folderToRename.map { !linkManager.canRenameFolder($0, to: newFolderName) } ?? true)
+        } message: {
+            Text(String(localized: "folder.rename.hint"))
+        }
         .sheet(isPresented: $showingAddLink) {
             AddEditLinkView(isPresented: $showingAddLink).environmentObject(linkManager)
+        }
+        .alert(String(localized: "folder.delete.title"), isPresented: Binding(
+            get: { folderToDelete != nil },
+            set: { if !$0 { folderToDelete = nil } }
+        )) {
+            Button(String(localized: .buttonCancel), role: .cancel) { folderToDelete = nil }
+            Button(String(localized: .buttonDelete), role: .destructive) { deleteFolder() }
+        } message: {
+            Text(String(localized: "folder.delete.hint"))
+            if let folderToDelete { Text(verbatim: folderToDelete) }
         }
         .sheet(item: $editingLink) { link in
             AddEditLinkView(link: link, isPresented: Binding(
@@ -84,12 +127,23 @@ struct LinkListView: View {
                 set: { if !$0 { editingLink = nil } }
             )).environmentObject(linkManager)
         }
+        .sheet(isPresented: Binding(get: { bookmarkImport != nil }, set: { if !$0 { bookmarkImport = nil } })) {
+            if let bookmarkImport { ImportBookmarksView(bookmarks: bookmarkImport).environmentObject(linkManager) }
+        }
     }
 
     private var header: some View {
         HStack(spacing: 10) {
             Text(String(localized: .appName)).font(.headline)
             Spacer()
+            if isSelecting {
+                Button("Select All") { selectedLinkIDs = Set(filteredLinks.map(\.id)) }
+                Button("Delete", role: .destructive) { deleteSelected() }.disabled(selectedLinkIDs.isEmpty)
+                Button("Done") { isSelecting = false; selectedLinkIDs.removeAll() }
+            } else {
+                Button { isSelecting = true } label: { Image(systemName: "checklist").frame(width: 24, height: 24) }
+                    .buttonStyle(.plain).help("Select bookmarks")
+            }
             Button(action: prepareToAdd) {
                 Image(systemName: "plus").frame(width: 24, height: 24).contentShape(Rectangle())
             }
@@ -97,7 +151,16 @@ struct LinkListView: View {
             .help(String(localized: .linkAdd))
 
             Menu {
+                Button(String(localized: "folder.new.title")) {
+                    parentFolder = nil
+                    childFolderName = ""
+                    showingNewFolder = true
+                }
                 SettingsLink { Label("Settings…", systemImage: "gearshape") }
+                Button { chooseBookmarkFile() } label: {
+                    Label("Import bookmarks…", systemImage: "square.and.arrow.down")
+                }
+                .labelStyle(.titleAndIcon)
                 Divider()
                 Button(String(localized: .menuQuitLinkshelf)) { NSApplication.shared.terminate(nil) }
             } label: {
@@ -108,6 +171,35 @@ struct LinkListView: View {
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 11)
+    }
+
+    private func chooseBookmarkFile() {
+        isSearchFocused = false
+        hidePopover()
+        DispatchQueue.main.async {
+            let panel = NSOpenPanel()
+            panel.allowedContentTypes = [.html, UTType(filenameExtension: "htm") ?? .html]
+            panel.canChooseDirectories = false
+            panel.allowsMultipleSelection = false
+            panel.begin { response in
+                guard response == .OK, let url = panel.url,
+                      let bookmarks = try? BookmarkImporter().parse(file: url) else { return }
+                showPopover()
+                DispatchQueue.main.async { bookmarkImport = bookmarks }
+            }
+        }
+    }
+
+    private func toggleSelection(of link: Link) {
+        if selectedLinkIDs.contains(link.id) { selectedLinkIDs.remove(link.id) }
+        else { selectedLinkIDs.insert(link.id) }
+    }
+
+    private func deleteSelected() {
+        guard !selectedLinkIDs.isEmpty else { return }
+        linkManager.deleteLinks(withIDs: selectedLinkIDs)
+        selectedLinkIDs.removeAll()
+        isSelecting = false
     }
 
     private var searchField: some View {
@@ -152,13 +244,17 @@ struct LinkListView: View {
                                 LinkRowView(
                                     link: link,
                                     isSelected: selectedLinkId == link.id,
+                                    isMultiSelecting: isSelecting,
+                                    isMarked: selectedLinkIDs.contains(link.id),
                                     isCopied: copiedLinkId == link.id,
+                                    onToggleSelection: { toggleSelection(of: link) },
                                     onPrimaryAction: { performDefaultAction(on: link) },
                                     onOpen: { open(link) },
                                     onEdit: { editingLink = link },
                                     onDelete: { deleteWithUndo(link) }
                                 )
                                 .id(link.id)
+                                .padding(.leading, CGFloat(max(0, (group.folder?.components(separatedBy: " / ").count ?? 1) - 1)) * 16)
                                 .listRowInsets(EdgeInsets())
                                 .listRowSeparator(.hidden)
                             }
@@ -168,7 +264,14 @@ struct LinkListView: View {
                             }
                         }
                     } header: {
-                        folderHeader(group.folder, count: group.links.count, isCollapsed: isCollapsed) {
+                        folderHeader(group.folder, count: group.links.count, isCollapsed: isCollapsed, onSelect: {
+                            let descendants = filteredLinks.filter { link in
+                                link.folder == group.folder || (group.folder.map { parent in
+                                    link.folder?.hasPrefix(parent + " / ") ?? false
+                                } ?? false)
+                            }
+                            selectedLinkIDs.formUnion(descendants.map(\.id))
+                        }) {
                             withAnimation(.easeInOut(duration: 0.15)) {
                                 if isCollapsed { collapsedFolders.remove(key) } else { collapsedFolders.insert(key) }
                                 collapsedFoldersStorage = collapsedFolders.sorted().joined(separator: "\n")
@@ -187,22 +290,64 @@ struct LinkListView: View {
         }
     }
 
-    private func folderHeader(_ folder: String?, count: Int, isCollapsed: Bool, onToggle: @escaping () -> Void) -> some View {
-        Button(action: onToggle) {
+    private func folderHeader(_ folder: String?, count: Int, isCollapsed: Bool, onSelect: @escaping () -> Void, onToggle: @escaping () -> Void) -> some View {
+        Button(action: isSelecting ? onSelect : onToggle) {
             HStack(spacing: 6) {
                 Image(systemName: isCollapsed ? "chevron.right" : "chevron.down").font(.caption2.weight(.semibold))
-                Text(folder ?? String(localized: .linkNoFolder))
+                                Text(folder?.components(separatedBy: " / ").last ?? String(localized: .linkNoFolder))
                 Spacer()
                 Text(verbatim: "\(count)").monospacedDigit()
             }
             .font(.caption.weight(.semibold))
             .foregroundStyle(.secondary)
             .padding(.horizontal, 12)
+            .padding(.leading, CGFloat(max(0, (folder?.components(separatedBy: " / ").count ?? 1) - 1)) * 16)
             .padding(.vertical, 6)
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .disabled(!searchText.isEmpty)
+        .contextMenu {
+            if let folder {
+                Button(String(localized: "folder.new.child")) {
+                    parentFolder = folder
+                    childFolderName = ""
+                    showingNewFolder = true
+                }
+                Button(String(localized: "folder.rename.menu")) {
+                    newFolderName = folder
+                    folderToRename = folder
+                }
+                Divider()
+                Button(String(localized: "folder.delete.menu"), role: .destructive) {
+                    folderToDelete = folder
+                }
+            }
+        }
+    }
+
+    private func renameFolder() {
+        guard let folder = folderToRename,
+              linkManager.renameFolder(folder, to: newFolderName) else { return }
+        let name = newFolderName.trimmingCharacters(in: .whitespacesAndNewlines)
+        let oldKey = folderKey(folder)
+        let newKey = folderKey(name)
+        collapsedFolders = Set(collapsedFolders.map { key in
+            key == oldKey || key.hasPrefix(oldKey + " / ")
+                ? newKey + String(key.dropFirst(oldKey.count)) : key
+        })
+        collapsedFoldersStorage = collapsedFolders.sorted().joined(separator: "\n")
+        folderToRename = nil
+    }
+
+    private func deleteFolder() {
+        guard let folder = folderToDelete else { return }
+        linkManager.deleteFolder(folder)
+        let key = folderKey(folder)
+        collapsedFolders = Set(collapsedFolders.filter { $0 != key && !$0.hasPrefix(key + " / ") })
+        collapsedFoldersStorage = collapsedFolders.sorted().joined(separator: "\n")
+        selectedLinkIDs.formIntersection(linkManager.links.map(\.id))
+        folderToDelete = nil
     }
 
     private var emptyState: some View {
@@ -360,14 +505,21 @@ struct LinkListView: View {
 
     private func groupedLinks(_ links: [Link]) -> [(folder: String?, links: [Link])] {
         let groups = Dictionary(grouping: links) { normalizeFolder($0.folder) }
-        return groups.keys.sorted {
-            switch ($0, $1) {
-            case (nil, nil): return false
-            case (nil, _): return true
-            case (_, nil): return false
-            case let (left?, right?): return left.localizedCaseInsensitiveCompare(right) == .orderedAscending
+        var result: [(folder: String?, links: [Link])] = []
+        if let unfiled = groups[nil] { result.append((nil, unfiled.sorted { $0.order < $1.order })) }
+        let paths = linkManager.folderNames.sorted {
+            $0.components(separatedBy: " / ").lexicographicallyPrecedes($1.components(separatedBy: " / ")) {
+                $0.localizedCaseInsensitiveCompare($1) == .orderedAscending
             }
-        }.map { key in (key, (groups[key] ?? []).sorted { $0.order < $1.order }) }
+        }
+        for path in paths {
+            let parts = path.components(separatedBy: " / ")
+            let ancestors = (1..<parts.count).map { parts.prefix($0).joined(separator: " / ") }
+            if searchText.isEmpty && ancestors.contains(where: { collapsedFolders.contains(folderKey($0)) }) { continue }
+            if !searchText.isEmpty && !links.contains(where: { $0.folder == path || ($0.folder?.hasPrefix(path + " / ") ?? false) }) { continue }
+            result.append((path, (groups[path] ?? []).sorted { $0.order < $1.order }))
+        }
+        return result
     }
 
     private func normalizeFolder(_ folder: String?) -> String? {
@@ -381,7 +533,10 @@ struct LinkListView: View {
 struct LinkRowView: View {
     let link: Link
     let isSelected: Bool
+    let isMultiSelecting: Bool
+    let isMarked: Bool
     let isCopied: Bool
+    let onToggleSelection: () -> Void
     let onPrimaryAction: () -> Void
     let onOpen: () -> Void
     let onEdit: () -> Void
@@ -399,6 +554,12 @@ struct LinkRowView: View {
 
     var body: some View {
         HStack(spacing: 8) {
+            if isMultiSelecting {
+                Button(action: onToggleSelection) {
+                    Image(systemName: isMarked ? "checkmark.circle.fill" : "circle")
+                        .foregroundStyle(isMarked ? Color.accentColor : Color.secondary)
+                }.buttonStyle(.plain)
+            }
             Button(action: onPrimaryAction) {
                 HStack(spacing: 10) {
                     Group {
