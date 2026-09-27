@@ -2,7 +2,7 @@
 
 ## Project scope
 
-LinkShelf is a macOS menu bar application targeting macOS 11+. It uses SwiftUI for views, AppKit for menu bar and global shortcut integration, and a Share Extension for adding links from other apps.
+LinkShelf is a macOS menu bar application targeting macOS 14+. It uses SwiftUI for views, AppKit for menu bar and global shortcut integration, and a Share Extension for adding links from other apps.
 
 Before changing behavior, understand whether the change affects the main app, the Share Extension, or their shared app-group storage.
 

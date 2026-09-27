@@ -54,7 +54,7 @@ All Share Extension files have been created:
    - **Product Bundle Identifier**: `com.chanchalgeek.LinkShelf.ShareExtension`
    - **Info.plist File**: `LinkShelfShare/Info.plist`
    - **Code Signing Entitlements**: `LinkShelfShare/LinkShelfShare.entitlements`
-   - **Deployment Target**: Same as main app (macOS 11.0+)
+   - **Deployment Target**: Same as main app (macOS 14.0+)
 
 ### 6. Configure Capabilities
 

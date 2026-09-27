@@ -84,7 +84,7 @@ You can edit or delete these to customize your shelf.
 
 ## Technical Details
 
-- **Platform**: macOS 11.0+
+- **Platform**: macOS 14.0+
 - **Framework**: SwiftUI + AppKit
 - **Storage**: UserDefaults (local, secure)
 - **Architecture**: MVVM pattern
