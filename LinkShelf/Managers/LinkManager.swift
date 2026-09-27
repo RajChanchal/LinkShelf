@@ -117,6 +117,16 @@ class LinkManager: ObservableObject {
             }
         }
     }
+
+    func importLinks(_ importedLinks: [ImportedBookmark]) {
+        for imported in importedLinks where !linkExists(url: imported.url) {
+            let folder = normalizeFolder(imported.folder)
+            let order = links.filter { $0.folder == folder }.count
+            links.append(Link(title: imported.title, url: imported.url, order: order, folder: folder))
+        }
+        saveLinks()
+        fetchMissingFavicons()
+    }
     
     func updateLink(_ link: Link, title: String, url: String, folder: String? = nil) {
         if let index = links.firstIndex(where: { $0.id == link.id }) {
@@ -156,6 +166,13 @@ class LinkManager: ObservableObject {
     func deleteLink(_ link: Link) {
         links.removeAll { $0.id == link.id }
         reindexOrders(in: link.folder)
+        saveLinks()
+    }
+
+    func deleteLinks(withIDs ids: Set<UUID>) {
+        let folders = Set(links.filter { ids.contains($0.id) }.map(\.folder))
+        links.removeAll { ids.contains($0.id) }
+        for folder in folders { reindexOrders(in: folder) }
         saveLinks()
     }
 

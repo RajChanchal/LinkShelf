@@ -1,5 +1,6 @@
 import SwiftUI
 import AppKit
+import UniformTypeIdentifiers
 
 extension Notification.Name {
     static let closeLinkShelfPopover = Notification.Name("CloseLinkShelfPopover")
@@ -17,6 +18,9 @@ struct LinkListView: View {
     @State private var selectedLinkId: UUID?
     @State private var collapsedFolders: Set<String> = []
     @State private var deletedLink: Link?
+    @State private var bookmarkImport: [ImportedBookmark]?
+    @State private var isSelecting = false
+    @State private var selectedLinkIDs: Set<UUID> = []
     @State private var undoTask: Task<Void, Never>?
     @AppStorage("collapsedFolders") private var collapsedFoldersStorage = ""
     @FocusState private var isSearchFocused: Bool
@@ -84,12 +88,23 @@ struct LinkListView: View {
                 set: { if !$0 { editingLink = nil } }
             )).environmentObject(linkManager)
         }
+        .sheet(isPresented: Binding(get: { bookmarkImport != nil }, set: { if !$0 { bookmarkImport = nil } })) {
+            if let bookmarkImport { ImportBookmarksView(bookmarks: bookmarkImport).environmentObject(linkManager) }
+        }
     }
 
     private var header: some View {
         HStack(spacing: 10) {
             Text(String(localized: .appName)).font(.headline)
             Spacer()
+            if isSelecting {
+                Button("Select All") { selectedLinkIDs = Set(filteredLinks.map(\.id)) }
+                Button("Delete", role: .destructive) { deleteSelected() }.disabled(selectedLinkIDs.isEmpty)
+                Button("Done") { isSelecting = false; selectedLinkIDs.removeAll() }
+            } else {
+                Button { isSelecting = true } label: { Image(systemName: "checklist").frame(width: 24, height: 24) }
+                    .buttonStyle(.plain).help("Select bookmarks")
+            }
             Button(action: prepareToAdd) {
                 Image(systemName: "plus").frame(width: 24, height: 24).contentShape(Rectangle())
             }
@@ -98,6 +113,7 @@ struct LinkListView: View {
 
             Menu {
                 SettingsLink { Label("Settings…", systemImage: "gearshape") }
+                Button("Import Bookmarks…") { chooseBookmarkFile() }
                 Divider()
                 Button(String(localized: .menuQuitLinkshelf)) { NSApplication.shared.terminate(nil) }
             } label: {
@@ -108,6 +124,25 @@ struct LinkListView: View {
         }
         .padding(.horizontal, 14)
         .padding(.vertical, 11)
+    }
+
+    private func chooseBookmarkFile() {
+        let panel = NSOpenPanel()
+        panel.allowedContentTypes = [.html, UTType(filenameExtension: "htm") ?? .html]
+        guard panel.runModal() == .OK, let url = panel.url else { return }
+        bookmarkImport = try? BookmarkImporter().parse(file: url)
+    }
+
+    private func toggleSelection(of link: Link) {
+        if selectedLinkIDs.contains(link.id) { selectedLinkIDs.remove(link.id) }
+        else { selectedLinkIDs.insert(link.id) }
+    }
+
+    private func deleteSelected() {
+        guard !selectedLinkIDs.isEmpty else { return }
+        linkManager.deleteLinks(withIDs: selectedLinkIDs)
+        selectedLinkIDs.removeAll()
+        isSelecting = false
     }
 
     private var searchField: some View {
@@ -152,7 +187,10 @@ struct LinkListView: View {
                                 LinkRowView(
                                     link: link,
                                     isSelected: selectedLinkId == link.id,
+                                    isMultiSelecting: isSelecting,
+                                    isMarked: selectedLinkIDs.contains(link.id),
                                     isCopied: copiedLinkId == link.id,
+                                    onToggleSelection: { toggleSelection(of: link) },
                                     onPrimaryAction: { performDefaultAction(on: link) },
                                     onOpen: { open(link) },
                                     onEdit: { editingLink = link },
@@ -168,7 +206,9 @@ struct LinkListView: View {
                             }
                         }
                     } header: {
-                        folderHeader(group.folder, count: group.links.count, isCollapsed: isCollapsed) {
+                        folderHeader(group.folder, count: group.links.count, isCollapsed: isCollapsed, onSelect: {
+                            selectedLinkIDs.formUnion(group.links.map(\.id))
+                        }) {
                             withAnimation(.easeInOut(duration: 0.15)) {
                                 if isCollapsed { collapsedFolders.remove(key) } else { collapsedFolders.insert(key) }
                                 collapsedFoldersStorage = collapsedFolders.sorted().joined(separator: "\n")
@@ -187,8 +227,8 @@ struct LinkListView: View {
         }
     }
 
-    private func folderHeader(_ folder: String?, count: Int, isCollapsed: Bool, onToggle: @escaping () -> Void) -> some View {
-        Button(action: onToggle) {
+    private func folderHeader(_ folder: String?, count: Int, isCollapsed: Bool, onSelect: @escaping () -> Void, onToggle: @escaping () -> Void) -> some View {
+        Button(action: isSelecting ? onSelect : onToggle) {
             HStack(spacing: 6) {
                 Image(systemName: isCollapsed ? "chevron.right" : "chevron.down").font(.caption2.weight(.semibold))
                 Text(folder ?? String(localized: .linkNoFolder))
@@ -381,7 +421,10 @@ struct LinkListView: View {
 struct LinkRowView: View {
     let link: Link
     let isSelected: Bool
+    let isMultiSelecting: Bool
+    let isMarked: Bool
     let isCopied: Bool
+    let onToggleSelection: () -> Void
     let onPrimaryAction: () -> Void
     let onOpen: () -> Void
     let onEdit: () -> Void
@@ -399,6 +442,12 @@ struct LinkRowView: View {
 
     var body: some View {
         HStack(spacing: 8) {
+            if isMultiSelecting {
+                Button(action: onToggleSelection) {
+                    Image(systemName: isMarked ? "checkmark.circle.fill" : "circle")
+                        .foregroundStyle(isMarked ? Color.accentColor : Color.secondary)
+                }.buttonStyle(.plain)
+            }
             Button(action: onPrimaryAction) {
                 HStack(spacing: 10) {
                     Group {
