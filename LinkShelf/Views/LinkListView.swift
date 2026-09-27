@@ -116,6 +116,7 @@ struct LinkListView: View {
                 Button { chooseBookmarkFile() } label: {
                     Label("Import bookmarks…", systemImage: "square.and.arrow.down")
                 }
+                .labelStyle(.titleAndIcon)
                 Divider()
                 Button(String(localized: .menuQuitLinkshelf)) { NSApplication.shared.terminate(nil) }
             } label: {
