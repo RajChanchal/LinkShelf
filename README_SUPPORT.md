@@ -1,7 +1,7 @@
 # LinkShelf - Support & Documentation
 
 **Version:** 1.0  
-**Platform:** macOS 15.6 or later  
+**Platform:** macOS 14.0 or later\
 **Support:** [GitHub Issues](https://github.com/RajChanchal/LinkShelf/issues)
 
 ---
@@ -74,7 +74,8 @@ LinkShelf is a minimal macOS menu bar application that helps you store and quick
 
 ### Data Storage
 - All your links are stored **locally** on your Mac
-- Data is saved using macOS UserDefaults (secure, local storage)
+- Data is saved in a local database in LinkShelf's App Group container on your Mac
+- Updating from version 1.4 or earlier moves your links automatically and keeps a backup of the original data
 - **No data is sent to external servers**
 - **No analytics or tracking**
 
@@ -177,7 +178,7 @@ LinkShelf requires minimal permissions:
 **A:** Check the App Store listing for current pricing information.
 
 ### Q: Will LinkShelf work on older macOS versions?
-**A:** LinkShelf requires macOS 15.6 or later. For older versions, please check the App Store for compatibility.
+**A:** LinkShelf requires macOS 14.0 or later. For older versions, please check the App Store for compatibility.
 
 ### Q: Can I customize the appearance?
 **A:** LinkShelf uses the native macOS appearance (light/dark mode). The app automatically adapts to your system theme.
