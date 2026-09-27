@@ -74,12 +74,9 @@ class LinkManager: ObservableObject {
     }
     
     private func setDefaultLinks() {
-        let defaultLinks = [
-            Link(title: "LinkedIn Profile", url: "https://linkedin.com/in/yourprofile", order: 0),
-            Link(title: "GitHub Profile", url: "https://github.com/yourusername", order: 1),
-            Link(title: "Portfolio Website", url: "https://yourportfolio.com", order: 2)
-        ]
-        links = defaultLinks
+        // A genuine empty state is more useful than placeholder links that look
+        // real but lead nowhere. The onboarding UI teaches the first action.
+        links = []
         saveLinks()
     }
     
@@ -106,13 +103,15 @@ class LinkManager: ObservableObject {
         links.append(newLink)
         saveLinks()
         
-        // Fetch favicon asynchronously
-        Task {
-            if let faviconData = await FaviconManager.shared.fetchFavicon(for: url) {
-                await MainActor.run {
-                    if let index = links.firstIndex(where: { $0.id == newLink.id }) {
-                        links[index].faviconData = faviconData
-                        saveLinks()
+        // Fetch favicon asynchronously when the user has opted in.
+        if UserDefaults.standard.object(forKey: "fetchFavicons") == nil || UserDefaults.standard.bool(forKey: "fetchFavicons") {
+            Task {
+                if let faviconData = await FaviconManager.shared.fetchFavicon(for: url) {
+                    await MainActor.run {
+                        if let index = links.firstIndex(where: { $0.id == newLink.id }) {
+                            links[index].faviconData = faviconData
+                            saveLinks()
+                        }
                     }
                 }
             }
@@ -138,13 +137,15 @@ class LinkManager: ObservableObject {
             }
             saveLinks()
             
-            // Fetch favicon asynchronously
-            Task {
-                if let faviconData = await FaviconManager.shared.fetchFavicon(for: url) {
-                    await MainActor.run {
-                        if let currentIndex = links.firstIndex(where: { $0.id == link.id }) {
-                            links[currentIndex].faviconData = faviconData
-                            saveLinks()
+            // Fetch favicon asynchronously when the user has opted in.
+            if UserDefaults.standard.object(forKey: "fetchFavicons") == nil || UserDefaults.standard.bool(forKey: "fetchFavicons") {
+                Task {
+                    if let faviconData = await FaviconManager.shared.fetchFavicon(for: url) {
+                        await MainActor.run {
+                            if let currentIndex = links.firstIndex(where: { $0.id == link.id }) {
+                                links[currentIndex].faviconData = faviconData
+                                saveLinks()
+                            }
                         }
                     }
                 }
@@ -154,6 +155,13 @@ class LinkManager: ObservableObject {
     
     func deleteLink(_ link: Link) {
         links.removeAll { $0.id == link.id }
+        reindexOrders(in: link.folder)
+        saveLinks()
+    }
+
+    func restoreLink(_ link: Link) {
+        guard !links.contains(where: { $0.id == link.id }) else { return }
+        links.append(link)
         reindexOrders(in: link.folder)
         saveLinks()
     }
@@ -226,6 +234,7 @@ class LinkManager: ObservableObject {
     
     /// Fetches favicons for all links that don't have one yet
     func fetchMissingFavicons() {
+        guard UserDefaults.standard.object(forKey: "fetchFavicons") == nil || UserDefaults.standard.bool(forKey: "fetchFavicons") else { return }
         let linksWithoutFavicons = links.filter { $0.faviconData == nil }
         
         // Fetch favicons with a small delay between requests to avoid overwhelming servers
