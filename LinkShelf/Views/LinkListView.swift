@@ -58,7 +58,8 @@ struct LinkListView: View {
             Divider()
 
             Group {
-                if linkManager.links.isEmpty && linkManager.folderNames.isEmpty { emptyState }
+                if !linkManager.hasLoaded { ProgressView().controlSize(.small) }
+                else if linkManager.links.isEmpty && linkManager.folderNames.isEmpty { emptyState }
                 else if filteredLinks.isEmpty && !searchText.isEmpty { noResultsState }
                 else { linkList }
             }

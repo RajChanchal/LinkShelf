@@ -128,7 +128,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy for LinkShelf</h1>
-        <p class="subtitle"><strong>Last Updated:</strong> December 2024 | <strong>Effective Date:</strong> December 2024</p>
+        <p class="subtitle"><strong>Last Updated:</strong> September 2026 | <strong>Effective Date:</strong> December 2024</p>
         
         <h2>Introduction</h2>
         <p>LinkShelf ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your information when you use LinkShelf, a macOS menu bar application.</p>
@@ -179,8 +179,8 @@
         
         <h3>Storage Location</h3>
         <ul>
-            <li>All data is stored locally on your Mac using macOS <strong>UserDefaults</strong></li>
-            <li>Data is stored in the app's sandboxed container</li>
+            <li>All data is stored locally on your Mac in a database inside the app's sandboxed App Group container</li>
+            <li>Website icons are kept in a local cache on your Mac and are never stored with your links</li>
             <li>Data is encrypted by macOS system-level encryption</li>
         </ul>
         
@@ -193,12 +193,9 @@
         
         <h3>Data Retention</h3>
         <ul>
-            <li>Your link data remains on your device until you:
-                <ul>
-                    <li>Delete individual links</li>
-                    <li>Delete the app (which removes all associated data)</li>
-                </ul>
-            </li>
+            <li>Your link data remains on your device until you delete individual links or remove LinkShelf's data folder</li>
+            <li>When LinkShelf 1.5 or later first opens links saved by an earlier version, it keeps a one-time backup copy of that original data on your Mac, in the same data folder</li>
+            <li>Deleting the app does not remove this folder. To remove all LinkShelf data, delete <code>~/Library/Group Containers/group.com.chanchalgeek.LinkShelf</code> after quitting the app</li>
             <li>We do not retain any copies of your data</li>
         </ul>
         

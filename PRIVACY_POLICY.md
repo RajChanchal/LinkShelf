@@ -1,6 +1,6 @@
 # Privacy Policy for LinkShelf
 
-**Last Updated:** December 2024  
+**Last Updated:** September 2026\
 **Effective Date:** December 2024
 
 ---
@@ -71,9 +71,9 @@ All information stored by LinkShelf is kept **exclusively on your device**:
 
 ### Data Retention
 
-- Your link data remains on your device until you:
-  - Delete individual links
-  - Delete the app (which removes all associated data)
+- Your link data remains on your device until you delete individual links or remove LinkShelf's data folder
+- When LinkShelf 1.5 or later first opens links saved by an earlier version, it keeps a one-time backup copy of that original data on your Mac, in the same data folder
+- Deleting the app does not remove this folder. To remove all LinkShelf data, delete `~/Library/Group Containers/group.com.chanchalgeek.LinkShelf` after quitting the app
 - We do not retain any copies of your data
 
 ---
