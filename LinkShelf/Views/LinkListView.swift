@@ -7,6 +7,8 @@ extension Notification.Name {
 }
 
 struct LinkListView: View {
+    var hidePopover: () -> Void = {}
+    var showPopover: () -> Void = {}
     @EnvironmentObject private var linkManager: LinkManager
     @AppStorage("defaultLinkAction") private var defaultLinkAction = "copy"
     @AppStorage("closeAfterAction") private var closeAfterAction = true
@@ -130,10 +132,20 @@ struct LinkListView: View {
     }
 
     private func chooseBookmarkFile() {
-        let panel = NSOpenPanel()
-        panel.allowedContentTypes = [.html, UTType(filenameExtension: "htm") ?? .html]
-        guard panel.runModal() == .OK, let url = panel.url else { return }
-        bookmarkImport = try? BookmarkImporter().parse(file: url)
+        isSearchFocused = false
+        hidePopover()
+        DispatchQueue.main.async {
+            let panel = NSOpenPanel()
+            panel.allowedContentTypes = [.html, UTType(filenameExtension: "htm") ?? .html]
+            panel.canChooseDirectories = false
+            panel.allowsMultipleSelection = false
+            panel.begin { response in
+                guard response == .OK, let url = panel.url,
+                      let bookmarks = try? BookmarkImporter().parse(file: url) else { return }
+                showPopover()
+                DispatchQueue.main.async { bookmarkImport = bookmarks }
+            }
+        }
     }
 
     private func toggleSelection(of link: Link) {
