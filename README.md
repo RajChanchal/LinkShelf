@@ -92,6 +92,8 @@ You can edit or delete these to customize your shelf.
 
 ## Future Enhancements (Not in MVP)
 
+The proposed iOS app, shared Swift package, and SwiftData + CloudKit migration are documented in [multi-device requirements](docs/REQUIREMENTS.md) and the [feature and architecture specification](docs/FEATURE_SPECIFICATION.md). These describe planned work, not currently shipped features.
+
 - ⌘+Number keyboard shortcuts
 - iCloud sync
 - Custom icons per link
