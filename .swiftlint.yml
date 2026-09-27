@@ -1,0 +1,34 @@
+# SwiftLint baseline for LinkShelf.
+
+included:
+  - LinkShelf
+  - LinkShelfShare
+
+excluded:
+  - .build
+  - DerivedData
+
+only_rules:
+  - array_init
+  - contains_over_first_not_nil
+  - empty_string
+  - empty_count
+  - empty_enum_arguments
+  - empty_xctest_method
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - modifier_order
+  - operator_usage_whitespace
+  - prefer_zero_over_explicit_init
+  - redundant_nil_coalescing
+  - redundant_string_enum_value
+  - shorthand_operator
+  - sorted_first_last
+  - syntactic_sugar
+  - unused_import
+  - unused_closure_parameter
+  - unused_enumerated
+  - unused_optional_binding
+
+reporter: xcode
