@@ -12,7 +12,7 @@ Just click the menu bar icon, tap the link, and it's copied.
 
 • **Menu bar access** - Instant availability from your menu bar
 • **One-click copy** - Copy any link to clipboard instantly
-• **Global shortcut** - Press Option+Command+L to open LinkShelf instantly
+• **Global shortcut** - Press Control+Option+L to open LinkShelf instantly
 • **Visual identification** - Automatic favicon display for easy recognition
 • **Quick search** - Find links instantly with real-time search
 • **Share Extension** - Add links directly from Safari and other apps

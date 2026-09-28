@@ -21,7 +21,7 @@ Just click the menu bar icon, tap the link, and it's copied.
 
 KEY FEATURES
 • One-click copy - Copy any link to clipboard instantly
-• Global shortcut - Press Option+Command+L to open LinkShelf instantly
+• Global shortcut - Press Control+Option+L to open LinkShelf instantly
 • Menu bar access - Instant availability from your menu bar
 • Visual identification - Automatic favicon display for easy recognition
 • Quick search - Find links instantly with real-time search
@@ -61,7 +61,7 @@ Solo haz clic en el icono de la barra de menús, toca el enlace y ya está copia
 
 CARACTERÍSTICAS PRINCIPALES
 • Copia con un clic - Copia cualquier enlace al portapapeles al instante
-• Atajo global - Pulsa Opción+Cmd+L para abrir LinkShelf al instante
+• Atajo global - Pulsa Control+Opción+L para abrir LinkShelf al instante
 • Acceso desde la barra de menús - Disponible al instante desde tu barra de menús
 • Identificación visual - Muestra el favicon automáticamente para reconocer cada enlace
 • Búsqueda rápida - Encuentra enlaces al instante con búsqueda en tiempo real
@@ -101,7 +101,7 @@ Cliquez simplement sur l'icône de la barre de menus, appuyez sur le lien, et il
 
 FONCTIONNALITÉS CLÉS
 • Copie en un clic - Copiez n'importe quel lien dans le presse-papiers instantanément
-• Raccourci global - Appuyez sur Option+Cmd+L pour ouvrir LinkShelf instantanément
+• Raccourci global - Appuyez sur Control+Option+L pour ouvrir LinkShelf instantanément
 • Accès depuis la barre de menus - Disponible instantanément depuis votre barre de menus
 • Identification visuelle - Affichage automatique des favicons pour une reconnaissance facile
 • Recherche rapide - Trouvez vos liens instantanément grâce à la recherche en temps réel
@@ -141,7 +141,7 @@ Einfach auf das Menüleisten-Symbol klicken, den Link antippen – schon ist er 
 
 HAUPTFUNKTIONEN
 • Kopieren mit einem Klick - Kopiere jeden Link sofort in die Zwischenablage
-• Globaler Tastaturkürzel - Drücke Option+Cmd+L, um LinkShelf sofort zu öffnen
+• Globaler Tastaturkürzel - Drücke Control+Option+L, um LinkShelf sofort zu öffnen
 • Zugriff über die Menüleiste - Sofort verfügbar über deine Menüleiste
 • Visuelle Erkennung - Automatische Favicon-Anzeige zur einfachen Wiedererkennung
 • Schnelle Suche - Finde Links sofort mit Echtzeit-Suche
@@ -181,7 +181,7 @@ LinkedInのプロフィール、GitHubのプロフィール、ポートフォリ
 
 主な機能
 • ワンクリックコピー - どのリンクも即座にクリップボードへコピー
-• グローバルショートカット - Option+Command+Lで即座にLinkShelfを開く
+• グローバルショートカット - Control+Option+Lで即座にLinkShelfを開く
 • メニューバーアクセス - メニューバーからすぐに利用可能
 • 視覚的な識別 - ファビコンを自動表示してひと目で識別
 • クイック検索 - リアルタイム検索でリンクを瞬時に発見
@@ -221,7 +221,7 @@ LinkShelf 是一款简洁的 macOS 菜单栏应用，可以保存你常用的链
 
 主要功能
 • 一键复制 - 立即将任意链接复制到剪贴板
-• 全局快捷键 - 按 Option+Command+L 立即打开 LinkShelf
+• 全局快捷键 - 按 Control+Option+L 立即打开 LinkShelf
 • 菜单栏访问 - 随时从菜单栏快速打开
 • 可视化识别 - 自动显示网站图标，一目了然
 • 快速搜索 - 实时搜索，瞬间找到所需链接
@@ -261,7 +261,7 @@ LinkShelf 是一款簡潔的 macOS 選單列應用程式，可以儲存你常用
 
 主要功能
 • 一鍵複製 - 立即將任意連結複製到剪貼簿
-• 全域快速鍵 - 按 Option+Command+L 立即開啟 LinkShelf
+• 全域快速鍵 - 按 Control+Option+L 立即開啟 LinkShelf
 • 選單列存取 - 隨時從選單列快速開啟
 • 視覺化識別 - 自動顯示網站圖示，一目了然
 • 快速搜尋 - 即時搜尋，瞬間找到所需連結
@@ -301,7 +301,7 @@ Basta clicar no ícone da barra de menus, tocar no link e está copiado.
 
 PRINCIPAIS FUNCIONALIDADES
 • Cópia num clique - Copie qualquer link para a área de transferência instantaneamente
-• Atalho global - Prima Option+Cmd+L para abrir o LinkShelf instantaneamente
+• Atalho global - Prima Control+Option+L para abrir o LinkShelf instantaneamente
 • Acesso pela barra de menus - Disponível instantaneamente a partir da barra de menus
 • Identificação visual - Apresentação automática do favicon para fácil reconhecimento
 • Pesquisa rápida - Encontre links instantaneamente com pesquisa em tempo real
@@ -341,7 +341,7 @@ Basta clicar no ícone da barra de menus, tocar no link e ele já estará copiad
 
 PRINCIPAIS RECURSOS
 • Cópia em um clique - Copie qualquer link para a área de transferência instantaneamente
-• Atalho global - Pressione Option+Cmd+L para abrir o LinkShelf instantaneamente
+• Atalho global - Pressione Control+Option+L para abrir o LinkShelf instantaneamente
 • Acesso pela barra de menus - Disponível instantaneamente na sua barra de menus
 • Identificação visual - Exibição automática do favicon para fácil reconhecimento
 • Busca rápida - Encontre links instantaneamente com busca em tempo real
@@ -381,7 +381,7 @@ Ti basta cliccare sull'icona nella barra dei menu, toccare il link, ed è copiat
 
 CARATTERISTICHE PRINCIPALI
 • Copia con un clic - Copia qualsiasi link negli appunti all'istante
-• Scorciatoia globale - Premi Opzione+Cmd+L per aprire LinkShelf all'istante
+• Scorciatoia globale - Premi Control+Opzione+L per aprire LinkShelf all'istante
 • Accesso dalla barra dei menu - Disponibile immediatamente dalla barra dei menu
 • Identificazione visiva - Visualizzazione automatica della favicon per un riconoscimento facile
 • Ricerca rapida - Trova i link all'istante con la ricerca in tempo reale
@@ -421,7 +421,7 @@ LinkShelf — простое приложение для строки меню m
 
 ОСНОВНЫЕ ВОЗМОЖНОСТИ
 • Копирование в один клик - Мгновенно копируйте любую ссылку в буфер обмена
-• Глобальное сочетание клавиш - Нажмите Option+Cmd+L, чтобы мгновенно открыть LinkShelf
+• Глобальное сочетание клавиш - Нажмите Control+Option+L, чтобы мгновенно открыть LinkShelf
 • Доступ из строки меню - Мгновенный доступ из строки меню
 • Визуальное распознавание - Автоматическое отображение фавикона для лёгкого узнавания
 • Быстрый поиск - Мгновенно находите ссылки благодаря поиску в реальном времени
@@ -461,7 +461,7 @@ LinkedIn 프로필, GitHub 프로필, 포트폴리오, 이력서 등 자주 공�
 
 주요 기능
 • 원클릭 복사 - 어떤 링크든 즉시 클립보드로 복사
-• 전역 단축키 - Option+Command+L로 LinkShelf를 즉시 실행
+• 전역 단축키 - Control+Option+L로 LinkShelf를 즉시 실행
 • 메뉴 막대 접근 - 메뉴 막대에서 언제든 바로 이용 가능
 • 시각적 식별 - 파비콘 자동 표시로 쉽게 구분
 • 빠른 검색 - 실시간 검색으로 링크를 즉시 찾기
@@ -501,7 +501,7 @@ Klik gewoon op het pictogram in de menubalk, tik op de link, en hij is gekopieer
 
 BELANGRIJKSTE FUNCTIES
 • Kopiëren met één klik - Kopieer elke link direct naar het klembord
-• Globale sneltoets - Druk op Option+Cmd+L om LinkShelf direct te openen
+• Globale sneltoets - Druk op Control+Option+L om LinkShelf direct te openen
 • Toegang via de menubalk - Direct beschikbaar vanuit je menubalk
 • Visuele herkenning - Automatische favicon-weergave voor eenvoudige herkenning
 • Snel zoeken - Vind links direct met realtime zoeken
@@ -541,7 +541,7 @@ Klicka bara på ikonen i menyraden, tryck på länken, så är den kopierad.
 
 VIKTIGA FUNKTIONER
 • Kopiera med ett klick - Kopiera vilken länk som helst till urklipp direkt
-• Global genväg - Tryck på Option+Cmd+L för att öppna LinkShelf direkt
+• Global genväg - Tryck på Control+Option+L för att öppna LinkShelf direkt
 • Åtkomst via menyraden - Direkt tillgänglig från din menyrad
 • Visuell identifiering - Visar automatiskt favicon för enkel igenkänning
 • Snabb sökning - Hitta länkar direkt med sökning i realtid
@@ -581,7 +581,7 @@ Klik blot på ikonet i menulinjen, tryk på linket, og det er kopieret.
 
 VIGTIGSTE FUNKTIONER
 • Kopiering med ét klik - Kopiér ethvert link til udklipsholderen med det samme
-• Global genvej - Tryk på Option+Cmd+L for at åbne LinkShelf med det samme
+• Global genvej - Tryk på Control+Option+L for at åbne LinkShelf med det samme
 • Adgang via menulinjen - Øjeblikkelig adgang fra din menulinje
 • Visuel genkendelse - Automatisk visning af favicon for nem genkendelse
 • Hurtig søgning - Find links øjeblikkeligt med søgning i realtid
@@ -621,7 +621,7 @@ Bare klikk på ikonet i menylinjen, trykk på lenken, og den er kopiert.
 
 HOVEDFUNKSJONER
 • Kopiering med ett klikk - Kopier hvilken som helst lenke til utklippstavlen umiddelbart
-• Global snarvei - Trykk Option+Cmd+L for å åpne LinkShelf umiddelbart
+• Global snarvei - Trykk Control+Option+L for å åpne LinkShelf umiddelbart
 • Tilgang fra menylinjen - Umiddelbart tilgjengelig fra menylinjen
 • Visuell gjenkjenning - Automatisk visning av favicon for enkel gjenkjenning
 • Rask søking - Finn lenker umiddelbart med sanntidssøk
@@ -661,7 +661,7 @@ Napsauta vain valikkorivin kuvaketta, napauta linkkiä, ja se on kopioitu.
 
 TÄRKEIMMÄT OMINAISUUDET
 • Kopiointi yhdellä napsautuksella - Kopioi mikä tahansa linkki leikepöydälle heti
-• Yleinen pikanäppäin - Avaa LinkShelf heti painamalla Option+Cmd+L
+• Yleinen pikanäppäin - Avaa LinkShelf heti painamalla Control+Option+L
 • Käyttö valikkorivin kautta - Aina käytettävissä valikkorivilta
 • Visuaalinen tunnistus - Automaattinen favicon-näyttö helpottaa tunnistamista
 • Nopea haku - Löydä linkit heti reaaliaikaisella haulla
