@@ -60,6 +60,12 @@ final class LinkManager: ObservableObject {
     // MARK: Lifecycle
 
     private func start() {
+        #if DEBUG
+        if ScreenshotDemo.isEnabled {
+            startScreenshotDemo()
+            return
+        }
+        #endif
         pendingWork = Task {
             let repository: LinkRepository
             do {
@@ -86,6 +92,25 @@ final class LinkManager: ObservableObject {
             await refresh()
         }
     }
+
+    #if DEBUG
+    /// Sample collection in a throwaway in-memory store, for App Store
+    /// screenshots. Never touches the shared store or legacy data.
+    private func startScreenshotDemo() {
+        ScreenshotDemo.installCaptureObserver()
+        pendingWork = Task {
+            do {
+                let repository = LinkRepository(
+                    modelContainer: try LinkShelfContainerFactory.makeContainer(.inMemory))
+                try await ScreenshotDemo.seed(repository)
+                self.repository = repository
+            } catch {
+                storageIssue = .loadFailed
+            }
+            await refresh()
+        }
+    }
+    #endif
 
     private func setupNotificationObserver() {
         CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),
