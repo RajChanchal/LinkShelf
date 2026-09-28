@@ -11,7 +11,7 @@ A minimal macOS menu bar app for storing and quickly copying frequently used lin
 - 🗂️ **Folders** - Group links into folders (optional)
 - 💾 **Local storage** - All data stored securely on your Mac
 - 🎨 **Native macOS UI** - Beautiful, minimal interface
-- 🧭 **Global shortcut** - Press ⌥⌘L to open LinkShelf from anywhere
+- 🧭 **Global shortcut** - Press ⌃⌥L to open LinkShelf from anywhere
 - 📤 **Share Extension** - Add links directly from Safari and other apps
 - 🚀 **Fast & lightweight** - No bloat, just works
 
@@ -88,7 +88,7 @@ You can edit or delete these to customize your shelf.
 - **Framework**: SwiftUI + AppKit
 - **Storage**: SwiftData via the in-repo [`LinkShelfKit`](LinkShelfKit/README.md) package, in the App Group container on your Mac. Links saved by version 1.4 and earlier are migrated automatically on first launch, and a backup of the original data is kept.
 - **Architecture**: MVVM pattern
-- **Shortcut**: Press ⌥⌘L to open LinkShelf from anywhere
+- **Shortcut**: Press ⌃⌥L to open LinkShelf from anywhere
 
 ## Future Enhancements (Not in MVP)
 
