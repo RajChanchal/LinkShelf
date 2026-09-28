@@ -13,7 +13,7 @@ Let a person save, organize, find, copy, and open their links on Mac and iPhone,
 - Use SwiftData for local persistence and its managed CloudKit integration for device synchronization.
 - Deliver a native iOS app alongside the existing macOS menu bar app.
 - Share the data layer through a versioned Swift Package Manager package, usable from separate application repositories.
-- Minimum versions: macOS 14 (confirmed 2026-09-27) and iOS 17 (proposed). SwiftData adoption ends support for macOS 11–13 in new releases.
+- Minimum versions: macOS 14 (confirmed 2026-09-27; shipped App Store builds already required it) and iOS 17 (proposed).
 - Use a shared CloudKit container and its private database for each person's collection. App Groups provide local access between an app and its extensions; they do not provide cross-device synchronization.
 - Keep preferences in UserDefaults and favicon images in a replaceable local cache.
 
@@ -72,7 +72,7 @@ Release gates include interrupted migration, concurrent app/extension writes, du
 
 ## Pending product and engineering decisions
 
-- Confirm the iOS minimum, iPhone/iPad distribution scope, and support policy for existing Mac users on macOS 11–13.
+- Confirm the iOS minimum and the iPhone/iPad distribution scope.
 - Register or select the CloudKit container and iOS App Group identifiers under the shipping developer team; identifier examples in the companion document are not provisioned resources.
 - Confirm the account transition UX and export/recovery format after the sync prototype.
 - Confirm performance reference devices and the legacy backup retention period. Suggested baseline: keep the migration backup until the user explicitly removes it after a successful upgrade.

@@ -6,7 +6,6 @@
 - Sharing a link from Safari or another app now confirms only after the link is saved, and shows a clear message if it couldn't be.
 - Clearer messages if your links can't be loaded or saved.
 - Website icons are now kept in a separate cache.
-- Requires macOS 14 Sonoma or later.
 
 ## Spanish (es)
 
@@ -14,7 +13,6 @@
 - Al compartir un enlace desde Safari u otra app, ahora solo se confirma cuando el enlace se ha guardado, y se muestra un mensaje claro si no se ha podido guardar.
 - Mensajes más claros si no se pueden cargar o guardar tus enlaces.
 - Los iconos de los sitios web se guardan ahora en una caché independiente.
-- Requiere macOS 14 Sonoma o posterior.
 
 ## French (fr)
 
@@ -22,7 +20,6 @@
 - Le partage d’un lien depuis Safari ou une autre app n’est confirmé qu’une fois le lien enregistré, et un message clair s’affiche en cas d’échec.
 - Messages plus clairs si vos liens ne peuvent pas être chargés ou enregistrés.
 - Les icônes des sites web sont désormais conservées dans un cache distinct.
-- Nécessite macOS 14 Sonoma ou version ultérieure.
 
 ## German (de)
 
@@ -30,7 +27,6 @@
 - Beim Teilen eines Links aus Safari oder einer anderen App erfolgt die Bestätigung jetzt erst, wenn der Link gesichert ist. Falls das nicht gelingt, erscheint eine klare Meldung.
 - Klarere Meldungen, wenn deine Links nicht geladen oder gesichert werden können.
 - Website-Symbole werden jetzt in einem separaten Cache gespeichert.
-- Erfordert macOS 14 Sonoma oder neuer.
 
 ## Japanese (ja)
 
@@ -38,7 +34,6 @@
 - Safariやほかのアプリからリンクを共有すると、リンクが保存されてから完了が表示されるようになりました。保存できなかった場合は、わかりやすいメッセージが表示されます。
 - リンクを読み込めない場合や保存できない場合のメッセージがわかりやすくなりました。
 - Webサイトのアイコンは別のキャッシュに保存されるようになりました。
-- macOS 14 Sonoma以降が必要です。
 
 ## Chinese Simplified (zh-Hans)
 
@@ -46,7 +41,6 @@
 - 从 Safari 或其他 App 共享链接时，现在会在链接存储完成后才确认；如果无法存储，会显示明确的提示。
 - 无法载入或存储链接时的提示更加清晰。
 - 网站图标现在保存在单独的缓存中。
-- 需要 macOS 14 Sonoma 或更高版本。
 
 ## Portuguese (pt)
 
@@ -54,7 +48,6 @@
 - Ao partilhar uma ligação a partir do Safari ou de outra app, a confirmação só surge depois de a ligação ser guardada, e é apresentada uma mensagem clara caso não seja possível guardá-la.
 - Mensagens mais claras se não for possível carregar ou guardar as ligações.
 - Os ícones dos sites passam a ser guardados numa cache separada.
-- Requer macOS 14 Sonoma ou posterior.
 
 ## Italian (it)
 
@@ -62,7 +55,6 @@
 - Quando condividi un link da Safari o da un’altra app, la conferma arriva solo dopo che il link è stato salvato; in caso contrario viene mostrato un messaggio chiaro.
 - Messaggi più chiari se non è possibile caricare o salvare i link.
 - Le icone dei siti web ora vengono conservate in una cache separata.
-- Richiede macOS 14 Sonoma o versioni successive.
 
 ## Russian (ru)
 
@@ -70,7 +62,6 @@
 - При отправке ссылки из Safari или другого приложения подтверждение теперь появляется только после сохранения ссылки. Если сохранить ее не удалось, отображается понятное сообщение.
 - Более понятные сообщения, если ссылки не удается загрузить или сохранить.
 - Значки веб-сайтов теперь хранятся в отдельном кэше.
-- Требуется macOS 14 Sonoma или новее.
 
 ## Korean (ko)
 
@@ -78,7 +69,6 @@
 - Safari 또는 다른 앱에서 링크를 공유하면 이제 링크가 저장된 후에만 완료가 표시되며, 저장할 수 없는 경우 명확한 메시지가 표시됩니다.
 - 링크를 불러오거나 저장할 수 없을 때 더 명확한 메시지가 표시됩니다.
 - 이제 웹사이트 아이콘은 별도의 캐시에 보관됩니다.
-- macOS 14 Sonoma 이상이 필요합니다.
 
 ## Traditional Chinese (zh-Hant)
 
@@ -86,7 +76,6 @@
 - 從 Safari 或其他 App 分享連結時，現在會在連結儲存完成後才確認；如果無法儲存，會顯示清楚的訊息。
 - 無法載入或儲存連結時的訊息更清楚。
 - 網站圖像現在會保存在獨立的快取中。
-- 需要 macOS 14 Sonoma 或以上版本。
 
 ## Brazilian Portuguese (pt-BR)
 
@@ -94,7 +83,6 @@
 - Ao compartilhar um link pelo Safari ou por outro app, a confirmação agora só aparece depois que o link é salvo, e uma mensagem clara é exibida se não for possível salvá-lo.
 - Mensagens mais claras quando não for possível carregar ou salvar seus links.
 - Os ícones dos sites agora ficam em um cache separado.
-- Requer macOS 14 Sonoma ou posterior.
 
 ## Dutch (nl)
 
@@ -102,7 +90,6 @@
 - Wanneer je een link deelt vanuit Safari of een andere app, wordt dit pas bevestigd nadat de link is bewaard. Lukt dat niet, dan zie je een duidelijke melding.
 - Duidelijkere meldingen als je links niet kunnen worden geladen of bewaard.
 - Websitesymbolen worden nu in een aparte cache bewaard.
-- Vereist macOS 14 Sonoma of nieuwer.
 
 ## Swedish (sv)
 
@@ -110,7 +97,6 @@
 - När du delar en länk från Safari eller en annan app bekräftas det nu först när länken har sparats, och ett tydligt meddelande visas om den inte kunde sparas.
 - Tydligare meddelanden om dina länkar inte kan läsas in eller sparas.
 - Webbplatssymboler sparas nu i en separat cache.
-- Kräver macOS 14 Sonoma eller senare.
 
 ## Danish (da)
 
@@ -118,7 +104,6 @@
 - Når du deler et link fra Safari eller en anden app, bekræftes det nu først, når linket er gemt, og der vises en tydelig besked, hvis det ikke kunne gemmes.
 - Tydeligere beskeder, hvis dine links ikke kan indlæses eller gemmes.
 - Webstedssymboler opbevares nu i en separat cache.
-- Kræver macOS 14 Sonoma eller nyere.
 
 ## Norwegian Bokmål (nb)
 
@@ -126,7 +111,6 @@
 - Når du deler en lenke fra Safari eller en annen app, bekreftes det nå først når lenken er lagret, og en tydelig melding vises hvis den ikke kunne lagres.
 - Tydeligere meldinger hvis lenkene ikke kan lastes inn eller lagres.
 - Nettstedsymboler lagres nå i en egen buffer.
-- Krever macOS 14 Sonoma eller nyere.
 
 ## Finnish (fi)
 
@@ -134,4 +118,3 @@
 - Kun jaat linkin Safarista tai muusta apista, jakaminen vahvistetaan nyt vasta, kun linkki on tallennettu. Jos tallennus ei onnistu, näet selkeän viestin.
 - Selkeämmät viestit, jos linkkejä ei voida ladata tai tallentaa.
 - Verkkosivustojen kuvakkeet säilytetään nyt erillisessä välimuistissa.
-- Vaatii macOS 14 Sonoman tai uudemman.

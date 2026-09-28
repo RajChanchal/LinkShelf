@@ -5,7 +5,8 @@
 ## Before archiving
 
 - [ ] [RajChanchal/LinkShelf#12](https://github.com/RajChanchal/LinkShelf/pull/12) (storage migration) and the 1.5 release-prep branch are merged to `main`.
-- [ ] Version is 1.5 (build 8) for both the app and the Share Extension.
+- [ ] Version is 1.5 (build 9) for both the app and the Share Extension. Build 8 was built with the Xcode 27.1 beta, and App Review rejects beta-built builds.
+- [ ] Archive with a released Xcode (27.0), not a beta. Use `DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer` if `xcode-select` points at a beta.
 - [ ] `(cd LinkShelfKit && swift test)`, `swiftlint lint --strict --quiet --no-cache`, and `ruby Scripts/verify_localizations.rb` pass.
 - [ ] The privacy policy update is reviewed. Merging to `main` republishes <https://rajchanchal.github.io/LinkShelf/> from `index.html`; confirm the live page shows "Last Updated: September 2026".
 
@@ -29,7 +30,7 @@ Install the App Store 1.4 build first, then upgrade to the 1.5 TestFlight build.
 ## App Store Connect
 
 - [ ] Paste the per-locale notes from `APP_STORE_WHATS_NEW.md`.
-- [ ] Customers on macOS 11–13 stay on 1.4; the App Store handles this from the new minimum version. Mention it in support replies if asked.
+- [ ] No customer loses support: the App Store's 1.4 build already required macOS 14.0, so 1.5 does not change the minimum for anyone.
 - [ ] The App Privacy answers are unchanged: no data is collected.
 
 ## After release
